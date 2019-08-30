@@ -23,6 +23,6 @@ docker run \
     $IMAGE:latest \
     --admin-password='$2y$12$wxhWs2RTCf6wQ59kzfmqUOoFPogTwAkB1AOK05ghWEjJ0GHPfQG0C'
 
-# address:  localhost:9000
-# username: admin
-# password: password1
+echo address:  localhost:9000
+echo username: admin
+echo password: password1
