@@ -1,0 +1,28 @@
+version: "2.2"
+services:
+  message_store:
+    image: ethangarofolo/eventide-message-store-postgres
+    hostname: message_store
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+
+  zeppelin:
+    image: apache/zeppelin:0.8.1
+    hostname: zeppelin
+    environment:
+      ZEPPELIN_PORT: 8080
+      ZEPPELIN_LOG_DIR: /logs
+      ZEPPELIN_NOTEBOOK_DIR: '/notebook'
+      SPARK_SUBMIT_OPTIONS: >-
+        --packages org.postgresql:postgresql:42.2.5
+    links:
+      - message_store
+    ports:
+      - 9001:8080
+    volumes:
+      - ./docker_data/zeppelin/conf:/zeppelin/conf
+      - ./docker_data/zeppelin/files:/files
+      - ./docker_data/zeppelin/logs:/logs
+      - ./docker_data/zeppelin/notebooks:/notebook

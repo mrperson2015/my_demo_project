@@ -1,0 +1,339 @@
+SOC Code,Occupation Title,Star Rating,Employment Estimates 2012,Employment Estimates 2022,Annual Growth Rate,Annual Openings Growth,Annual Openings Replacements,Annual Openings Total,Hourly Wages Inexperienced,Hourly Wages Median,Education,Work Experience,Job Training
+00-0000,"Total, All Occupations",,56520,67050,1.9,1080,1390,2470,9.60,16.40,,,
+11-0000,Management Occupations,,3010,3500,1.6,50,60,110,18.80,34.50,,,
+11-1000,Top Executives,,1160,1390,1.9,20,20,40,,,,,
+11-1021,General and Operations Managers,5,1020,1230,2.1,20,20,40,17.30,34.40,Bachelor's degree,Less than 5 years,None
+11-2000,"Advertising, Marketing, Promotions, Public Relations, and Sales Managers",,60,80,2.9,0,0,0,,,,,
+11-2022,Sales Managers,3,60,70,2.6,0,0,0,27.30,36.60,Bachelor's degree,Less than 5 years,None
+11-3000,Operations Specialties Managers,,240,280,1.4,0,0,10,,,,,
+11-3011,Administrative Services Managers,,40,50,1.1,0,0,0,22.00,27.50,Bachelor's degree,Less than 5 years,None
+11-3031,Financial Managers,3,90,110,1.7,0,0,0,24.20,33.00,Bachelor's degree,5 years or more,None
+11-9000,Other Management Occupations,,1540,1760,1.4,20,30,50,,,,,
+11-9013,"Farmers, Ranchers, and Other Agricultural Managers",4,500,480,-0.3,0,10,10,,,High school diploma or equivalent,5 years or more,None
+11-9021,Construction Managers,5,240,310,3.2,10,0,10,30.90,37.40,Bachelor's degree,None,Moderate-term on-the-job training
+11-9032,"Education Administrators, Elementary and Secondary School",3,120,130,0.7,0,0,0,64118.00,77684.00,Master's degree,5 years or more,None
+11-9051,Food Service Managers,3,60,70,2.3,0,0,0,17.50,21.70,High school diploma or equivalent,Less than 5 years,None
+11-9081,Lodging Managers,3,100,110,1.6,0,0,10,19.10,28.70,High school diploma or equivalent,Less than 5 years,None
+11-9111,Medical and Health Services Managers,4,90,120,3.4,0,0,10,29.50,38.30,Bachelor's degree,None,None
+11-9199,"Managers, All Other",,180,220,2.7,10,0,10,16.80,27.80,High school diploma or equivalent,Less than 5 years,None
+13-0000,Business and Financial Operations Occupations,,1110,1310,1.7,20,20,40,16.00,26.80,,,
+13-1000,Business Operations Specialists,,660,760,1.6,10,10,20,,,,,
+13-1022,"Wholesale and Retail Buyers, Except Farm Products",,40,40,1.7,0,0,0,12.90,19.70,High school diploma or equivalent,None,Long-term on-the-job training
+13-1023,"Purchasing Agents, Except Wholesale, Retail, and Farm Products",2,50,50,0.8,0,0,0,19.20,23.20,High school diploma or equivalent,None,Long-term on-the-job training
+13-1041,Compliance Officers,2,80,90,1.1,0,0,0,20.70,31.90,Bachelor's degree,None,Moderate-term on-the-job training
+13-1051,Cost Estimators,4,80,90,1.9,0,0,0,17.30,28.20,Bachelor's degree,None,None
+13-1071,Human Resources Specialists,2,90,100,1,0,0,0,18.60,27.90,Bachelor's degree,None,None
+13-1111,Management Analysts,4,70,90,3.8,0,0,0,18.50,28.20,Bachelor's degree,Less than 5 years,None
+13-1161,Market Research Analysts and Marketing Specialists,4,50,70,3.4,0,0,0,14.30,22.70,Bachelor's degree,None,None
+13-1199,"Business Operations Specialists, All Other",,130,140,0.9,0,0,0,14.40,28.00,High school diploma or equivalent,None,None
+13-2000,Financial Specialists,,460,540,1.9,10,10,20,,,,,
+13-2011,Accountants and Auditors,5,250,300,2.2,10,10,10,23.10,32.00,Bachelor's degree,None,None
+13-2021,Appraisers and Assessors of Real Estate,2,60,60,1.5,0,0,0,9.20,17.00,Bachelor's degree,None,Long-term on-the-job training
+13-2052,Personal Financial Advisors,3,50,50,2,0,0,0,,,Bachelor's degree,None,None
+13-2072,Loan Officers,3,70,80,1.6,0,0,0,15.20,20.10,Bachelor's degree,None,Moderate-term on-the-job training
+15-0000,Computer and Mathematical Occupations,,280,340,2.2,10,10,10,12.70,26.00,,,
+15-1100,Computer Occupations,,270,330,2.2,10,10,10,,,,,
+15-1142,Network and Computer Systems Administrators,3,60,70,1.8,0,0,0,23.50,31.80,Bachelor's degree,None,None
+15-1151,Computer User Support Specialists,3,70,90,2.1,0,0,0,8.20,16.40,"Some college, no degree",None,Moderate-term on-the-job training
+17-0000,Architecture and Engineering Occupations,,700,820,1.8,10,20,30,19.50,30.10,,,
+17-1000,"Architects, Surveyors, and Cartographers",,80,90,2.4,0,0,0,,,,,
+17-1022,Surveyors,2,50,60,1.7,0,0,0,20.30,24.90,Bachelor's degree,Less than 5 years,None
+17-2000,Engineers,,360,440,2.3,10,10,20,,,,,
+17-2051,Civil Engineers,5,100,140,3.4,0,0,10,24.70,34.00,Bachelor's degree,None,None
+17-2151,"Mining and Geological Engineers, Including Mining Safety Engineers",2,60,50,-0.9,0,0,0,26.00,33.40,Bachelor's degree,None,None
+17-2171,Petroleum Engineers,5,80,120,3.9,0,0,10,28.30,40.00,Bachelor's degree,None,None
+17-3000,"Drafters, Engineering Technicians, and Mapping Technicians",,270,290,0.9,0,10,10,,,,,
+17-3011,Architectural and Civil Drafters,2,70,80,1,0,0,0,18.00,21.40,Associate's degree,None,None
+17-3023,Electrical and Electronics Engineering Technicians,2,50,50,1.3,0,0,0,17.30,30.90,Associate's degree,None,None
+17-3025,Environmental Engineering Technicians,,40,30,-2,0,0,0,,,Associate's degree,None,None
+17-3031,Surveying and Mapping Technicians,3,50,60,3,0,0,0,12.90,19.00,High school diploma or equivalent,None,Moderate-term on-the-job training
+19-0000,"Life, Physical, and Social Science Occupations",,890,950,0.7,10,30,40,12.10,19.30,,,
+19-1000,Life Scientists,,200,200,0.1,0,10,10,,,,,
+19-1023,Zoologists and Wildlife Biologists,2,60,70,0.3,0,0,0,18.50,24.80,Bachelor's degree,None,None
+19-1029,"Biological Scientists, All Other",2,60,60,0,0,0,0,,,Bachelor's degree,None,None
+19-2000,Physical Scientists,,80,100,1.4,0,0,0,,,,,
+19-3000,Social Scientists and Related Workers,,130,160,2,0,0,10,,,,,
+19-3031,"Clinical, Counseling, and School Psychologists",3,50,70,2.5,0,0,0,12.50,26.00,Doctoral or professional degree,None,Internship/residency
+19-3091,Anthropologists and Archeologists,2,50,60,1.4,0,0,0,20.70,29.40,Master's degree,None,None
+19-4000,"Life, Physical, and Social Science Technicians",,470,490,0.5,0,20,20,,,,,
+19-4021,Biological Technicians,0,60,60,-0.2,0,0,0,13.00,15.10,Bachelor's degree,None,None
+19-4031,Chemical Technicians,,40,50,3.5,0,0,0,11.10,17.50,Associate's degree,None,Moderate-term on-the-job training
+19-4041,Geological and Petroleum Technicians,3,50,60,2.4,0,0,0,14.30,23.20,Associate's degree,None,Moderate-term on-the-job training
+19-4093,Forest and Conservation Technicians,3,300,300,0,0,10,10,,,Associate's degree,None,None
+21-0000,Community and Social Service Occupations,,560,660,1.9,10,10,20,12.60,17.70,,,
+21-1000,"Counselors, Social Workers, and Other Community and Social Service Specialists",,480,570,1.9,10,10,20,,,,,
+21-1012,"Educational, Guidance, School, and Vocational Counselors",2,60,70,1,0,0,0,16.60,20.80,Master's degree,None,None
+21-1021,"Child, Family, and School Social Workers",3,50,60,2.3,0,0,0,16.50,21.20,Bachelor's degree,None,None
+21-1092,Probation Officers and Correctional Treatment Specialists,,40,40,0.3,0,0,0,,,Bachelor's degree,None,Short-term on-the-job training
+21-1093,Social and Human Service Assistants,3,200,230,1.9,0,10,10,10.80,13.60,High school diploma or equivalent,None,Short-term on-the-job training
+21-2000,Religious Workers,,70,90,2,0,0,0,,,,,
+21-2099,"Religious Workers, All Other",,40,50,2,0,0,0,,,Bachelor's degree,None,None
+23-0000,Legal Occupations,,210,250,1.9,0,0,10,13.70,22.20,,,
+23-1000,"Lawyers, Judges, and Related Workers",,150,170,1.9,0,0,10,,,,,
+23-1011,Lawyers,4,100,120,2.3,0,0,0,15.70,36.90,Doctoral or professional degree,None,None
+23-2000,Legal Support Workers,,60,80,1.9,0,0,0,,,,,
+25-0000,"Education, Training, and Library Occupations",,3540,3910,1.1,40,70,110,9.90,15.40,,,
+25-1000,Postsecondary Teachers,,170,200,2.2,0,0,10,,,,,
+25-1194,"Vocational Education Teachers, Postsecondary",,40,50,0.9,0,0,0,17.70,26.00,Bachelor's degree,Less than 5 years,None
+25-2000,"Preschool, Primary, Secondary, and Special Education School Teachers",,1450,1630,1.2,20,30,50,,,,,
+25-2011,"Preschool Teachers, Except Special Education",3,60,80,1.9,0,0,0,9.20,11.80,Associate's degree,None,None
+25-2021,"Elementary School Teachers, Except Special Education",5,590,670,1.4,10,10,20,36144.00,49421.00,Bachelor's degree,None,Internship/residency
+25-2052,"Special Education Teachers, Kindergarten and Elementary School",2,120,130,0.7,0,0,0,,,Bachelor's degree,None,Internship/residency
+25-3000,Other Teachers and Instructors,,1120,1220,0.9,10,20,30,,,,,
+25-3021,Self-Enrichment Education Teachers,2,90,100,1.1,0,0,0,10.90,19.80,High school diploma or equivalent,Less than 5 years,None
+25-3098,Substitute Teachers,1,880,930,0.7,10,20,20,8.20,9.80,Bachelor's degree,None,Internship/residency
+25-3099,"Teachers and Instructors, All Other",,140,180,2.2,0,0,10,24876.00,35619.00,Bachelor's degree,None,Internship/residency
+25-4000,"Librarians, Curators, and Archivists",,100,100,0.7,0,0,10,,,,,
+25-4031,Library Technicians,1,60,60,0.9,0,0,0,10.70,11.50,Postsecondary non-degree award,None,None
+25-9000,"Other Education, Training, and Library Occupations",,700,760,0.7,10,10,20,,,,,
+25-9041,Teacher Assistants,1,580,620,0.7,0,10,20,20155.00,23409.00,"Some college, no degree",None,None
+27-0000,"Arts, Design, Entertainment, Sports, and Media Occupations",,310,380,2.1,10,10,10,9.90,15.20,,,
+27-1000,Art and Design Workers,,150,180,2.2,0,0,10,,,,,
+51-1000,Supervisors of Production Workers,,240,260,1,0,0,10,,,,,
+27-1023,Floral Designers,0,70,70,0.8,0,0,0,8.00,9.50,High school diploma or equivalent,None,Moderate-term on-the-job training
+27-1024,Graphic Designers,3,60,80,3.7,0,0,0,8.10,11.60,Bachelor's degree,None,None
+27-3000,Media and Communication Workers,,90,110,1.6,0,0,0,,,,,
+27-4000,Media and Communication Equipment Workers,,50,60,2.2,0,0,0,,,,,
+29-0000,Healthcare Practitioners and Technical Occupations,,2320,2920,2.6,60,50,110,14.20,23.70,,,
+29-1000,Health Diagnosing and Treating Practitioners,,1160,1490,2.9,30,20,60,,,,,
+29-1021,"Dentists, General",4,60,80,2.6,0,0,0,,,Doctoral or professional degree,None,None
+29-1051,Pharmacists,3,70,90,2.3,0,0,0,52.50,63.20,Doctoral or professional degree,None,None
+29-1062,Family and General Practitioners,,40,50,1.8,0,0,0,63.50,81.70,Doctoral or professional degree,None,Internship/residency
+29-1071,Physician Assistants,4,50,70,4.1,0,0,0,40.30,53.70,Master's degree,None,None
+29-1123,Physical Therapists,4,50,60,3.1,0,0,0,29.20,37.60,Doctoral or professional degree,None,None
+29-1141,Registered Nurses,5,620,810,3,20,10,30,18.80,26.30,Associate's degree,None,None
+29-1171,Nurse Practitioners,4,50,70,3.4,0,0,0,31.10,44.60,Master's degree,None,None
+29-2000,Health Technologists and Technicians,,1070,1340,2.5,30,20,50,,,,,
+29-2011,Medical and Clinical Laboratory Technologists,3,50,60,2,0,0,0,20.20,25.90,Bachelor's degree,None,None
+29-2021,Dental Hygienists,4,60,80,3.8,0,0,0,,,Associate's degree,None,None
+29-2034,Radiologic Technologists,3,60,70,2.2,0,0,0,18.40,23.60,Associate's degree,None,None
+29-2041,Emergency Medical Technicians and Paramedics,3,360,440,2.3,10,10,20,8.90,14.20,Postsecondary non-degree award,None,None
+29-2052,Pharmacy Technicians,3,130,160,2.6,0,0,0,13.10,16.00,High school diploma or equivalent,None,Moderate-term on-the-job training
+29-2061,Licensed Practical and Licensed Vocational Nurses,4,230,270,1.9,0,10,10,14.60,17.70,Postsecondary non-degree award,None,None
+29-2071,Medical Records and Health Information Technicians,,40,50,3,0,0,0,12.60,15.60,Postsecondary non-degree award,None,None
+29-9000,Other Healthcare Practitioners and Technical Occupations,,90,90,-0.1,0,0,0,,,,,
+29-9011,Occupational Health and Safety Specialists,2,90,90,-0.2,0,0,0,21.90,28.50,Bachelor's degree,None,Short-term on-the-job training
+31-0000,Healthcare Support Occupations,,1230,1590,3,40,20,60,9.10,11.40,,,
+31-1000,"Nursing, Psychiatric, and Home Health Aides",,660,870,3.2,20,10,30,,,,,
+31-1011,Home Health Aides,1,180,310,7,10,0,20,8.00,9.60,Less than high school,None,Short-term on-the-job training
+31-1014,Nursing Assistants,1,470,550,1.7,10,10,20,9.20,10.90,Postsecondary non-degree award,None,None
+31-2000,Occupational Therapy and Physical Therapist Assistants and Aides,,60,80,4.4,0,0,0,,,,,
+31-2022,Physical Therapist Aides,,40,50,3.8,0,0,0,8.40,11.00,High school diploma or equivalent,None,Short-term on-the-job training
+31-9000,Other Healthcare Support Occupations,,510,640,2.6,10,10,20,,,,,
+31-9011,Massage Therapists,3,60,80,3.5,0,0,0,10.80,21.00,Postsecondary non-degree award,None,None
+31-9091,Dental Assistants,3,210,270,2.6,10,0,10,9.60,11.50,Postsecondary non-degree award,None,None
+31-9092,Medical Assistants,3,150,190,2.8,0,0,10,11.00,14.50,Postsecondary non-degree award,None,None
+31-9094,Medical Transcriptionists,,40,40,0.3,0,0,0,,,Postsecondary non-degree award,None,None
+33-0000,Protective Service Occupations,,1100,1230,1.2,10,40,50,8.90,16.60,,,
+33-1000,Supervisors of Protective Service Workers,,120,130,0.9,0,0,10,,,,,
+33-1012,First-Line Supervisors of Police and Detectives,3,80,80,1.2,0,0,0,19.40,27.20,High school diploma or equivalent,Less than 5 years,Moderate-term on-the-job training
+33-2000,Fire Fighting and Prevention Workers,,190,220,1.5,0,10,10,,,,,
+33-2011,Firefighters,1,190,220,1.5,0,10,10,8.10,8.70,Postsecondary non-degree award,None,Long-term on-the-job training
+33-3000,Law Enforcement Workers,,420,470,1.3,10,10,20,,,,,
+33-3012,Correctional Officers and Jailers,3,90,100,1.3,0,0,0,15.40,18.70,High school diploma or equivalent,None,Moderate-term on-the-job training
+33-3051,Police and Sheriff's Patrol Officers,4,290,330,1.4,0,10,10,15.60,19.30,High school diploma or equivalent,None,Moderate-term on-the-job training
+33-9000,Other Protective Service Workers,,370,410,1,0,20,20,,,,,
+33-9032,Security Guards,3,120,140,1.5,0,0,0,,,High school diploma or equivalent,None,Short-term on-the-job training
+33-9091,Crossing Guards,0,50,50,0.7,0,0,0,8.10,9.00,High school diploma or equivalent,None,Short-term on-the-job training
+33-9092,"Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers",1,110,130,1.4,0,10,10,8.10,9.80,High school diploma or equivalent,None,Short-term on-the-job training
+35-0000,Food Preparation and Serving Related Occupations,,4350,5080,1.7,70,160,240,8.10,9.10,,,
+35-1000,Supervisors of Food Preparation and Serving Workers,,370,440,2,10,10,20,,,,,
+35-2000,Cooks and Food Preparation Workers,,1110,1260,1.4,20,20,40,,,,,
+35-2011,"Cooks, Fast Food",1,230,250,0.7,0,0,10,8.10,9.60,Less than high school,None,Short-term on-the-job training
+35-2012,"Cooks, Institution and Cafeteria",1,220,250,1,0,0,10,9.60,11.40,Less than high school,None,Short-term on-the-job training
+35-2014,"Cooks, Restaurant",1,320,390,2.3,10,10,10,9.70,11.10,Less than high school,Less than 5 years,Moderate-term on-the-job training
+35-2021,Food Preparation Workers,1,310,340,1.1,0,10,10,8.10,8.80,Less than high school,None,Short-term on-the-job training
+35-3000,Food and Beverage Serving Workers,,2390,2820,1.8,40,100,150,,,,,
+35-3011,Bartenders,1,170,200,2,0,10,10,,,Less than high school,None,Short-term on-the-job training
+35-3021,"Combined Food Preparation and Serving Workers, Including Fast Food",1,1260,1550,2.3,30,50,80,8.10,8.60,Less than high school,None,Short-term on-the-job training
+35-3022,"Counter Attendants, Cafeteria, Food Concession, and Coffee Shop",1,200,200,0.2,0,10,10,8.10,8.60,Less than high school,None,Short-term on-the-job training
+35-3031,Waiters and Waitresses,1,740,840,1.4,10,40,50,8.10,9.40,Less than high school,None,Short-term on-the-job training
+35-9000,Other Food Preparation and Serving Related Workers,,490,560,1.4,10,30,30,,,,,
+35-9011,Dining Room and Cafeteria Attendants and Bartender Helpers,1,170,190,1.4,0,10,10,,,Less than high school,None,Short-term on-the-job training
+35-9021,Dishwashers,1,150,170,1.4,0,10,10,8.00,8.50,Less than high school,None,Short-term on-the-job training
+35-9031,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",1,170,190,1.3,0,10,20,8.00,8.40,Less than high school,None,None
+37-0000,Building and Grounds Cleaning and Maintenance Occupations,,2530,3090,2.2,60,50,110,8.50,11.00,,,
+37-1000,Supervisors of Building and Grounds Cleaning and Maintenance Workers,,290,380,3,10,10,10,,,,,
+37-1011,First-Line Supervisors of Housekeeping and Janitorial Workers,4,150,190,2.5,0,0,10,11.20,16.80,High school diploma or equivalent,Less than 5 years,None
+37-1012,"First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers",4,140,180,3.6,10,0,10,16.10,19.20,High school diploma or equivalent,Less than 5 years,None
+37-2000,Building Cleaning and Pest Control Workers,,1770,2120,2,40,30,70,,,,,
+37-2011,"Janitors and Cleaners, Except Maids and Housekeeping Cleaners",1,790,960,2.1,20,20,30,8.10,10.80,Less than high school,None,Short-term on-the-job training
+37-2012,Maids and Housekeeping Cleaners,1,960,1140,1.8,20,20,40,8.10,10.20,Less than high school,None,Short-term on-the-job training
+37-3000,Grounds Maintenance Workers,,480,600,2.5,10,10,20,,,,,
+37-3011,Landscaping and Groundskeeping Workers,3,390,500,2.7,10,10,20,9.70,12.40,Less than high school,None,Short-term on-the-job training
+37-3012,"Pesticide Handlers, Sprayers, and Applicators, Vegetation",3,90,100,2,0,0,0,,,High school diploma or equivalent,None,Moderate-term on-the-job training
+39-0000,Personal Care and Service Occupations,,1710,2100,2.2,40,50,90,8.10,9.30,,,
+39-1000,Supervisors of Personal Care and Service Workers,,80,100,2.1,0,0,0,,,,,
+39-1021,First-Line Supervisors of Personal Service Workers,3,80,100,2.1,0,0,0,11.10,15.30,High school diploma or equivalent,Less than 5 years,None
+39-2000,Animal Care and Service Workers,,110,140,2.8,0,0,10,,,,,
+39-2011,Animal Trainers,,40,50,3.8,0,0,0,8.20,8.90,High school diploma or equivalent,None,Moderate-term on-the-job training
+39-2021,Nonfarm Animal Caretakers,3,70,80,2.2,0,0,0,9.70,12.00,Less than high school,None,Short-term on-the-job training
+39-3000,Entertainment Attendants and Related Workers,,290,330,1.4,0,10,20,,,,,
+39-3091,Amusement and Recreation Attendants,1,270,310,1.5,0,10,20,8.10,8.60,Less than high school,None,Short-term on-the-job training
+39-5000,Personal Appearance Workers,,70,100,2.8,0,0,0,,,,,
+39-5012,"Hairdressers, Hairstylists, and Cosmetologists",1,60,80,2.7,0,0,0,,,Postsecondary non-degree award,None,None
+39-7000,Tour and Travel Guides,,150,180,1.7,0,10,10,,,,,
+39-7011,Tour Guides and Escorts,4,150,180,1.7,0,10,10,13.20,16.10,High school diploma or equivalent,None,Moderate-term on-the-job training
+39-9000,Other Personal Care and Service Workers,,980,1220,2.5,20,20,40,,,,,
+39-9011,Childcare Workers,1,360,440,2.3,10,10,20,8.10,9.10,High school diploma or equivalent,None,Short-term on-the-job training
+39-9021,Personal Care Aides,1,220,280,2.9,10,0,10,8.00,8.70,Less than high school,None,Short-term on-the-job training
+39-9031,Fitness Trainers and Aerobics Instructors,1,60,80,1.9,0,0,0,8.10,9.70,High school diploma or equivalent,None,Short-term on-the-job training
+39-9032,Recreation Workers,1,280,350,2.3,10,0,10,8.10,11.10,Bachelor's degree,None,None
+39-9041,Residential Advisors,1,50,70,4.3,0,0,0,,,High school diploma or equivalent,None,Short-term on-the-job training
+41-0000,Sales and Related Occupations,,5020,5940,1.8,90,160,250,8.20,11.00,,,
+41-1000,Supervisors of Sales Workers,,790,940,1.9,20,20,30,,,,,
+41-1011,First-Line Supervisors of Retail Sales Workers,3,750,890,2,20,20,30,11.30,14.40,High school diploma or equivalent,Less than 5 years,None
+41-1012,First-Line Supervisors of Non-Retail Sales Workers,,40,40,1,0,0,0,25.10,31.10,High school diploma or equivalent,Less than 5 years,None
+41-2000,Retail Sales Workers,,3210,3750,1.7,50,120,180,,,,,
+41-2011,Cashiers,1,1760,1970,1.2,20,80,100,8.10,8.90,Less than high school,None,Short-term on-the-job training
+41-2021,Counter and Rental Clerks,1,90,110,2.1,0,0,0,8.00,11.20,Less than high school,None,Short-term on-the-job training
+41-2022,Parts Salespersons,3,150,170,1.7,0,0,10,10.70,15.80,Less than high school,None,Moderate-term on-the-job training
+41-2031,Retail Salespersons,1,1210,1500,2.4,30,40,70,8.60,11.20,Less than high school,None,Short-term on-the-job training
+41-3000,"Sales Representatives, Services",,410,490,2,10,10,20,,,,,
+41-3011,Advertising Sales Agents,3,70,80,1.1,0,0,0,8.10,12.00,High school diploma or equivalent,None,Moderate-term on-the-job training
+41-3021,Insurance Sales Agents,4,110,140,2.3,0,0,10,14.90,21.70,High school diploma or equivalent,None,Moderate-term on-the-job training
+41-3031,"Securities, Commodities, and Financial Services Sales Agents",,40,40,1.3,0,0,0,16.40,17.30,Bachelor's degree,None,Moderate-term on-the-job training
+41-3099,"Sales Representatives, Services, All Other",,170,220,2.4,0,10,10,14.00,25.80,High school diploma or equivalent,None,Short-term on-the-job training
+41-4000,"Sales Representatives, Wholesale and Manufacturing",,490,600,2.1,10,10,20,,,,,
+41-4011,"Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",5,180,220,2.4,0,0,10,21.30,32.90,Bachelor's degree,None,Moderate-term on-the-job training
+41-4012,"Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",5,310,370,2,10,10,10,14.10,24.90,High school diploma or equivalent,None,Moderate-term on-the-job training
+41-9000,Other Sales and Related Workers,,130,170,2.8,0,0,10,,,,,
+41-9022,Real Estate Sales Agents,4,100,130,2.8,0,0,0,8.80,19.30,High school diploma or equivalent,None,Long-term on-the-job training
+43-0000,Office and Administrative Support Occupations,,7030,8200,1.7,120,150,280,9.50,13.60,,,
+43-1000,Supervisors of Office and Administrative Support Workers,,310,370,2,10,10,10,,,,,
+43-1011,First-Line Supervisors of Office and Administrative Support Workers,4,310,370,2,10,10,10,15.20,21.20,High school diploma or equivalent,Less than 5 years,None
+43-2000,Communications Equipment Operators,,120,160,3.7,0,0,10,,,,,
+43-2021,Telephone Operators,3,110,150,4.1,0,0,10,,,High school diploma or equivalent,None,Short-term on-the-job training
+43-3000,Financial Clerks,,1240,1490,2,20,20,50,,,,,
+43-3011,Bill and Account Collectors,3,60,70,2.1,0,0,0,12.00,14.40,High school diploma or equivalent,None,Moderate-term on-the-job training
+43-3021,Billing and Posting Clerks,3,180,240,3.5,10,0,10,10.70,13.90,High school diploma or equivalent,None,Short-term on-the-job training
+43-3031,"Bookkeeping, Accounting, and Auditing Clerks",4,650,780,2,10,10,20,11.40,16.00,High school diploma or equivalent,None,Moderate-term on-the-job training
+43-3051,Payroll and Timekeeping Clerks,4,110,130,1.8,0,0,0,11.80,16.20,High school diploma or equivalent,None,Moderate-term on-the-job training
+43-3071,Tellers,1,230,240,0.8,0,10,10,10.00,11.20,High school diploma or equivalent,None,Short-term on-the-job training
+43-4000,Information and Record Clerks,,1560,1820,1.7,30,50,70,,,,,
+43-4031,"Court, Municipal, and License Clerks",3,60,70,1.9,0,0,0,12.70,16.20,High school diploma or equivalent,None,Moderate-term on-the-job training
+43-4051,Customer Service Representatives,3,330,390,1.8,10,10,20,9.80,13.70,High school diploma or equivalent,None,Short-term on-the-job training
+43-4061,"Eligibility Interviewers, Government Programs",4,80,100,2.4,0,0,0,16.10,16.90,High school diploma or equivalent,None,Moderate-term on-the-job training
+43-4081,"Hotel, Motel, and Resort Desk Clerks",1,320,400,2.5,10,20,20,8.90,10.60,High school diploma or equivalent,None,Short-term on-the-job training
+43-4111,"Interviewers, Except Eligibility and Loan",0,50,50,1,0,0,0,10.50,11.90,High school diploma or equivalent,None,Short-term on-the-job training
+43-4121,"Library Assistants, Clerical",1,60,70,2,0,0,0,9.10,11.20,High school diploma or equivalent,None,Short-term on-the-job training
+43-4131,Loan Interviewers and Clerks,0,50,60,1.5,0,0,0,8.20,9.80,High school diploma or equivalent,None,Short-term on-the-job training
+43-4141,New Accounts Clerks,,40,40,0.3,0,0,0,,,High school diploma or equivalent,None,Moderate-term on-the-job training
+43-4171,Receptionists and Information Clerks,3,440,510,1.6,10,10,20,8.80,11.50,High school diploma or equivalent,None,Short-term on-the-job training
+43-4199,"Information and Record Clerks, All Other",,60,50,-1.7,0,0,0,13.40,17.20,High school diploma or equivalent,None,Short-term on-the-job training
+43-5000,"Material Recording, Scheduling, Dispatching, and Distributing Workers",,1020,1110,0.9,10,30,40,,,,,
+43-5032,"Dispatchers, Except Police, Fire, and Ambulance",4,120,140,2,0,0,10,14.70,22.10,High school diploma or equivalent,None,Moderate-term on-the-job training
+43-5041,"Meter Readers, Utilities",,40,30,-2.2,0,0,0,18.00,25.00,High school diploma or equivalent,None,Short-term on-the-job training
+43-5051,Postal Service Clerks,2,60,50,-0.5,0,0,0,12.80,23.80,High school diploma or equivalent,None,Short-term on-the-job training
+43-5052,Postal Service Mail Carriers,2,70,70,0.4,0,0,0,18.60,26.60,High school diploma or equivalent,None,Short-term on-the-job training
+43-5071,"Shipping, Receiving, and Traffic Clerks",3,70,80,1.2,0,0,0,9.90,14.00,High school diploma or equivalent,None,Short-term on-the-job training
+43-5081,Stock Clerks and Order Fillers,1,550,610,1.1,10,20,20,8.20,10.40,Less than high school,None,Short-term on-the-job training
+43-6000,Secretaries and Administrative Assistants,,1520,1860,2.3,40,20,50,,,,,
+43-6011,Executive Secretaries and Executive Administrative Assistants,2,140,140,0.6,0,0,0,15.30,21.50,High school diploma or equivalent,Less than 5 years,None
+43-6013,Medical Secretaries,3,120,160,4.1,10,0,10,10.80,13.30,High school diploma or equivalent,None,Moderate-term on-the-job training
+43-6014,"Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",3,1230,1520,2.3,30,20,40,11.50,15.50,High school diploma or equivalent,None,Short-term on-the-job training
+43-9000,Other Office and Administrative Support Workers,,1270,1390,0.9,10,30,40,,,,,
+43-9021,Data Entry Keyers,,40,20,-4.9,0,0,0,8.20,9.20,High school diploma or equivalent,None,Moderate-term on-the-job training
+43-9022,Word Processors and Typists,,40,40,-0.8,0,0,0,10.50,12.00,High school diploma or equivalent,None,Short-term on-the-job training
+43-9061,"Office Clerks, General",3,1140,1280,1.2,10,20,40,8.90,11.70,High school diploma or equivalent,None,Short-term on-the-job training
+45-0000,"Farming, Fishing, and Forestry Occupations",,830,820,-0.1,0,30,30,,,,,
+45-2000,Agricultural Workers,,800,780,-0.2,0,20,20,,,,,
+45-2091,Agricultural Equipment Operators,0,50,50,0.2,0,0,0,,,Less than high school,None,Short-term on-the-job training
+45-2093,"Farmworkers, Farm, Ranch, and Aquacultural Animals",0,80,80,0,0,0,0,8.00,13.40,Less than high school,None,Short-term on-the-job training
+47-0000,Construction and Extraction Occupations,,8280,10470,2.6,230,190,410,13.90,19.70,,,
+47-1000,Supervisors of Construction and Extraction Workers,,890,1130,2.8,30,10,40,,,,,
+47-1011,First-Line Supervisors of Construction Trades and Extraction Workers,5,890,1130,2.8,30,10,40,21.50,29.40,High school diploma or equivalent,5 years or more,None
+47-2000,Construction Trades Workers,,3800,4840,2.7,100,70,180,,,,,
+47-2031,Carpenters,4,680,950,4,30,10,40,11.00,17.20,High school diploma or equivalent,None,Apprenticeship
+47-2044,Tile and Marble Setters,4,50,60,3.3,0,0,0,,,Less than high school,None,Long-term on-the-job training
+47-2051,Cement Masons and Concrete Finishers,4,100,160,6.3,10,0,10,14.30,17.00,Less than high school,None,Moderate-term on-the-job training
+47-2061,Construction Laborers,4,1340,1670,2.4,30,30,60,12.00,16.00,Less than high school,None,Short-term on-the-job training
+47-2073,Operating Engineers and Other Construction Equipment Operators,4,950,1110,1.7,20,20,40,16.30,20.60,High school diploma or equivalent,None,Moderate-term on-the-job training
+47-2111,Electricians,5,290,360,2.1,10,10,10,17.30,26.10,High school diploma or equivalent,None,Apprenticeship
+47-2141,"Painters, Construction and Maintenance",3,60,80,4.5,0,0,0,13.60,15.70,Less than high school,None,Moderate-term on-the-job training
+47-2152,"Plumbers, Pipefitters, and Steamfitters",4,120,160,3,0,0,10,16.40,17.90,High school diploma or equivalent,None,Apprenticeship
+47-2211,Sheet Metal Workers,,40,60,5.4,0,0,0,,,High school diploma or equivalent,None,Apprenticeship
+47-3000,"Helpers, Construction Trades",,80,120,5.7,0,0,10,,,,,
+47-3013,Helpers--Electricians,3,50,80,4.5,0,0,0,8.00,11.90,High school diploma or equivalent,None,Short-term on-the-job training
+47-4000,Other Construction and Related Workers,,300,330,1.3,0,10,10,,,,,
+47-4011,Construction and Building Inspectors,4,60,80,2.9,0,0,0,19.00,26.30,High school diploma or equivalent,5 years or more,Moderate-term on-the-job training
+47-4051,Highway Maintenance Workers,3,150,170,1.1,0,0,0,14.40,17.80,High school diploma or equivalent,None,Moderate-term on-the-job training
+47-5000,Extraction Workers,,3220,4040,2.5,90,100,190,,,,,
+47-5011,"Derrick Operators, Oil and Gas",5,180,230,3.1,10,10,10,18.90,22.50,Less than high school,None,Short-term on-the-job training
+47-5012,"Rotary Drill Operators, Oil and Gas",5,220,290,3.1,10,10,20,19.10,26.30,Less than high school,None,Moderate-term on-the-job training
+47-5013,"Service Unit Operators, Oil, Gas, and Mining",5,870,1170,3.4,30,40,70,17.60,24.40,Less than high school,None,Moderate-term on-the-job training
+47-5041,Continuous Mining Machine Operators,2,210,170,-2,0,0,0,21.90,25.20,High school diploma or equivalent,None,Moderate-term on-the-job training
+47-5042,Mine Cutting and Channeling Machine Operators,3,150,160,0.6,0,0,0,22.90,26.30,High school diploma or equivalent,None,Moderate-term on-the-job training
+47-5061,"Roof Bolters, Mining",2,70,70,-1.1,0,0,0,25.50,26.20,High school diploma or equivalent,None,Moderate-term on-the-job training
+47-5071,"Roustabouts, Oil and Gas",4,1410,1850,3.1,40,40,80,11.30,16.60,Less than high school,None,Moderate-term on-the-job training
+47-5081,Helpers--Extraction Workers,2,60,50,-1.1,0,0,0,20.60,22.40,High school diploma or equivalent,None,Moderate-term on-the-job training
+49-0000,"Installation, Maintenance, and Repair Occupations",,3820,4550,1.9,70,100,170,13.60,22.10,,,
+49-1000,"Supervisors of Installation, Maintenance, and Repair Workers",,390,440,1.4,10,10,20,,,,,
+49-1011,"First-Line Supervisors of Mechanics, Installers, and Repairers",5,390,440,1.4,10,10,20,20.60,34.50,High school diploma or equivalent,Less than 5 years,None
+49-2000,"Electrical and Electronic Equipment Mechanics, Installers, and Repairers",,340,360,0.6,0,10,10,,,,,
+49-2022,"Telecommunications Equipment Installers and Repairers, Except Line Installers",3,120,140,1.1,0,0,0,19.40,26.60,Postsecondary non-degree award,None,Moderate-term on-the-job training
+49-2092,"Electric Motor, Power Tool, and Related Repairers",0,70,70,0.6,0,0,0,,,Postsecondary non-degree award,None,Long-term on-the-job training
+49-2095,"Electrical and Electronics Repairers, Powerhouse, Substation, and Relay",2,110,100,-0.5,0,0,0,,,Postsecondary non-degree award,None,Long-term on-the-job training
+49-3000,"Vehicle and Mobile Equipment Mechanics, Installers, and Repairers",,1260,1500,1.9,20,30,60,,,,,
+49-3021,Automotive Body and Related Repairers,3,90,110,2.1,0,0,0,14.00,20.80,High school diploma or equivalent,None,Moderate-term on-the-job training
+49-3023,Automotive Service Technicians and Mechanics,3,390,470,2.1,10,10,20,11.40,16.60,High school diploma or equivalent,None,Long-term on-the-job training
+49-3031,Bus and Truck Mechanics and Diesel Engine Specialists,5,300,360,1.9,10,10,10,16.50,22.00,High school diploma or equivalent,None,Long-term on-the-job training
+49-3042,"Mobile Heavy Equipment Mechanics, Except Engines",5,280,310,1.1,0,10,10,19.40,25.40,High school diploma or equivalent,None,Long-term on-the-job training
+49-3091,Bicycle Repairers,,40,60,5.6,0,0,0,10.30,12.00,High school diploma or equivalent,None,Moderate-term on-the-job training
+49-3093,Tire Repairers and Changers,3,90,100,1.5,0,0,0,,,High school diploma or equivalent,None,Short-term on-the-job training
+49-9000,"Other Installation, Maintenance, and Repair Occupations",,1830,2240,2.3,40,50,90,,,,,
+49-9021,"Heating, Air Conditioning, and Refrigeration Mechanics and Installers",,40,60,3.5,0,0,0,,,Postsecondary non-degree award,None,Long-term on-the-job training
+49-9041,Industrial Machinery Mechanics,5,550,740,3.4,20,20,40,19.20,25.10,High school diploma or equivalent,None,Long-term on-the-job training
+49-9043,"Maintenance Workers, Machinery",2,60,70,1,0,0,0,21.10,27.30,High school diploma or equivalent,None,Moderate-term on-the-job training
+49-9051,Electrical Power-Line Installers and Repairers,5,230,250,1,0,10,10,21.90,31.30,High school diploma or equivalent,None,Long-term on-the-job training
+49-9052,Telecommunications Line Installers and Repairers,4,110,140,2.8,0,0,10,,,High school diploma or equivalent,None,Long-term on-the-job training
+49-9071,"Maintenance and Repair Workers, General",3,590,690,1.5,10,10,20,10.40,16.00,High school diploma or equivalent,None,Long-term on-the-job training
+49-9096,Riggers,4,50,70,4.4,0,0,0,,,High school diploma or equivalent,None,Short-term on-the-job training
+49-9098,"Helpers--Installation, Maintenance, and Repair Workers",3,120,150,2,0,0,10,10.30,16.10,High school diploma or equivalent,None,Moderate-term on-the-job training
+51-0000,Production Occupations,,2530,2860,1.3,40,60,100,11.40,19.40,,,
+51-1011,First-Line Supervisors of Production and Operating Workers,4,240,260,1,0,0,10,20.30,33.60,Postsecondary non-degree award,Less than 5 years,None
+51-2000,Assemblers and Fabricators,,40,60,2.5,0,0,0,,,,,
+51-3000,Food Processing Workers,,340,370,1,0,10,10,,,,,
+51-3011,Bakers,1,140,160,1.4,0,0,10,8.70,10.70,Less than high school,None,Long-term on-the-job training
+51-3021,Butchers and Meat Cutters,3,110,120,1.1,0,0,0,10.40,15.70,Less than high school,None,Long-term on-the-job training
+51-3092,Food Batchmakers,0,50,50,-0.4,0,0,0,,,High school diploma or equivalent,None,Moderate-term on-the-job training
+51-4000,Metal Workers and Plastic Workers,,450,540,1.9,10,10,20,,,,,
+51-4041,Machinists,4,110,130,2.1,0,0,0,15.30,22.70,High school diploma or equivalent,None,Long-term on-the-job training
+51-4121,"Welders, Cutters, Solderers, and Brazers",4,300,350,1.5,0,10,10,14.70,21.20,High school diploma or equivalent,None,Moderate-term on-the-job training
+51-5100,Printing Workers,,70,70,-0.1,0,0,0,,,,,
+51-5112,Printing Press Operators,,40,40,-0.3,0,0,0,13.20,14.40,High school diploma or equivalent,None,Moderate-term on-the-job training
+51-6000,"Textile, Apparel, and Furnishings Workers",,180,210,1.6,0,0,10,,,,,
+51-6011,Laundry and Dry-Cleaning Workers,1,100,130,2.2,0,0,10,8.10,10.50,Less than high school,None,Short-term on-the-job training
+51-7000,Woodworkers,,110,130,1.9,0,0,0,,,,,
+51-7011,Cabinetmakers and Bench Carpenters,3,90,110,2.2,0,0,0,13.30,16.20,High school diploma or equivalent,None,Moderate-term on-the-job training
+51-8000,Plant and System Operators,,670,760,1.3,10,20,40,,,,,
+51-8013,Power Plant Operators,2,90,70,-1.7,0,0,0,,,High school diploma or equivalent,None,Long-term on-the-job training
+51-8031,Water and Wastewater Treatment Plant and System Operators,4,250,290,1.3,0,10,10,12.40,19.90,High school diploma or equivalent,None,Long-term on-the-job training
+51-8093,"Petroleum Pump System Operators, Refinery Operators, and Gaugers",5,240,310,2.9,10,10,20,23.60,31.00,High school diploma or equivalent,None,Long-term on-the-job training
+51-9000,Other Production Occupations,,420,470,1.1,10,10,20,,,,,
+51-9061,"Inspectors, Testers, Sorters, Samplers, and Weighers",3,110,130,1.4,0,0,0,19.30,25.70,High school diploma or equivalent,None,Moderate-term on-the-job training
+51-9111,Packaging and Filling Machine Operators and Tenders,,40,50,1.9,0,0,0,,,High school diploma or equivalent,None,Moderate-term on-the-job training
+51-9198,Helpers--Production Workers,0,50,50,0.6,0,0,0,10.90,14.70,Less than high school,None,Short-term on-the-job training
+53-0000,Transportation and Material Moving Occupations,,5170,6080,1.8,90,110,200,11.60,19.80,,,
+53-1000,Supervisors of Transportation and Material Moving Workers,,160,180,1.3,0,0,10,,,,,
+53-1021,"First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand",2,50,50,1.1,0,0,0,14.00,23.80,High school diploma or equivalent,Less than 5 years,None
+53-1031,First-Line Supervisors of Transportation and Material-Moving Machine and Vehicle Operators,4,110,120,1.5,0,0,10,24.20,36.70,High school diploma or equivalent,Less than 5 years,None
+53-3000,Motor Vehicle Operators,,3290,3930,2,60,50,120,,,,,
+53-3022,"Bus Drivers, School or Special Client",1,260,280,0.8,0,10,10,11.60,14.10,High school diploma or equivalent,None,Short-term on-the-job training
+53-3032,Heavy and Tractor-Trailer Truck Drivers,5,2350,2860,2.2,50,40,90,16.80,22.20,Postsecondary non-degree award,None,Short-term on-the-job training
+53-3033,Light Truck or Delivery Services Drivers,1,440,500,1.4,10,10,10,8.10,10.30,High school diploma or equivalent,None,Short-term on-the-job training
+53-3041,Taxi Drivers and Chauffeurs,1,100,120,2.8,0,0,0,,,Less than high school,None,Short-term on-the-job training
+53-4000,Rail Transportation Workers,,70,70,0.1,0,0,0,,,,,
+53-6000,Other Transportation Workers,,70,90,2.7,0,0,0,,,,,
+53-6031,Automotive and Watercraft Service Attendants,,40,60,4,0,0,0,8.40,10.40,Less than high school,None,Short-term on-the-job training
+53-7000,Material Moving Workers,,1550,1760,1.4,20,40,70,,,,,
+53-7011,Conveyor Operators and Tenders,,40,40,0.5,0,0,0,,,Less than high school,None,Short-term on-the-job training
+53-7032,Excavating and Loading Machine and Dragline Operators,2,70,80,0.4,0,0,0,16.80,21.90,High school diploma or equivalent,Less than 5 years,Moderate-term on-the-job training
+53-7033,"Loading Machine Operators, Underground Mining",2,50,50,-0.8,0,0,0,21.90,25.50,Less than high school,None,Short-term on-the-job training
+53-7061,Cleaners of Vehicles and Equipment,1,120,150,2.2,0,0,10,8.10,9.50,Less than high school,None,Short-term on-the-job training
+53-7062,"Laborers and Freight, Stock, and Material Movers, Hand",3,650,750,1.5,10,20,30,9.10,13.40,Less than high school,None,Short-term on-the-job training
+53-7064,"Packers and Packagers, Hand",0,60,60,0.2,0,0,0,8.20,8.70,Less than high school,None,Short-term on-the-job training
+53-7071,Gas Compressor and Gas Pumping Station Operators,,40,40,1.9,0,0,0,,,Less than high school,None,Moderate-term on-the-job training
+53-7073,Wellhead Pumpers,5,270,350,2.9,10,10,20,17.70,22.90,Less than high school,Less than 5 years,Moderate-term on-the-job training
+53-7081,Refuse and Recyclable Material Collectors,0,90,100,1,0,0,0,,,Less than high school,None,Short-term on-the-job training
+53-7111,Mine Shuttle Car Operators,2,70,60,-1,0,0,0,20.80,24.40,Less than high school,None,Short-term on-the-job training
