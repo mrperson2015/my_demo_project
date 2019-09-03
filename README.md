@@ -12,6 +12,7 @@ A fun little project that plays with small datasets using different technologies
 # Validated On Systems
 * Windows 10
 * Ubuntu 19.04
+* macOS Majave 10.14.2
 
 # Apache Zeppelin
 Web-based notebook that enables data-driven,  interactive data analytics
