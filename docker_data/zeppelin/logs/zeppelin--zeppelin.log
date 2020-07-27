@@ -194,3 +194,641 @@
  INFO [2019-08-30 04:44:56,932] ({Thread-56} ManagedInterpreterGroup.java[close]:89) - Close InterpreterGroup: jdbc:shared_process
  INFO [2019-08-30 04:44:56,933] ({Thread-34} NotebookRepoSync.java[close]:428) - Closing all notebook storages
  INFO [2019-08-30 04:44:59,947] ({Thread-34} ZeppelinServer.java[run]:264) - Bye
+ WARN [2020-07-27 19:48:00,187] ({main} ZeppelinConfiguration.java[create]:159) - Failed to load configuration, proceeding with a default
+ INFO [2020-07-27 19:48:00,253] ({main} ZeppelinConfiguration.java[create]:171) - Server Host: 0.0.0.0
+ INFO [2020-07-27 19:48:00,254] ({main} ZeppelinConfiguration.java[create]:173) - Server Port: 8080
+ INFO [2020-07-27 19:48:00,255] ({main} ZeppelinConfiguration.java[create]:177) - Context Path: /
+ INFO [2020-07-27 19:48:00,256] ({main} ZeppelinConfiguration.java[create]:178) - Zeppelin Version: 0.9.0-preview1
+ INFO [2020-07-27 19:48:00,291] ({main} Log.java[initialized]:193) - Logging initialized @1176ms to org.eclipse.jetty.util.log.Slf4jLog
+ WARN [2020-07-27 19:48:00,670] ({main} ZeppelinConfiguration.java[getConfigFSDir]:631) - zeppelin.config.fs.dir is not specified, fall back to local conf directory zeppelin.conf.dir
+ INFO [2020-07-27 19:48:00,716] ({main} Credentials.java[loadFromFile]:121) - /zeppelin/conf/credentials.json
+ INFO [2020-07-27 19:48:00,758] ({ImmediateThread-1595879280666} PluginManager.java[loadNotebookRepo]:60) - Loading NotebookRepo Plugin: org.apache.zeppelin.notebook.repo.GitNotebookRepo
+ INFO [2020-07-27 19:48:00,919] ({ImmediateThread-1595879280666} VFSNotebookRepo.java[setNotebookDirectory]:70) - Using notebookDir: /notebook
+ INFO [2020-07-27 19:48:00,965] ({main} ZeppelinServer.java[setupWebAppContext]:488) - warPath is: /zeppelin/zeppelin-web-0.9.0-preview1.war
+ INFO [2020-07-27 19:48:00,966] ({main} ZeppelinServer.java[setupWebAppContext]:501) - ZeppelinServer Webapp path: /zeppelin/webapps
+ INFO [2020-07-27 19:48:01,005] ({main} ZeppelinServer.java[setupWebAppContext]:488) - warPath is: /zeppelin/zeppelin-web-angular-0.9.0-preview1.war
+ INFO [2020-07-27 19:48:01,006] ({main} ZeppelinServer.java[setupWebAppContext]:501) - ZeppelinServer Webapp path: /zeppelin/webapps/next
+ INFO [2020-07-27 19:48:01,055] ({main} NotebookServer.java[<init>]:153) - NotebookServer instantiated: org.apache.zeppelin.socket.NotebookServer@17a7f733
+ INFO [2020-07-27 19:48:01,056] ({main} NotebookServer.java[setNotebook]:164) - Injected NotebookProvider
+ INFO [2020-07-27 19:48:01,059] ({main} NotebookServer.java[setServiceLocator]:158) - Injected ServiceLocator: ServiceLocatorImpl(shared-locator,0,811760110)
+ INFO [2020-07-27 19:48:01,060] ({main} NotebookServer.java[setNotebookService]:171) - Injected NotebookServiceProvider
+ INFO [2020-07-27 19:48:01,061] ({main} NotebookServer.java[setAuthorizationServiceProvider]:178) - Injected NotebookAuthorizationServiceProvider
+ INFO [2020-07-27 19:48:01,062] ({main} NotebookServer.java[setConnectionManagerProvider]:184) - Injected ConnectionManagerProvider
+ INFO [2020-07-27 19:48:01,064] ({main} ZeppelinServer.java[setupClusterManagerServer]:439) - Cluster mode is disabled
+ INFO [2020-07-27 19:48:01,080] ({main} ZeppelinServer.java[main]:251) - Starting zeppelin server
+ INFO [2020-07-27 19:48:01,082] ({main} Server.java[doStart]:370) - jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_252-8u252-b09-1~16.04-b09
+ INFO [2020-07-27 19:48:01,083] ({ImmediateThread-1595879280666} GitNotebookRepo.java[init]:77) - Opening a git repo at '/notebook'
+ INFO [2020-07-27 19:48:01,218] ({ImmediateThread-1595879280666} GitNotebookRepo.java[init]:81) - Git repo /notebook/.git does not exist, creating a new one
+ INFO [2020-07-27 19:48:01,229] ({main} StandardDescriptorProcessor.java[visitServlet]:283) - NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+ INFO [2020-07-27 19:48:01,246] ({main} DefaultSessionIdManager.java[doStart]:365) - DefaultSessionIdManager workerName=node0
+ INFO [2020-07-27 19:48:01,247] ({main} DefaultSessionIdManager.java[doStart]:370) - No SessionScavenger set, using defaults
+ INFO [2020-07-27 19:48:01,255] ({main} HouseKeeper.java[startScavenging]:149) - node0 Scavenging every 600000ms
+ INFO [2020-07-27 19:48:02,557] ({main} ContextHandler.java[doStart]:855) - Started o.e.j.w.WebAppContext@3eb25e1a{zeppelin-web,/,jar:file:///zeppelin/zeppelin-web-0.9.0-preview1.war!/,AVAILABLE}{/zeppelin/zeppelin-web-0.9.0-preview1.war}
+ INFO [2020-07-27 19:48:02,578] ({main} StandardDescriptorProcessor.java[visitServlet]:283) - NO JSP Support for /next, did not find org.eclipse.jetty.jsp.JettyJspServlet
+ INFO [2020-07-27 19:48:02,938] ({main} ContextHandler.java[doStart]:855) - Started o.e.j.w.WebAppContext@4116aac9{zeppelin-web-angular,/next,jar:file:///zeppelin/zeppelin-web-angular-0.9.0-preview1.war!/,AVAILABLE}{/zeppelin/zeppelin-web-angular-0.9.0-preview1.war}
+ INFO [2020-07-27 19:48:02,967] ({main} AbstractConnector.java[doStart]:292) - Started ServerConnector@33c7e1bb{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+ INFO [2020-07-27 19:48:02,969] ({main} Server.java[doStart]:410) - Started @3859ms
+ INFO [2020-07-27 19:48:07,970] ({main} ZeppelinServer.java[main]:265) - Done, zeppelin server started
+ INFO [2020-07-27 19:48:41,921] ({qtp101478235-15} NoAuthenticationService.java[<init>]:38) - NoAuthenticationService is initialized
+ WARN [2020-07-27 19:48:41,945] ({qtp101478235-15} SecurityRestApi.java[ticket]:89) - {"status":"OK","message":"","body":{"principal":"anonymous","ticket":"anonymous","roles":"[]"}}
+ INFO [2020-07-27 19:48:42,051] ({qtp101478235-14} NotebookServer.java[onOpen]:243) - New connection from 172.21.0.1:40430
+ WARN [2020-07-27 19:48:42,070] ({qtp101478235-14} VFSNotebookRepo.java[listFolder]:108) - Skip hidden folder: /notebook/.git
+ WARN [2020-07-27 19:48:42,077] ({qtp101478235-26} ClusterRestApi.java[<init>]:61) - Cluster mode is disabled, ClusterRestApi won't work
+ WARN [2020-07-27 19:48:42,093] ({qtp101478235-14} ZeppelinConfiguration.java[getConfigFSDir]:631) - zeppelin.config.fs.dir is not specified, fall back to local conf directory zeppelin.conf.dir
+ WARN [2020-07-27 19:48:42,094] ({qtp101478235-14} ZeppelinConfiguration.java[getConfigFSDir]:631) - zeppelin.config.fs.dir is not specified, fall back to local conf directory zeppelin.conf.dir
+ WARN [2020-07-27 19:48:42,095] ({qtp101478235-14} ZeppelinConfiguration.java[getConfigFSDir]:631) - zeppelin.config.fs.dir is not specified, fall back to local conf directory zeppelin.conf.dir
+ INFO [2020-07-27 19:48:42,096] ({qtp101478235-14} LocalConfigStorage.java[loadNotebookAuthorization]:86) - Load notebook authorization from file: /zeppelin/conf/notebook-authorization.json
+ INFO [2020-07-27 19:48:42,442] ({qtp101478235-13} InterpreterSettingManager.java[<init>]:186) - Using RecoveryStorage: org.apache.zeppelin.interpreter.recovery.NullRecoveryStorage
+ INFO [2020-07-27 19:48:42,444] ({qtp101478235-13} InterpreterSettingManager.java[<init>]:192) - Using LifecycleManager: org.apache.zeppelin.interpreter.lifecycle.NullLifecycleManager
+ INFO [2020-07-27 19:48:42,453] ({Thread-16} RemoteInterpreterEventServer.java[run]:104) - InterpreterEventServer is starting at 172.21.0.3:45477
+ INFO [2020-07-27 19:48:42,948] ({qtp101478235-13} RemoteInterpreterEventServer.java[start]:128) - RemoteInterpreterEventServer is started
+ INFO [2020-07-27 19:48:42,977] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: bigquery
+ INFO [2020-07-27 19:48:42,987] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: kylin
+ INFO [2020-07-27 19:48:42,994] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: hazelcastjet
+ INFO [2020-07-27 19:48:43,004] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: spark
+ INFO [2020-07-27 19:48:43,012] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: livy
+ INFO [2020-07-27 19:48:43,017] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: java
+ INFO [2020-07-27 19:48:43,023] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: jupyter
+ WARN [2020-07-27 19:48:43,068] ({qtp101478235-13} InterpreterSettingManager.java[loadInterpreterSettingFromDefaultDir]:364) - No interpreter-setting.json found in /zeppelin/interpreter/scio
+ INFO [2020-07-27 19:48:43,073] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: mongodb
+ INFO [2020-07-27 19:48:43,079] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: submarine
+ INFO [2020-07-27 19:48:43,084] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: flink
+ INFO [2020-07-27 19:48:43,089] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: geode
+ INFO [2020-07-27 19:48:43,094] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: cassandra
+ INFO [2020-07-27 19:48:43,098] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: beam
+ INFO [2020-07-27 19:48:43,103] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: hbase
+ INFO [2020-07-27 19:48:43,107] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: lens
+ INFO [2020-07-27 19:48:43,110] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: ksql
+ INFO [2020-07-27 19:48:43,115] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: jdbc
+ INFO [2020-07-27 19:48:43,120] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: ignite
+ INFO [2020-07-27 19:48:43,123] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: file
+ INFO [2020-07-27 19:48:43,127] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: neo4j
+ INFO [2020-07-27 19:48:43,131] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: sparql
+ INFO [2020-07-27 19:48:43,135] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: kotlin
+ INFO [2020-07-27 19:48:43,139] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: groovy
+ INFO [2020-07-27 19:48:43,142] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: pig
+ INFO [2020-07-27 19:48:43,146] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: scalding
+ INFO [2020-07-27 19:48:43,150] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: sap
+ INFO [2020-07-27 19:48:43,154] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: alluxio
+ INFO [2020-07-27 19:48:43,158] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: sh
+ INFO [2020-07-27 19:48:43,161] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: md
+ INFO [2020-07-27 19:48:43,165] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: elasticsearch
+ INFO [2020-07-27 19:48:43,169] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: r
+ INFO [2020-07-27 19:48:43,173] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: angular
+ INFO [2020-07-27 19:48:43,176] ({qtp101478235-13} InterpreterSettingManager.java[registerInterpreterSetting]:463) - Register InterpreterSettingTemplate: python
+ INFO [2020-07-27 19:48:43,177] ({qtp101478235-13} LocalConfigStorage.java[loadInterpreterSettings]:69) - Load Interpreter Setting from file: /zeppelin/conf/interpreter.json
+ INFO [2020-07-27 19:48:43,244] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting ignite from interpreter.json
+ INFO [2020-07-27 19:48:43,245] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting python from interpreter.json
+ INFO [2020-07-27 19:48:43,246] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting sap from interpreter.json
+ INFO [2020-07-27 19:48:43,248] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting jdbc from interpreter.json
+ INFO [2020-07-27 19:48:43,249] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting lens from interpreter.json
+ INFO [2020-07-27 19:48:43,250] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting pig from interpreter.json
+ INFO [2020-07-27 19:48:43,251] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting flink from interpreter.json
+ INFO [2020-07-27 19:48:43,251] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting angular from interpreter.json
+ INFO [2020-07-27 19:48:43,253] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting livy from interpreter.json
+ INFO [2020-07-27 19:48:43,253] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting groovy from interpreter.json
+ INFO [2020-07-27 19:48:43,254] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting file from interpreter.json
+ INFO [2020-07-27 19:48:43,255] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting neo4j from interpreter.json
+ INFO [2020-07-27 19:48:43,255] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting elasticsearch from interpreter.json
+ INFO [2020-07-27 19:48:43,257] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting spark from interpreter.json
+ INFO [2020-07-27 19:48:43,258] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting sh from interpreter.json
+ INFO [2020-07-27 19:48:43,259] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting cassandra from interpreter.json
+ INFO [2020-07-27 19:48:43,260] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting md from interpreter.json
+ INFO [2020-07-27 19:48:43,260] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting alluxio from interpreter.json
+ INFO [2020-07-27 19:48:43,261] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting bigquery from interpreter.json
+ INFO [2020-07-27 19:48:43,262] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting hbase from interpreter.json
+ INFO [2020-07-27 19:48:43,263] ({qtp101478235-13} InterpreterSettingManager.java[loadFromFile]:284) - Create Interpreter Setting kylin from interpreter.json
+ INFO [2020-07-27 19:48:43,312] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter ignite status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,315] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter beam status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,315] ({Thread-17} InterpreterSetting.java[setStatus]:740) - Set interpreter ignite status to READY
+ INFO [2020-07-27 19:48:43,317] ({Thread-18} InterpreterSetting.java[setStatus]:740) - Set interpreter beam status to READY
+ INFO [2020-07-27 19:48:43,317] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter geode status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,319] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter jdbc status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,339] ({Thread-19} InterpreterSetting.java[setStatus]:740) - Set interpreter geode status to READY
+ INFO [2020-07-27 19:48:43,341] ({Thread-20} InterpreterSetting.java[setStatus]:740) - Set interpreter jdbc status to READY
+ INFO [2020-07-27 19:48:43,341] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter lens status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,347] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter pig status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,348] ({Thread-21} InterpreterSetting.java[setStatus]:740) - Set interpreter lens status to READY
+ INFO [2020-07-27 19:48:43,351] ({Thread-22} InterpreterSetting.java[setStatus]:740) - Set interpreter pig status to READY
+ INFO [2020-07-27 19:48:43,351] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter file status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,356] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter jupyter status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,356] ({Thread-23} InterpreterSetting.java[setStatus]:740) - Set interpreter file status to READY
+ INFO [2020-07-27 19:48:43,357] ({Thread-24} InterpreterSetting.java[setStatus]:740) - Set interpreter jupyter status to READY
+ INFO [2020-07-27 19:48:43,357] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter java status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,360] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter elasticsearch status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,360] ({Thread-25} InterpreterSetting.java[setStatus]:740) - Set interpreter java status to READY
+ INFO [2020-07-27 19:48:43,361] ({Thread-26} InterpreterSetting.java[setStatus]:740) - Set interpreter elasticsearch status to READY
+ INFO [2020-07-27 19:48:43,361] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter submarine status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,366] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter sh status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,366] ({Thread-27} InterpreterSetting.java[setStatus]:740) - Set interpreter submarine status to READY
+ INFO [2020-07-27 19:48:43,367] ({Thread-28} InterpreterSetting.java[setStatus]:740) - Set interpreter sh status to READY
+ INFO [2020-07-27 19:48:43,367] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter spark status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,370] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter md status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,370] ({Thread-29} InterpreterSetting.java[run]:953) - Start to download dependencies for interpreter: spark
+ INFO [2020-07-27 19:48:43,371] ({Thread-30} InterpreterSetting.java[setStatus]:740) - Set interpreter md status to READY
+ INFO [2020-07-27 19:48:43,371] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter hazelcastjet status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,374] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter alluxio status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,374] ({Thread-31} InterpreterSetting.java[setStatus]:740) - Set interpreter hazelcastjet status to READY
+ INFO [2020-07-27 19:48:43,375] ({Thread-32} InterpreterSetting.java[setStatus]:740) - Set interpreter alluxio status to READY
+ INFO [2020-07-27 19:48:43,375] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter bigquery status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,379] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter mongodb status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,379] ({Thread-33} InterpreterSetting.java[setStatus]:740) - Set interpreter bigquery status to READY
+ INFO [2020-07-27 19:48:43,380] ({Thread-34} InterpreterSetting.java[setStatus]:740) - Set interpreter mongodb status to READY
+ INFO [2020-07-27 19:48:43,380] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter hbase status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,383] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter python status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,384] ({Thread-35} InterpreterSetting.java[setStatus]:740) - Set interpreter hbase status to READY
+ INFO [2020-07-27 19:48:43,384] ({Thread-36} InterpreterSetting.java[setStatus]:740) - Set interpreter python status to READY
+ INFO [2020-07-27 19:48:43,384] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter sap status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,387] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter kotlin status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,387] ({Thread-37} InterpreterSetting.java[setStatus]:740) - Set interpreter sap status to READY
+ INFO [2020-07-27 19:48:43,388] ({Thread-38} InterpreterSetting.java[setStatus]:740) - Set interpreter kotlin status to READY
+ INFO [2020-07-27 19:48:43,388] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter scalding status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,390] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter flink status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,391] ({Thread-39} InterpreterSetting.java[setStatus]:740) - Set interpreter scalding status to READY
+ INFO [2020-07-27 19:48:43,391] ({Thread-40} InterpreterSetting.java[setStatus]:740) - Set interpreter flink status to READY
+ INFO [2020-07-27 19:48:43,391] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter angular status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,395] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter ksql status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,395] ({Thread-41} InterpreterSetting.java[setStatus]:740) - Set interpreter angular status to READY
+ INFO [2020-07-27 19:48:43,396] ({Thread-42} InterpreterSetting.java[setStatus]:740) - Set interpreter ksql status to READY
+ INFO [2020-07-27 19:48:43,396] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter livy status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,402] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter r status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,403] ({Thread-43} InterpreterSetting.java[setStatus]:740) - Set interpreter livy status to READY
+ INFO [2020-07-27 19:48:43,404] ({Thread-44} InterpreterSetting.java[setStatus]:740) - Set interpreter r status to READY
+ INFO [2020-07-27 19:48:43,404] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter neo4j status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,407] ({Thread-29} InterpreterSetting.java[run]:966) - Finish downloading dependencies for interpreter: spark
+ INFO [2020-07-27 19:48:43,407] ({Thread-45} InterpreterSetting.java[setStatus]:740) - Set interpreter neo4j status to READY
+ INFO [2020-07-27 19:48:43,407] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter groovy status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,408] ({Thread-29} InterpreterSetting.java[setStatus]:740) - Set interpreter spark status to READY
+ INFO [2020-07-27 19:48:43,409] ({Thread-46} InterpreterSetting.java[setStatus]:740) - Set interpreter groovy status to READY
+ INFO [2020-07-27 19:48:43,409] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter cassandra status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,412] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter sparql status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,412] ({Thread-47} InterpreterSetting.java[setStatus]:740) - Set interpreter cassandra status to READY
+ INFO [2020-07-27 19:48:43,413] ({Thread-48} InterpreterSetting.java[setStatus]:740) - Set interpreter sparql status to READY
+ INFO [2020-07-27 19:48:43,413] ({qtp101478235-13} InterpreterSetting.java[setStatus]:740) - Set interpreter kylin status to DOWNLOADING_DEPENDENCIES
+ INFO [2020-07-27 19:48:43,417] ({Thread-49} InterpreterSetting.java[setStatus]:740) - Set interpreter kylin status to READY
+ INFO [2020-07-27 19:48:43,417] ({qtp101478235-13} LocalConfigStorage.java[save]:59) - Save Interpreter Setting to /zeppelin/conf/interpreter.json
+ INFO [2020-07-27 19:48:43,509] ({qtp101478235-13} LuceneSearch.java[<init>]:94) - Use /tmp/zeppelin-index for storing lucene search index
+ INFO [2020-07-27 19:48:43,679] ({qtp101478235-13} Notebook.java[getNotesInfo]:557) - Start getNoteList
+ INFO [2020-07-27 19:48:43,682] ({qtp101478235-13} Notebook.java[getNotesInfo]:581) - Finish getNoteList
+ INFO [2020-07-27 19:48:45,995] ({qtp101478235-15} Helium.java[loadConf]:140) - Add helium local registry /zeppelin/helium
+ WARN [2020-07-27 19:48:45,998] ({qtp101478235-15} Helium.java[loadConf]:148) - /zeppelin/conf/helium.json does not exists
+ INFO [2020-07-27 19:48:46,136] ({qtp101478235-18} InterpreterSetting.java[getOrCreateInterpreterGroup]:466) - Create InterpreterGroup with groupId: md-shared_process for user: anonymous and note: 2FF44RNWS
+ INFO [2020-07-27 19:48:46,140] ({qtp101478235-18} InterpreterSetting.java[createInterpreters]:821) - Interpreter org.apache.zeppelin.markdown.Markdown created for user: anonymous, sessionId: shared_session
+ INFO [2020-07-27 19:48:46,142] ({qtp101478235-18} ManagedInterpreterGroup.java[getOrCreateSession]:174) - Create Session: shared_session in InterpreterGroup: md-shared_process for user: anonymous
+ INFO [2020-07-27 19:48:46,143] ({qtp101478235-18} InterpreterSetting.java[getOrCreateInterpreterGroup]:466) - Create InterpreterGroup with groupId: spark-shared_process for user: anonymous and note: 2FF44RNWS
+ INFO [2020-07-27 19:48:46,143] ({qtp101478235-18} InterpreterSetting.java[createInterpreters]:821) - Interpreter org.apache.zeppelin.spark.SparkInterpreter created for user: anonymous, sessionId: shared_session
+ INFO [2020-07-27 19:48:46,144] ({qtp101478235-18} InterpreterSetting.java[createInterpreters]:821) - Interpreter org.apache.zeppelin.spark.SparkSqlInterpreter created for user: anonymous, sessionId: shared_session
+ INFO [2020-07-27 19:48:46,144] ({qtp101478235-18} InterpreterSetting.java[createInterpreters]:821) - Interpreter org.apache.zeppelin.spark.PySparkInterpreter created for user: anonymous, sessionId: shared_session
+ INFO [2020-07-27 19:48:46,145] ({qtp101478235-18} InterpreterSetting.java[createInterpreters]:821) - Interpreter org.apache.zeppelin.spark.IPySparkInterpreter created for user: anonymous, sessionId: shared_session
+ INFO [2020-07-27 19:48:46,146] ({qtp101478235-18} InterpreterSetting.java[createInterpreters]:821) - Interpreter org.apache.zeppelin.spark.SparkRInterpreter created for user: anonymous, sessionId: shared_session
+ INFO [2020-07-27 19:48:46,147] ({qtp101478235-18} InterpreterSetting.java[createInterpreters]:821) - Interpreter org.apache.zeppelin.spark.SparkIRInterpreter created for user: anonymous, sessionId: shared_session
+ INFO [2020-07-27 19:48:46,148] ({qtp101478235-18} InterpreterSetting.java[createInterpreters]:821) - Interpreter org.apache.zeppelin.spark.SparkShinyInterpreter created for user: anonymous, sessionId: shared_session
+ INFO [2020-07-27 19:48:46,149] ({qtp101478235-18} InterpreterSetting.java[createInterpreters]:821) - Interpreter org.apache.zeppelin.spark.KotlinSparkInterpreter created for user: anonymous, sessionId: shared_session
+ INFO [2020-07-27 19:48:46,150] ({qtp101478235-18} ManagedInterpreterGroup.java[getOrCreateSession]:174) - Create Session: shared_session in InterpreterGroup: spark-shared_process for user: anonymous
+ INFO [2020-07-27 19:48:46,151] ({qtp101478235-18} InterpreterSetting.java[getOrCreateInterpreterGroup]:466) - Create InterpreterGroup with groupId: jdbc-shared_process for user: anonymous and note: 2FF44RNWS
+ INFO [2020-07-27 19:48:46,152] ({qtp101478235-18} InterpreterSetting.java[createInterpreters]:821) - Interpreter org.apache.zeppelin.jdbc.JDBCInterpreter created for user: anonymous, sessionId: shared_session
+ INFO [2020-07-27 19:48:46,152] ({qtp101478235-18} ManagedInterpreterGroup.java[getOrCreateSession]:174) - Create Session: shared_session in InterpreterGroup: jdbc-shared_process for user: anonymous
+ WARN [2020-07-27 19:48:46,241] ({qtp101478235-18} GitNotebookRepo.java[revisionHistory]:210) - No Head found for Basic Curation Demo_2FF44RNWS.zpln, No HEAD exists and no explicit starting revision was specified
+ INFO [2020-07-27 19:48:52,336] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-022330_767586551 of note: 2FF44RNWS
+ INFO [2020-07-27 19:48:52,338] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:48:52,379] ({qtp101478235-67} SchedulerFactory.java[<init>]:62) - Scheduler Thread Pool Size: 100
+ INFO [2020-07-27 19:48:52,391] ({SchedulerFactory2} AbstractScheduler.java[runJob]:125) - Job 20190829-022330_767586551 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:48:52,392] ({SchedulerFactory2} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-022330_767586551, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:48:52,393] ({SchedulerFactory2} ManagedInterpreterGroup.java[getOrCreateInterpreterProcess]:62) - Create InterpreterProcess for InterpreterGroup: md-shared_process
+ INFO [2020-07-27 19:48:52,395] ({SchedulerFactory2} PluginManager.java[loadInterpreterLauncher]:141) - Loading Interpreter Launcher Plugin: StandardInterpreterLauncher
+ INFO [2020-07-27 19:48:52,397] ({SchedulerFactory2} StandardInterpreterLauncher.java[launch]:49) - Launching Interpreter: md
+ INFO [2020-07-27 19:48:52,411] ({SchedulerFactory2} ProcessLauncher.java[transition]:109) - Process state is transitioned to LAUNCHED
+ INFO [2020-07-27 19:48:52,412] ({SchedulerFactory2} ProcessLauncher.java[launch]:96) - Process is launched: [/zeppelin/bin/interpreter.sh, -d, /zeppelin/interpreter/md, -c, 172.21.0.3, -p, 45477, -r, :, -i, md-shared_process, -l, /zeppelin/local-repo/md, -g, md]
+ INFO [2020-07-27 19:48:52,440] ({Exec Stream Pumper} ProcessLauncher.java[processLine]:188) - Interpreter launch command:  /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding=UTF-8 -Dlog4j.configuration=file:///zeppelin/conf/log4j.properties -Dzeppelin.log.file='/logs/zeppelin-interpreter-md-shared_process--zeppelin.log' -Xms1024m -Xmx2048m -XX:MaxPermSize=512m -cp ":/zeppelin/interpreter/md/*::/zeppelin/interpreter/zeppelin-interpreter-shaded-0.9.0-preview1.jar" org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer 172.21.0.3 45477 "md-shared_process" :
+ INFO [2020-07-27 19:48:53,018] ({pool-7-thread-1} ProcessLauncher.java[transition]:109) - Process state is transitioned to RUNNING
+ INFO [2020-07-27 19:48:53,208] ({SchedulerFactory2} RemoteInterpreter.java[call]:171) - Create RemoteInterpreter org.apache.zeppelin.markdown.Markdown
+ INFO [2020-07-27 19:48:53,389] ({SchedulerFactory2} RemoteInterpreter.java[call]:141) - Open RemoteInterpreter org.apache.zeppelin.markdown.Markdown
+ INFO [2020-07-27 19:48:53,390] ({SchedulerFactory2} RemoteInterpreter.java[pushAngularObjectRegistryToRemote]:431) - Push local angular object registry from ZeppelinServer to remote interpreter group md-shared_process
+ INFO [2020-07-27 19:48:54,159] ({SchedulerFactory2} NotebookServer.java[onStatusChange]:1899) - Job 20190829-022330_767586551 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:48:54,160] ({SchedulerFactory2} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:48:54,195] ({SchedulerFactory2} AbstractScheduler.java[runJob]:152) - Job 20190829-022330_767586551 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:48:54,234] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-032751_1927835622 of note: 2FF44RNWS
+ INFO [2020-07-27 19:48:54,236] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:48:54,272] ({SchedulerFactory2} AbstractScheduler.java[runJob]:125) - Job 20190830-032751_1927835622 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:48:54,273] ({SchedulerFactory2} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-032751_1927835622, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:48:54,286] ({SchedulerFactory2} NotebookServer.java[onStatusChange]:1899) - Job 20190830-032751_1927835622 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:48:54,288] ({SchedulerFactory2} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:48:54,320] ({SchedulerFactory2} AbstractScheduler.java[runJob]:152) - Job 20190830-032751_1927835622 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:48:54,371] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-133856_759055540 of note: 2FF44RNWS
+ INFO [2020-07-27 19:48:54,373] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:48:54,408] ({SchedulerFactory3} AbstractScheduler.java[runJob]:125) - Job 20190829-133856_759055540 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:48:54,411] ({SchedulerFactory3} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-133856_759055540, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:48:54,426] ({SchedulerFactory3} NotebookServer.java[onStatusChange]:1899) - Job 20190829-133856_759055540 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:48:54,427] ({SchedulerFactory3} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:48:54,463] ({SchedulerFactory3} AbstractScheduler.java[runJob]:152) - Job 20190829-133856_759055540 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:48:54,508] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-012730_906473588 of note: 2FF44RNWS
+ INFO [2020-07-27 19:48:54,509] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:48:54,561] ({SchedulerFactory4} AbstractScheduler.java[runJob]:125) - Job 20190829-012730_906473588 started by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:48:54,564] ({SchedulerFactory4} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-012730_906473588, interpreter: org.apache.zeppelin.spark.PySparkInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:48:54,565] ({SchedulerFactory4} ManagedInterpreterGroup.java[getOrCreateInterpreterProcess]:62) - Create InterpreterProcess for InterpreterGroup: spark-shared_process
+ INFO [2020-07-27 19:48:54,566] ({SchedulerFactory4} PluginManager.java[loadInterpreterLauncher]:141) - Loading Interpreter Launcher Plugin: SparkInterpreterLauncher
+ INFO [2020-07-27 19:48:54,570] ({SchedulerFactory4} StandardInterpreterLauncher.java[launch]:49) - Launching Interpreter: spark
+ INFO [2020-07-27 19:48:54,572] ({SchedulerFactory4} SparkInterpreterLauncher.java[buildEnvFromProperties]:185) - Run Spark under non-secure mode as no keytab and principal is specified
+ INFO [2020-07-27 19:48:54,574] ({SchedulerFactory4} ProcessLauncher.java[transition]:109) - Process state is transitioned to LAUNCHED
+ INFO [2020-07-27 19:48:54,574] ({SchedulerFactory4} ProcessLauncher.java[launch]:96) - Process is launched: [/zeppelin/bin/interpreter.sh, -d, /zeppelin/interpreter/spark, -c, 172.21.0.3, -p, 45477, -r, :, -i, spark-shared_process, -l, /zeppelin/local-repo/spark, -g, spark]
+ INFO [2020-07-27 19:48:54,622] ({Exec Stream Pumper} ProcessLauncher.java[processLine]:188) - Interpreter launch command:  /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding=UTF-8 -Dlog4j.configuration=file:///zeppelin/conf/log4j.properties -Dzeppelin.log.file='/logs/zeppelin-interpreter-spark-shared_process--zeppelin.log' -Xms1024m -Xmx2048m -XX:MaxPermSize=512m -cp ":/zeppelin/local-repo/spark/*:/zeppelin/interpreter/spark/dep/*:/zeppelin/interpreter/spark/*::/zeppelin/interpreter/zeppelin-interpreter-shaded-0.9.0-preview1.jar" org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer 172.21.0.3 45477 "spark-shared_process" :
+ INFO [2020-07-27 19:48:55,237] ({pool-7-thread-2} ProcessLauncher.java[transition]:109) - Process state is transitioned to RUNNING
+ INFO [2020-07-27 19:48:55,241] ({SchedulerFactory4} RemoteInterpreter.java[call]:171) - Create RemoteInterpreter org.apache.zeppelin.spark.SparkInterpreter
+ INFO [2020-07-27 19:48:55,370] ({SchedulerFactory4} RemoteInterpreter.java[call]:171) - Create RemoteInterpreter org.apache.zeppelin.spark.SparkSqlInterpreter
+ INFO [2020-07-27 19:48:55,374] ({SchedulerFactory4} RemoteInterpreter.java[call]:171) - Create RemoteInterpreter org.apache.zeppelin.spark.PySparkInterpreter
+ INFO [2020-07-27 19:48:55,382] ({SchedulerFactory4} RemoteInterpreter.java[call]:171) - Create RemoteInterpreter org.apache.zeppelin.spark.IPySparkInterpreter
+ INFO [2020-07-27 19:48:55,392] ({SchedulerFactory4} RemoteInterpreter.java[call]:171) - Create RemoteInterpreter org.apache.zeppelin.spark.SparkRInterpreter
+ INFO [2020-07-27 19:48:55,399] ({SchedulerFactory4} RemoteInterpreter.java[call]:171) - Create RemoteInterpreter org.apache.zeppelin.spark.SparkIRInterpreter
+ INFO [2020-07-27 19:48:55,405] ({SchedulerFactory4} RemoteInterpreter.java[call]:171) - Create RemoteInterpreter org.apache.zeppelin.spark.SparkShinyInterpreter
+ INFO [2020-07-27 19:48:55,411] ({SchedulerFactory4} RemoteInterpreter.java[call]:171) - Create RemoteInterpreter org.apache.zeppelin.spark.KotlinSparkInterpreter
+ INFO [2020-07-27 19:48:55,568] ({SchedulerFactory4} RemoteInterpreter.java[call]:141) - Open RemoteInterpreter org.apache.zeppelin.spark.PySparkInterpreter
+ INFO [2020-07-27 19:48:55,569] ({SchedulerFactory4} RemoteInterpreter.java[pushAngularObjectRegistryToRemote]:431) - Push local angular object registry from ZeppelinServer to remote interpreter group spark-shared_process
+ INFO [2020-07-27 19:49:22,039] ({SchedulerFactory4} NotebookServer.java[onStatusChange]:1899) - Job 20190829-012730_906473588 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:22,040] ({SchedulerFactory4} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:22,079] ({SchedulerFactory4} AbstractScheduler.java[runJob]:152) - Job 20190829-012730_906473588 finished by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:49:22,090] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-032654_123213654 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:22,091] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:22,122] ({SchedulerFactory3} AbstractScheduler.java[runJob]:125) - Job 20190830-032654_123213654 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:22,124] ({SchedulerFactory3} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-032654_123213654, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:22,135] ({SchedulerFactory3} NotebookServer.java[onStatusChange]:1899) - Job 20190830-032654_123213654 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:22,136] ({SchedulerFactory3} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:22,165] ({SchedulerFactory3} AbstractScheduler.java[runJob]:152) - Job 20190830-032654_123213654 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:22,221] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-134046_28846703 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:22,222] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:22,253] ({SchedulerFactory5} AbstractScheduler.java[runJob]:125) - Job 20190829-134046_28846703 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:22,254] ({SchedulerFactory5} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-134046_28846703, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:22,274] ({SchedulerFactory5} NotebookServer.java[onStatusChange]:1899) - Job 20190829-134046_28846703 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:22,276] ({SchedulerFactory5} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:22,315] ({SchedulerFactory5} AbstractScheduler.java[runJob]:152) - Job 20190829-134046_28846703 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:22,353] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-024003_1202704084 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:22,355] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:22,388] ({SchedulerFactory6} AbstractScheduler.java[runJob]:125) - Job 20190829-024003_1202704084 started by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:49:22,389] ({SchedulerFactory6} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-024003_1202704084, interpreter: org.apache.zeppelin.spark.PySparkInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:26,138] ({SchedulerFactory6} NotebookServer.java[onStatusChange]:1899) - Job 20190829-024003_1202704084 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:26,139] ({SchedulerFactory6} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:26,168] ({SchedulerFactory6} AbstractScheduler.java[runJob]:152) - Job 20190829-024003_1202704084 finished by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:49:26,191] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-032738_111341904 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:26,193] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:26,220] ({SchedulerFactory4} AbstractScheduler.java[runJob]:125) - Job 20190830-032738_111341904 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:26,222] ({SchedulerFactory4} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-032738_111341904, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:26,230] ({SchedulerFactory4} NotebookServer.java[onStatusChange]:1899) - Job 20190830-032738_111341904 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:26,231] ({SchedulerFactory4} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:26,257] ({SchedulerFactory4} AbstractScheduler.java[runJob]:152) - Job 20190830-032738_111341904 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:26,320] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-135305_726851865 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:26,322] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:26,349] ({SchedulerFactory7} AbstractScheduler.java[runJob]:125) - Job 20190829-135305_726851865 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:26,350] ({SchedulerFactory7} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-135305_726851865, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:26,359] ({SchedulerFactory7} NotebookServer.java[onStatusChange]:1899) - Job 20190829-135305_726851865 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:26,360] ({SchedulerFactory7} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:26,387] ({SchedulerFactory7} AbstractScheduler.java[runJob]:152) - Job 20190829-135305_726851865 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:26,449] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-030246_97873831 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:26,451] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:26,480] ({SchedulerFactory8} AbstractScheduler.java[runJob]:125) - Job 20190829-030246_97873831 started by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:49:26,481] ({SchedulerFactory8} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-030246_97873831, interpreter: org.apache.zeppelin.jdbc.JDBCInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:26,482] ({SchedulerFactory8} ManagedInterpreterGroup.java[getOrCreateInterpreterProcess]:62) - Create InterpreterProcess for InterpreterGroup: jdbc-shared_process
+ INFO [2020-07-27 19:49:26,483] ({SchedulerFactory8} PluginManager.java[loadInterpreterLauncher]:141) - Loading Interpreter Launcher Plugin: StandardInterpreterLauncher
+ INFO [2020-07-27 19:49:26,484] ({SchedulerFactory8} StandardInterpreterLauncher.java[launch]:49) - Launching Interpreter: jdbc
+ INFO [2020-07-27 19:49:26,485] ({SchedulerFactory8} ProcessLauncher.java[transition]:109) - Process state is transitioned to LAUNCHED
+ INFO [2020-07-27 19:49:26,486] ({SchedulerFactory8} ProcessLauncher.java[launch]:96) - Process is launched: [/zeppelin/bin/interpreter.sh, -d, /zeppelin/interpreter/jdbc, -c, 172.21.0.3, -p, 45477, -r, :, -i, jdbc-shared_process, -l, /zeppelin/local-repo/jdbc, -g, jdbc]
+ INFO [2020-07-27 19:49:26,511] ({Exec Stream Pumper} ProcessLauncher.java[processLine]:188) - Interpreter launch command:  /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding=UTF-8 -Dlog4j.configuration=file:///zeppelin/conf/log4j.properties -Dzeppelin.log.file='/logs/zeppelin-interpreter-jdbc-shared_process--zeppelin.log' -Xms1024m -Xmx2048m -XX:MaxPermSize=512m -cp ":/zeppelin/interpreter/jdbc/*::/zeppelin/interpreter/zeppelin-interpreter-shaded-0.9.0-preview1.jar" org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer 172.21.0.3 45477 "jdbc-shared_process" :
+ INFO [2020-07-27 19:49:26,950] ({pool-7-thread-3} ProcessLauncher.java[transition]:109) - Process state is transitioned to RUNNING
+ INFO [2020-07-27 19:49:26,953] ({SchedulerFactory8} RemoteInterpreter.java[call]:171) - Create RemoteInterpreter org.apache.zeppelin.jdbc.JDBCInterpreter
+ INFO [2020-07-27 19:49:27,085] ({SchedulerFactory8} RemoteInterpreter.java[call]:141) - Open RemoteInterpreter org.apache.zeppelin.jdbc.JDBCInterpreter
+ INFO [2020-07-27 19:49:27,086] ({SchedulerFactory8} RemoteInterpreter.java[pushAngularObjectRegistryToRemote]:431) - Push local angular object registry from ZeppelinServer to remote interpreter group jdbc-shared_process
+ INFO [2020-07-27 19:49:27,539] ({SchedulerFactory8} NotebookServer.java[onStatusChange]:1899) - Job 20190829-030246_97873831 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:27,540] ({SchedulerFactory8} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:27,569] ({SchedulerFactory8} AbstractScheduler.java[runJob]:152) - Job 20190829-030246_97873831 finished by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:49:27,581] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-032949_1545505914 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:27,582] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:27,610] ({SchedulerFactory5} AbstractScheduler.java[runJob]:125) - Job 20190830-032949_1545505914 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:27,611] ({SchedulerFactory5} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-032949_1545505914, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:27,619] ({SchedulerFactory5} NotebookServer.java[onStatusChange]:1899) - Job 20190830-032949_1545505914 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:27,620] ({SchedulerFactory5} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:27,648] ({SchedulerFactory5} AbstractScheduler.java[runJob]:152) - Job 20190830-032949_1545505914 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:27,710] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-140618_1631334414 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:27,711] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:27,739] ({SchedulerFactory9} AbstractScheduler.java[runJob]:125) - Job 20190829-140618_1631334414 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:27,741] ({SchedulerFactory9} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-140618_1631334414, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:27,750] ({SchedulerFactory9} NotebookServer.java[onStatusChange]:1899) - Job 20190829-140618_1631334414 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:27,751] ({SchedulerFactory9} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:27,777] ({SchedulerFactory9} AbstractScheduler.java[runJob]:152) - Job 20190829-140618_1631334414 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:27,838] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-031029_17424089 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:27,839] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:27,868] ({SchedulerFactory6} AbstractScheduler.java[runJob]:125) - Job 20190829-031029_17424089 started by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:49:27,869] ({SchedulerFactory6} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-031029_17424089, interpreter: org.apache.zeppelin.jdbc.JDBCInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:27,908] ({SchedulerFactory6} NotebookServer.java[onStatusChange]:1899) - Job 20190829-031029_17424089 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:27,910] ({SchedulerFactory6} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:27,941] ({SchedulerFactory6} AbstractScheduler.java[runJob]:152) - Job 20190829-031029_17424089 finished by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:49:27,967] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-032958_1819296509 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:27,969] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:27,997] ({SchedulerFactory10} AbstractScheduler.java[runJob]:125) - Job 20190830-032958_1819296509 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:27,998] ({SchedulerFactory10} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-032958_1819296509, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:28,006] ({SchedulerFactory10} NotebookServer.java[onStatusChange]:1899) - Job 20190830-032958_1819296509 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:28,006] ({SchedulerFactory10} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,036] ({SchedulerFactory10} AbstractScheduler.java[runJob]:152) - Job 20190830-032958_1819296509 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,097] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-140612_1910157418 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:28,099] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,129] ({SchedulerFactory4} AbstractScheduler.java[runJob]:125) - Job 20190829-140612_1910157418 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,131] ({SchedulerFactory4} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-140612_1910157418, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:28,138] ({SchedulerFactory4} NotebookServer.java[onStatusChange]:1899) - Job 20190829-140612_1910157418 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:28,138] ({SchedulerFactory4} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,169] ({SchedulerFactory4} AbstractScheduler.java[runJob]:152) - Job 20190829-140612_1910157418 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,229] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-145918_1551440508 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:28,231] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,267] ({SchedulerFactory11} AbstractScheduler.java[runJob]:125) - Job 20190829-145918_1551440508 started by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,268] ({SchedulerFactory11} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-145918_1551440508, interpreter: org.apache.zeppelin.jdbc.JDBCInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:28,319] ({SchedulerFactory11} NotebookServer.java[onStatusChange]:1899) - Job 20190829-145918_1551440508 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:28,320] ({SchedulerFactory11} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,356] ({SchedulerFactory11} AbstractScheduler.java[runJob]:152) - Job 20190829-145918_1551440508 finished by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,366] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-033005_2094284759 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:28,368] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,399] ({SchedulerFactory7} AbstractScheduler.java[runJob]:125) - Job 20190830-033005_2094284759 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,400] ({SchedulerFactory7} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-033005_2094284759, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:28,407] ({SchedulerFactory7} NotebookServer.java[onStatusChange]:1899) - Job 20190830-033005_2094284759 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:28,408] ({SchedulerFactory7} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,438] ({SchedulerFactory7} AbstractScheduler.java[runJob]:152) - Job 20190830-033005_2094284759 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,498] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-200108_510567407 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:28,500] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,530] ({SchedulerFactory12} AbstractScheduler.java[runJob]:125) - Job 20190829-200108_510567407 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,531] ({SchedulerFactory12} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-200108_510567407, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:28,539] ({SchedulerFactory12} NotebookServer.java[onStatusChange]:1899) - Job 20190829-200108_510567407 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:28,541] ({SchedulerFactory12} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,567] ({SchedulerFactory12} AbstractScheduler.java[runJob]:152) - Job 20190829-200108_510567407 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,629] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-145933_1721691768 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:28,631] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,659] ({SchedulerFactory13} AbstractScheduler.java[runJob]:125) - Job 20190829-145933_1721691768 started by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,661] ({SchedulerFactory13} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-145933_1721691768, interpreter: org.apache.zeppelin.jdbc.JDBCInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:28,688] ({SchedulerFactory13} NotebookServer.java[onStatusChange]:1899) - Job 20190829-145933_1721691768 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:28,690] ({SchedulerFactory13} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,718] ({SchedulerFactory13} AbstractScheduler.java[runJob]:152) - Job 20190829-145933_1721691768 finished by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,759] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-040010_630067952 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:28,760] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,789] ({SchedulerFactory8} AbstractScheduler.java[runJob]:125) - Job 20190830-040010_630067952 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,790] ({SchedulerFactory8} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-040010_630067952, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:28,806] ({SchedulerFactory8} NotebookServer.java[onStatusChange]:1899) - Job 20190830-040010_630067952 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:28,807] ({SchedulerFactory8} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,834] ({SchedulerFactory8} AbstractScheduler.java[runJob]:152) - Job 20190830-040010_630067952 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,888] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-155716_1657224798 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:28,890] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:28,919] ({SchedulerFactory14} AbstractScheduler.java[runJob]:125) - Job 20190829-155716_1657224798 started by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:49:28,921] ({SchedulerFactory14} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-155716_1657224798, interpreter: org.apache.zeppelin.jdbc.JDBCInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:28,993] ({SchedulerFactory14} NotebookServer.java[onStatusChange]:1899) - Job 20190829-155716_1657224798 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:28,994] ({SchedulerFactory14} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:29,018] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-201150_1559115067 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:29,020] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:29,023] ({SchedulerFactory14} AbstractScheduler.java[runJob]:152) - Job 20190829-155716_1657224798 finished by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:49:29,120] ({SchedulerFactory5} AbstractScheduler.java[runJob]:125) - Job 20190829-201150_1559115067 started by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:49:29,122] ({SchedulerFactory5} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-201150_1559115067, interpreter: org.apache.zeppelin.jdbc.JDBCInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:29,137] ({SchedulerFactory5} NotebookServer.java[onStatusChange]:1899) - Job 20190829-201150_1559115067 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:29,138] ({SchedulerFactory5} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:29,150] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-033013_204684837 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:29,163] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:29,164] ({SchedulerFactory5} AbstractScheduler.java[runJob]:152) - Job 20190829-201150_1559115067 finished by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:49:29,191] ({SchedulerFactory15} AbstractScheduler.java[runJob]:125) - Job 20190830-033013_204684837 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:29,192] ({SchedulerFactory15} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-033013_204684837, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:29,200] ({SchedulerFactory15} NotebookServer.java[onStatusChange]:1899) - Job 20190830-033013_204684837 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:29,201] ({SchedulerFactory15} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:29,228] ({SchedulerFactory15} AbstractScheduler.java[runJob]:152) - Job 20190830-033013_204684837 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:29,291] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-222550_1322102679 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:29,292] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:29,319] ({SchedulerFactory9} AbstractScheduler.java[runJob]:125) - Job 20190829-222550_1322102679 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:29,320] ({SchedulerFactory9} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-222550_1322102679, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:29,327] ({SchedulerFactory9} NotebookServer.java[onStatusChange]:1899) - Job 20190829-222550_1322102679 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:29,328] ({SchedulerFactory9} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:29,356] ({SchedulerFactory9} AbstractScheduler.java[runJob]:152) - Job 20190829-222550_1322102679 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:29,419] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-201221_604270122 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:29,420] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:29,452] ({SchedulerFactory16} AbstractScheduler.java[runJob]:125) - Job 20190829-201221_604270122 started by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:49:29,453] ({SchedulerFactory16} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-201221_604270122, interpreter: org.apache.zeppelin.spark.PySparkInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:30,074] ({SchedulerFactory16} NotebookServer.java[onStatusChange]:1899) - Job 20190829-201221_604270122 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:30,075] ({SchedulerFactory16} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:30,111] ({SchedulerFactory16} AbstractScheduler.java[runJob]:152) - Job 20190829-201221_604270122 finished by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:49:30,152] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-033021_965492532 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:30,154] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:30,181] ({SchedulerFactory6} AbstractScheduler.java[runJob]:125) - Job 20190830-033021_965492532 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:30,183] ({SchedulerFactory6} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-033021_965492532, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:30,188] ({SchedulerFactory6} NotebookServer.java[onStatusChange]:1899) - Job 20190830-033021_965492532 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:30,190] ({SchedulerFactory6} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:30,219] ({SchedulerFactory6} AbstractScheduler.java[runJob]:152) - Job 20190830-033021_965492532 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:30,280] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-222827_1921372444 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:30,281] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:30,312] ({SchedulerFactory17} AbstractScheduler.java[runJob]:125) - Job 20190829-222827_1921372444 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:30,313] ({SchedulerFactory17} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-222827_1921372444, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:49:30,321] ({SchedulerFactory17} NotebookServer.java[onStatusChange]:1899) - Job 20190829-222827_1921372444 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:30,322] ({SchedulerFactory17} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:30,349] ({SchedulerFactory17} AbstractScheduler.java[runJob]:152) - Job 20190829-222827_1921372444 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:49:30,410] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-221933_108988996 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:30,412] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:30,446] ({SchedulerFactory10} AbstractScheduler.java[runJob]:125) - Job 20190829-221933_108988996 started by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:49:30,447] ({SchedulerFactory10} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-221933_108988996, interpreter: org.apache.zeppelin.spark.PySparkInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ WARN [2020-07-27 19:49:34,897] ({pool-6-thread-1} AppendOutputRunner.java[run]:104) - Processing size for buffered append-output is high: 101853 characters.
+ INFO [2020-07-27 19:49:34,898] ({SchedulerFactory10} NotebookServer.java[onStatusChange]:1899) - Job 20190829-221933_108988996 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:34,900] ({SchedulerFactory10} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:34,938] ({SchedulerFactory10} AbstractScheduler.java[runJob]:152) - Job 20190829-221933_108988996 finished by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:49:34,951] ({qtp101478235-67} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-223056_1210647338 of note: 2FF44RNWS
+ INFO [2020-07-27 19:49:34,952] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:49:34,978] ({qtp101478235-67} Paragraph.java[execute]:358) - Skip to run blank paragraph. 20190829-223056_1210647338
+ INFO [2020-07-27 19:49:34,978] ({qtp101478235-67} NotebookServer.java[onStatusChange]:1899) - Job 20190829-223056_1210647338 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:49:34,979] ({qtp101478235-67} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ WARN [2020-07-27 19:49:35,009] ({qtp101478235-67} InterpreterSettingManager.java[getEditorSetting]:553) - No default interpreter info found in interpreter setting: md
+ INFO [2020-07-27 19:50:26,863] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-022330_767586551 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:26,865] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:26,898] ({SchedulerFactory18} AbstractScheduler.java[runJob]:125) - Job 20190829-022330_767586551 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:26,900] ({SchedulerFactory18} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-022330_767586551, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:26,930] ({SchedulerFactory18} NotebookServer.java[onStatusChange]:1899) - Job 20190829-022330_767586551 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:26,931] ({SchedulerFactory18} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:26,959] ({SchedulerFactory18} AbstractScheduler.java[runJob]:152) - Job 20190829-022330_767586551 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:26,995] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-032751_1927835622 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:26,996] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:27,026] ({SchedulerFactory4} AbstractScheduler.java[runJob]:125) - Job 20190830-032751_1927835622 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:27,027] ({SchedulerFactory4} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-032751_1927835622, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:27,035] ({SchedulerFactory4} NotebookServer.java[onStatusChange]:1899) - Job 20190830-032751_1927835622 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:27,036] ({SchedulerFactory4} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:27,062] ({SchedulerFactory4} AbstractScheduler.java[runJob]:152) - Job 20190830-032751_1927835622 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:27,125] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-133856_759055540 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:27,126] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:27,155] ({SchedulerFactory19} AbstractScheduler.java[runJob]:125) - Job 20190829-133856_759055540 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:27,156] ({SchedulerFactory19} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-133856_759055540, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:27,165] ({SchedulerFactory19} NotebookServer.java[onStatusChange]:1899) - Job 20190829-133856_759055540 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:27,166] ({SchedulerFactory19} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:27,194] ({SchedulerFactory19} AbstractScheduler.java[runJob]:152) - Job 20190829-133856_759055540 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:27,255] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-012730_906473588 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:27,256] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:27,292] ({SchedulerFactory11} AbstractScheduler.java[runJob]:125) - Job 20190829-012730_906473588 started by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:50:27,294] ({SchedulerFactory11} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-012730_906473588, interpreter: org.apache.zeppelin.spark.PySparkInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:31,738] ({SchedulerFactory11} NotebookServer.java[onStatusChange]:1899) - Job 20190829-012730_906473588 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:31,739] ({SchedulerFactory11} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:31,769] ({SchedulerFactory11} AbstractScheduler.java[runJob]:152) - Job 20190829-012730_906473588 finished by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:50:31,797] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-032654_123213654 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:31,798] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:31,827] ({SchedulerFactory20} AbstractScheduler.java[runJob]:125) - Job 20190830-032654_123213654 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:31,831] ({SchedulerFactory20} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-032654_123213654, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:31,840] ({SchedulerFactory20} NotebookServer.java[onStatusChange]:1899) - Job 20190830-032654_123213654 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:31,841] ({SchedulerFactory20} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:31,869] ({SchedulerFactory20} AbstractScheduler.java[runJob]:152) - Job 20190830-032654_123213654 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:31,927] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-134046_28846703 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:31,928] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:31,955] ({SchedulerFactory7} AbstractScheduler.java[runJob]:125) - Job 20190829-134046_28846703 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:31,957] ({SchedulerFactory7} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-134046_28846703, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:31,966] ({SchedulerFactory7} NotebookServer.java[onStatusChange]:1899) - Job 20190829-134046_28846703 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:31,967] ({SchedulerFactory7} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:31,998] ({SchedulerFactory7} AbstractScheduler.java[runJob]:152) - Job 20190829-134046_28846703 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:32,055] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-024003_1202704084 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:32,056] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:32,085] ({SchedulerFactory21} AbstractScheduler.java[runJob]:125) - Job 20190829-024003_1202704084 started by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:50:32,086] ({SchedulerFactory21} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-024003_1202704084, interpreter: org.apache.zeppelin.spark.PySparkInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:35,129] ({SchedulerFactory21} NotebookServer.java[onStatusChange]:1899) - Job 20190829-024003_1202704084 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:35,132] ({SchedulerFactory21} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,162] ({SchedulerFactory21} AbstractScheduler.java[runJob]:152) - Job 20190829-024003_1202704084 finished by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,188] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-032738_111341904 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:35,189] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,222] ({SchedulerFactory12} AbstractScheduler.java[runJob]:125) - Job 20190830-032738_111341904 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,230] ({SchedulerFactory12} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-032738_111341904, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:35,237] ({SchedulerFactory12} NotebookServer.java[onStatusChange]:1899) - Job 20190830-032738_111341904 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:35,238] ({SchedulerFactory12} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,270] ({SchedulerFactory12} AbstractScheduler.java[runJob]:152) - Job 20190830-032738_111341904 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,321] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-135305_726851865 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:35,322] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,350] ({SchedulerFactory22} AbstractScheduler.java[runJob]:125) - Job 20190829-135305_726851865 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,352] ({SchedulerFactory22} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-135305_726851865, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:35,359] ({SchedulerFactory22} NotebookServer.java[onStatusChange]:1899) - Job 20190829-135305_726851865 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:35,361] ({SchedulerFactory22} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,387] ({SchedulerFactory22} AbstractScheduler.java[runJob]:152) - Job 20190829-135305_726851865 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,450] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-030246_97873831 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:35,451] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,487] ({SchedulerFactory13} AbstractScheduler.java[runJob]:125) - Job 20190829-030246_97873831 started by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,489] ({SchedulerFactory13} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-030246_97873831, interpreter: org.apache.zeppelin.jdbc.JDBCInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:35,507] ({SchedulerFactory13} NotebookServer.java[onStatusChange]:1899) - Job 20190829-030246_97873831 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:35,508] ({SchedulerFactory13} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,535] ({SchedulerFactory13} AbstractScheduler.java[runJob]:152) - Job 20190829-030246_97873831 finished by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,587] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-032949_1545505914 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:35,588] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,617] ({SchedulerFactory23} AbstractScheduler.java[runJob]:125) - Job 20190830-032949_1545505914 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,618] ({SchedulerFactory23} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-032949_1545505914, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:35,625] ({SchedulerFactory23} NotebookServer.java[onStatusChange]:1899) - Job 20190830-032949_1545505914 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:35,627] ({SchedulerFactory23} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,655] ({SchedulerFactory23} AbstractScheduler.java[runJob]:152) - Job 20190830-032949_1545505914 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,717] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-140618_1631334414 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:35,718] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,747] ({SchedulerFactory8} AbstractScheduler.java[runJob]:125) - Job 20190829-140618_1631334414 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,748] ({SchedulerFactory8} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-140618_1631334414, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:35,755] ({SchedulerFactory8} NotebookServer.java[onStatusChange]:1899) - Job 20190829-140618_1631334414 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:35,756] ({SchedulerFactory8} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,782] ({SchedulerFactory8} AbstractScheduler.java[runJob]:152) - Job 20190829-140618_1631334414 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,846] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-031029_17424089 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:35,847] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,878] ({SchedulerFactory24} AbstractScheduler.java[runJob]:125) - Job 20190829-031029_17424089 started by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,883] ({SchedulerFactory24} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-031029_17424089, interpreter: org.apache.zeppelin.jdbc.JDBCInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:35,904] ({SchedulerFactory24} NotebookServer.java[onStatusChange]:1899) - Job 20190829-031029_17424089 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:35,905] ({SchedulerFactory24} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:35,931] ({SchedulerFactory24} AbstractScheduler.java[runJob]:152) - Job 20190829-031029_17424089 finished by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:50:35,978] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-032958_1819296509 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:35,979] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,006] ({SchedulerFactory14} AbstractScheduler.java[runJob]:125) - Job 20190830-032958_1819296509 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,008] ({SchedulerFactory14} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-032958_1819296509, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:36,015] ({SchedulerFactory14} NotebookServer.java[onStatusChange]:1899) - Job 20190830-032958_1819296509 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:36,016] ({SchedulerFactory14} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,041] ({SchedulerFactory14} AbstractScheduler.java[runJob]:152) - Job 20190830-032958_1819296509 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,105] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-140612_1910157418 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:36,107] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,135] ({SchedulerFactory25} AbstractScheduler.java[runJob]:125) - Job 20190829-140612_1910157418 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,136] ({SchedulerFactory25} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-140612_1910157418, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:36,143] ({SchedulerFactory25} NotebookServer.java[onStatusChange]:1899) - Job 20190829-140612_1910157418 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:36,144] ({SchedulerFactory25} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,170] ({SchedulerFactory25} AbstractScheduler.java[runJob]:152) - Job 20190829-140612_1910157418 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,234] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-145918_1551440508 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:36,236] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,265] ({SchedulerFactory5} AbstractScheduler.java[runJob]:125) - Job 20190829-145918_1551440508 started by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,266] ({SchedulerFactory5} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-145918_1551440508, interpreter: org.apache.zeppelin.jdbc.JDBCInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:36,292] ({SchedulerFactory5} NotebookServer.java[onStatusChange]:1899) - Job 20190829-145918_1551440508 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:36,293] ({SchedulerFactory5} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,321] ({SchedulerFactory5} AbstractScheduler.java[runJob]:152) - Job 20190829-145918_1551440508 finished by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,364] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-033005_2094284759 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:36,365] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,404] ({SchedulerFactory26} AbstractScheduler.java[runJob]:125) - Job 20190830-033005_2094284759 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,405] ({SchedulerFactory26} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-033005_2094284759, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:36,412] ({SchedulerFactory26} NotebookServer.java[onStatusChange]:1899) - Job 20190830-033005_2094284759 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:36,413] ({SchedulerFactory26} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,440] ({SchedulerFactory26} AbstractScheduler.java[runJob]:152) - Job 20190830-033005_2094284759 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,496] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-200108_510567407 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:36,497] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,527] ({SchedulerFactory15} AbstractScheduler.java[runJob]:125) - Job 20190829-200108_510567407 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,528] ({SchedulerFactory15} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-200108_510567407, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:36,537] ({SchedulerFactory15} NotebookServer.java[onStatusChange]:1899) - Job 20190829-200108_510567407 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:36,538] ({SchedulerFactory15} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,567] ({SchedulerFactory15} AbstractScheduler.java[runJob]:152) - Job 20190829-200108_510567407 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,626] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-145933_1721691768 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:36,627] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,655] ({SchedulerFactory27} AbstractScheduler.java[runJob]:125) - Job 20190829-145933_1721691768 started by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,657] ({SchedulerFactory27} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-145933_1721691768, interpreter: org.apache.zeppelin.jdbc.JDBCInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:36,675] ({SchedulerFactory27} NotebookServer.java[onStatusChange]:1899) - Job 20190829-145933_1721691768 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:36,677] ({SchedulerFactory27} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,703] ({SchedulerFactory27} AbstractScheduler.java[runJob]:152) - Job 20190829-145933_1721691768 finished by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,755] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-040010_630067952 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:36,756] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,784] ({SchedulerFactory9} AbstractScheduler.java[runJob]:125) - Job 20190830-040010_630067952 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,785] ({SchedulerFactory9} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-040010_630067952, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:36,798] ({SchedulerFactory9} NotebookServer.java[onStatusChange]:1899) - Job 20190830-040010_630067952 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:36,800] ({SchedulerFactory9} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,832] ({SchedulerFactory9} AbstractScheduler.java[runJob]:152) - Job 20190830-040010_630067952 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,884] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-155716_1657224798 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:36,885] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:36,915] ({SchedulerFactory28} AbstractScheduler.java[runJob]:125) - Job 20190829-155716_1657224798 started by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:50:36,916] ({SchedulerFactory28} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-155716_1657224798, interpreter: org.apache.zeppelin.jdbc.JDBCInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:36,985] ({SchedulerFactory28} NotebookServer.java[onStatusChange]:1899) - Job 20190829-155716_1657224798 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:36,986] ({SchedulerFactory28} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:37,014] ({SchedulerFactory28} AbstractScheduler.java[runJob]:152) - Job 20190829-155716_1657224798 finished by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:50:37,014] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-201150_1559115067 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:37,015] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:37,115] ({SchedulerFactory16} AbstractScheduler.java[runJob]:125) - Job 20190829-201150_1559115067 started by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:50:37,117] ({SchedulerFactory16} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-201150_1559115067, interpreter: org.apache.zeppelin.jdbc.JDBCInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:37,131] ({SchedulerFactory16} NotebookServer.java[onStatusChange]:1899) - Job 20190829-201150_1559115067 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:37,132] ({SchedulerFactory16} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:37,143] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-033013_204684837 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:37,163] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:37,165] ({SchedulerFactory16} AbstractScheduler.java[runJob]:152) - Job 20190829-201150_1559115067 finished by scheduler RemoteInterpreter-jdbc-shared_process-shared_session
+ INFO [2020-07-27 19:50:37,196] ({SchedulerFactory29} AbstractScheduler.java[runJob]:125) - Job 20190830-033013_204684837 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:37,199] ({SchedulerFactory29} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-033013_204684837, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:37,207] ({SchedulerFactory29} NotebookServer.java[onStatusChange]:1899) - Job 20190830-033013_204684837 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:37,208] ({SchedulerFactory29} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:37,236] ({SchedulerFactory29} AbstractScheduler.java[runJob]:152) - Job 20190830-033013_204684837 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:37,296] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-222550_1322102679 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:37,297] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:37,326] ({SchedulerFactory6} AbstractScheduler.java[runJob]:125) - Job 20190829-222550_1322102679 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:37,330] ({SchedulerFactory6} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-222550_1322102679, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:37,336] ({SchedulerFactory6} NotebookServer.java[onStatusChange]:1899) - Job 20190829-222550_1322102679 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:37,337] ({SchedulerFactory6} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:37,364] ({SchedulerFactory6} AbstractScheduler.java[runJob]:152) - Job 20190829-222550_1322102679 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:37,425] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-201221_604270122 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:37,427] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:37,465] ({SchedulerFactory30} AbstractScheduler.java[runJob]:125) - Job 20190829-201221_604270122 started by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:50:37,466] ({SchedulerFactory30} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-201221_604270122, interpreter: org.apache.zeppelin.spark.PySparkInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:37,893] ({SchedulerFactory30} NotebookServer.java[onStatusChange]:1899) - Job 20190829-201221_604270122 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:37,894] ({SchedulerFactory30} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ WARN [2020-07-27 19:50:37,905] ({pool-6-thread-1} AppendOutputRunner.java[run]:104) - Processing size for buffered append-output is high: 102465 characters.
+ INFO [2020-07-27 19:50:37,928] ({SchedulerFactory30} AbstractScheduler.java[runJob]:152) - Job 20190829-201221_604270122 finished by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:50:37,965] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190830-033021_965492532 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:37,966] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:37,993] ({SchedulerFactory17} AbstractScheduler.java[runJob]:125) - Job 20190830-033021_965492532 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:37,995] ({SchedulerFactory17} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190830-033021_965492532, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:38,000] ({SchedulerFactory17} NotebookServer.java[onStatusChange]:1899) - Job 20190830-033021_965492532 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:38,001] ({SchedulerFactory17} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:38,029] ({SchedulerFactory17} AbstractScheduler.java[runJob]:152) - Job 20190830-033021_965492532 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:38,093] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-222827_1921372444 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:38,094] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:38,122] ({SchedulerFactory31} AbstractScheduler.java[runJob]:125) - Job 20190829-222827_1921372444 started by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:38,124] ({SchedulerFactory31} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-222827_1921372444, interpreter: org.apache.zeppelin.markdown.Markdown, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:38,131] ({SchedulerFactory31} NotebookServer.java[onStatusChange]:1899) - Job 20190829-222827_1921372444 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:38,132] ({SchedulerFactory31} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:38,159] ({SchedulerFactory31} AbstractScheduler.java[runJob]:152) - Job 20190829-222827_1921372444 finished by scheduler RemoteInterpreter-md-shared_process-shared_session
+ INFO [2020-07-27 19:50:38,222] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-221933_108988996 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:38,223] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:38,263] ({SchedulerFactory10} AbstractScheduler.java[runJob]:125) - Job 20190829-221933_108988996 started by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:50:38,265] ({SchedulerFactory10} Paragraph.java[jobRun]:407) - Run paragraph [paragraph_id: 20190829-221933_108988996, interpreter: org.apache.zeppelin.spark.PySparkInterpreter, note_id: 2FF44RNWS, user: anonymous]
+ INFO [2020-07-27 19:50:41,549] ({SchedulerFactory10} NotebookServer.java[onStatusChange]:1899) - Job 20190829-221933_108988996 is finished successfully, status: FINISHED
+ INFO [2020-07-27 19:50:41,550] ({SchedulerFactory10} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ WARN [2020-07-27 19:50:41,557] ({pool-6-thread-1} AppendOutputRunner.java[run]:104) - Processing size for buffered append-output is high: 102446 characters.
+ INFO [2020-07-27 19:50:41,570] ({qtp101478235-66} NotebookService.java[runParagraph]:293) - Start to run paragraph: 20190829-223056_1210647338 of note: 2FF44RNWS
+ INFO [2020-07-27 19:50:41,575] ({qtp101478235-66} VFSNotebookRepo.java[save]:145) - Saving note 2FF44RNWS to Basic Curation Demo_2FF44RNWS.zpln
+ INFO [2020-07-27 19:50:41,582] ({SchedulerFactory10} AbstractScheduler.java[runJob]:152) - Job 20190829-221933_108988996 finished by scheduler RemoteInterpreter-spark-shared_process-shared_session
+ INFO [2020-07-27 19:50:41,602] ({qtp101478235-66} Paragraph.java[execute]:358) - Skip to run blank paragraph. 20190829-223056_1210647338
