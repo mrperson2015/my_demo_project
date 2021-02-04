@@ -28,7 +28,7 @@ https://zeppelin.apache.org/
 * ```Password```: 
 
 # Portainer
-Not part of docker-compose
+(Not part of docker-compose)
 Build and manage your Docker environments
 https://www.portainer.io/
 * ```Address```:  localhost:9000
