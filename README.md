@@ -1,5 +1,5 @@
 # my_demo_project
-A fun little project that plays with small datasets using different technologies like sql, spark and postgres amonth others
+A fun little project that plays with small datasets using different technologies like sql, spark and postgres amongst others.
 
 # To Run
 1. Clone (this) repo ```git clone https://github.com/mrperson2015/my_demo_project.git```
@@ -28,8 +28,8 @@ https://zeppelin.apache.org/
 * ```Password```: 
 
 # Portainer
-(Not part of docker-compose)
-Build and manage your Docker environments
+  (Not part of docker-compose)\
+  Build and manage your Docker environments
 https://www.portainer.io/
 * ```Address```:  localhost:9000
 * ```Username```: admin
