@@ -1,0 +1,484 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\n\nfrom pyspark.sql.functions import input_file_name\nfrom pyspark.sql import functions as F\n\ndf_romeo \u003d spark.read.format(\"text\").load(\"/files/Assignment/romeo-and-juliet.txt.gz\") \\\n  .withColumn(\"source_file_name\", input_file_name())\n  \ndf_counts \u003d df_romeo.select(F.explode(F.split(F.regexp_replace(F.col(\"value\"), \"[^A-Za-z0-9\\s]+\", \" \"), \" \")).alias(\"word_clean\")).select(F.trim(F.col(\"word_clean\")).alias(\"word_clean\")).groupBy(F.col(\"word_clean\")).count().orderBy(F.col(\"count\").desc())\n\nz.show(df_counts)",
+      "user": "anonymous",
+      "dateUpdated": "2021-02-15 23:14:30.117",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "word_clean": "string",
+                      "count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "word_clean",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "count",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "word_clean\tcount\n\t7085\nI\t642\nthe\t605\nand\t481\nto\t452\na\t390\nof\t357\nis\t309\nmy\t301\nin\t286\ns\t282\nyou\t274\nthat\t273\nme\t265\nnot\t244\nAnd\t237\nthou\t235\nwith\t229\nbe\t189\nit\t186\nthis\t185\nfor\t164\nROMEO\t164\nRomeo\t162\nO\t157\nthy\t150\nher\t149\nlove\t145\nthee\t138\nwill\t137\nhis\t135\nas\t121\nso\t119\nJULIET\t119\nhave\t115\nhe\t114\nWhat\t109\nhim\t102\nshe\t100\nCAPULET\t99\nbut\t98\nshall\t94\nll\t91\nNURSE\t91\nyour\t89\nTo\t87\nall\t87\nby\t86\nBut\t85\nfrom\t83\nThe\t80\nThat\t80\nEnter\t76\nman\t73\nnight\t72\nno\t72\ndo\t71\non\t70\nTybalt\t67\nJuliet\t67\ndeath\t66\nare\t64\nwhat\t64\nBENVOLIO\t64\nMERCUTIO\t63\nA\t63\nhere\t62\ngood\t61\nFRIAR\t61\nan\t61\nFor\t60\nat\t59\nmore\t58\nam\t57\nLAWRENCE\t56\nthen\t56\nour\t56\ncome\t56\nif\t55\nup\t55\nnow\t55\nMy\t54\nsir\t54\nHe\t54\nthere\t53\nwe\t53\nhath\t53\nwould\t52\nart\t51\nsay\t49\nout\t49\nLADY\t49\ntheir\t49\ntoo\t49\ndead\t48\none\t48\nday\t47\nshould\t47\nlady\t46\nfair\t44\nwas\t43\nor\t43\nThou\t43\nthem\t42\nmay\t42\ngo\t42\nthey\t42\nsuch\t41\nsome\t41\nCome\t40\nwell\t40\nShe\t40\nIt\t39\ntell\t38\nCapulet\t38\nupon\t38\nIs\t38\nThis\t38\nyet\t38\nmust\t38\nthan\t37\nParis\t37\nNurse\t37\nAs\t36\nthese\t36\nmuch\t36\nwhen\t36\ndoth\t36\ndid\t35\nknow\t35\nThey\t35\nIn\t34\nexits\t34\n \t34\nmake\t33\nlike\t33\nGo\t33\nwhich\t33\nwere\t33\nGod\t32\nAy\t32\nWhere\t32\nBy\t32\nlet\t32\nMontague\t31\nHow\t31\nsee\t31\nlight\t31\nWhy\t31\ncan\t31\ngive\t31\nold\t31\nexit\t31\nus\t30\nWhich\t30\ntake\t30\nNo\t30\nsweet\t30\nOr\t30\ntime\t30\nmen\t29\nword\t29\nhow\t29\nHere\t29\nYou\t29\nheart\t29\ncomes\t28\nmine\t28\nSo\t28\nIf\t28\nOf\t28\ntrue\t27\nback\t27\nThen\t27\nagain\t27\neyes\t27\nbed\t27\ngone\t26\nfather\t26\nheaven\t26\nMercutio\t26\nnurse\t26\nwhere\t26\nNow\t26\nhand\t26\ner\t25\ndear\t25\nGood\t25\nname\t24\nhast\t24\nWith\t24\nwilt\t24\nScene\t24\nspeak\t24\nPARIS\t24\ndie\t23\nlook\t23\nvery\t23\nlord\t23\nWe\t23\nbanished\t22\nface\t22\nlife\t22\nmade\t22\nhouse\t22\nTis\t21\nfind\t21\nhence\t21\ncannot\t21\nstand\t21\naway\t21\nSAMPSON\t21\npart\t21\nFriar\t21\nthink\t20\nCounty\t20\nWell\t20\nst\t20\ntears\t20\nlie\t20\ntis\t20\nbeen\t20\nFIRST\t20\nbid\t20\nhear\t20\nSERVINGMAN\t20\ncousin\t20\nThy\t19\nbefore\t19\neye\t19\nyoung\t19\nstay\t19\nAn\t19\nmarried\t19\nPrince\t19\nworld\t19\nTYBALT\t18\nLet\t18\nblood\t18\nboth\t18\nson\t18\nmother\t18\nholy\t18\nletter\t17\nWho\t17\nDo\t17\ntwo\t17\nlies\t17\nown\t17\nlips\t17\nnever\t17\nslain\t17\nhour\t17\nother\t17\no\t17\nTherefore\t17\nLady\t17\ncall\t17\nBenvolio\t17\nlive\t17\ngrave\t17\nNay\t17\nGive\t16\nchild\t16\nhad\t16\nalone\t16\nill\t16\nShall\t16\nPeter\t16\nwho\t16\ndown\t16\nAll\t16\nwife\t16\nkeep\t16\naside\t16\nGREGORY\t16\nPRINCE\t16\nlong\t16\ndaughter\t16\ntill\t15\nnew\t15\nvillain\t15\nWhen\t15\nany\t15\nring\t15\nsame\t15\npeace\t15\nearly\t15\nNot\t15\nThere\t15\nanother\t15\nkinsman\t15\npray\t15\nere\t15\nLawrence\t15\nsun\t15\nthose\t15\nSome\t15\nYour\t14\nmyself\t14\nhead\t14\npoor\t14\nFarewell\t14\nThursday\t14\ngentleman\t14\nlives\t14\nBe\t14\nhaste\t14\nnone\t14\nPETER\t14\nOne\t14\nBeing\t14\nnews\t14\nsoul\t14\nfall\t14\nMONTAGUE\t14\nMUSICIAN\t14\nfriend\t14\nnothing\t14\nhelp\t14\nuse\t14\nbreath\t14\nHer\t14\ntonight\t14\nAh\t14\njoy\t14\ntomorrow\t13\nVerona\t13\nsaid\t13\nmost\t13\nthing\t13\nwoe\t13\nMantua\t13\nrest\t13\nfear\t13\nforth\t13\npoison\t13\nfaith\t13\nsound\t13\nhands\t13\nput\t13\nwit\t13\nmany\t13\nlittle\t13\nmakes\t13\nBALTHASAR\t13\nsoon\t13\nhusband\t13\nstill\t13\nsin\t13\nMadam\t13\nMarry\t13\nbeing\t12\nabout\t12\ndost\t12\ncould\t12\nrun\t12\nbest\t12\nDoth\t12\ncell\t12\nthine\t12\ntalk\t12\nHold\t12\nhither\t12\nt\t12\nhate\t12\nmaster\t12\ngentle\t12\nfriar\t12\nwithin\t12\nleave\t12\nbetter\t12\nhappy\t12\nlaw\t12\nho\t12\nhimself\t11\ngrief\t11\ntongue\t11\noff\t11\nmorning\t11\nbear\t11\nmarriage\t11\nsend\t11\nearth\t11\nyears\t11\nWill\t11\nbeauty\t11\nshame\t11\ntomb\t11\nwhose\t11\nlate\t11\nkiss\t11\nwithout\t11\nplace\t11\nmaid\t11\nHath\t11\nbody\t11\never\t11\nheavy\t10\ntwenty\t10\nwatch\t10\nEarth\t10\nsilver\t10\ntimes\t10\nmadam\t10\nen\t10\nwarrant\t10\nshow\t10\nHave\t10\nshalt\t10\nnor\t10\npale\t10\nTake\t10\ndream\t10\nThan\t10\nlay\t10\ncalls\t10\nsays\t10\nrich\t10\nelse\t10\nkill\t10\nboy\t10\nears\t10\ne\t10\nbring\t10\nweep\t10\nground\t10\nOn\t10\nblack\t10\nstraight\t10\nmad\t10\nset\t10\nRosaline\t10\nsleep\t10\ndone\t10\ncomfort\t9\nfirst\t9\nquarrel\t9\nmarry\t9\nflower\t9\nServingman\t9\nhours\t9\nsword\t9\nmistress\t9\nMore\t9\nvault\t9\ncame\t9\nNor\t9\nYet\t9\ninto\t9\ndraw\t9\nhigh\t9\ndays\t9\nne\t9\ngreat\t9\npardon\t9\nhide\t9\nevery\t9\nneed\t9\nsaw\t9\nswear\t9\nmove\t9\nagainst\t9\ncase\t9\nonce\t9\nfoot\t9\nonly\t9\nfull\t9\nmusic\t9\nway\t9\nabove\t9\nCan\t8\neven\t8\nbound\t8\nwhy\t8\nWATCH\t8\nforget\t8\nsorrow\t8\nbosom\t8\nLook\t8\nsight\t8\nanswer\t8\nStay\t8\nclouds\t8\nthough\t8\nmind\t8\ncounsel\t8\nbegone\t8\nthree\t8\ndesperate\t8\nfire\t8\nmerry\t8\nmeans\t8\nHis\t8\nthought\t8\nplay\t8\nwoes\t8\nloving\t8\nbones\t8\nLord\t8\nmean\t8\nmeet\t8\nend\t8\nwall\t8\nlast\t8\ngoose\t8\nnoble\t8\nbite\t8\nancient\t8\nbook\t8\nfound\t8\nwoeful\t8\nDeath\t8\nget\t8\nmoved\t7\nmurder\t7\nmeasure\t7\nwrit\t7\nsince\t7\nhot\t7\ncorse\t7\nside\t7\nprince\t7\nnear\t7\nsea\t7\nsudden\t7\ndagger\t7\nclose\t7\nchamber\t7\nnext\t7\nfool\t7\ntender\t7\nenough\t7\nshows\t7\nthumb\t7\nthyself\t7\n2\t7\nfearful\t7\nthousand\t7\nkilled\t7\ndark\t7\nsick\t7\nblessed\t7\nshort\t7\ncanst\t7\nfeel\t7\nOut\t7\nlooks\t7\nsit\t7\nindeed\t7\nAlack\t7\nvile\t7\nHie\t7\nTill\t7\nflesh\t7\npast\t7\nbloody\t7\nbeseech\t7\ngentlemen\t7\nwords\t7\nbecause\t7\nToo\t7\near\t7\nServingmen\t7\nhit\t7\nPage\t7\nbehold\t7\nstars\t7\nawhile\t7\nbride\t6\nhome\t6\ncompany\t6\nTell\t6\nlark\t6\nABRAM\t6\nmonument\t6\nnature\t6\nkisses\t6\nfourteen\t6\narm\t6\nyouth\t6\ncheeks\t6\nlovers\t6\ncare\t6\nchurch\t6\nWilt\t6\ntoward\t6\nitself\t6\nAt\t6\nbrother\t6\nLove\t6\nfight\t6\nunto\t6\nTurn\t6\nMay\t6\nreason\t6\ncords\t6\nnoise\t6\nenvious\t6\nseen\t6\nflowers\t6\nhaving\t6\nmight\t6\n3\t6\nknife\t6\nCall\t6\nspeaks\t6\nWas\t6\nexile\t6\ndog\t6\nmorrow\t6\nenemy\t6\nremember\t6\nfetch\t6\nstir\t6\nair\t6\nSECOND\t6\nless\t6\nThese\t6\nbanishment\t6\ncheek\t6\nkind\t6\nbreast\t6\nchurchyard\t6\nWife\t6\ntale\t6\ndoom\t6\ntook\t6\ndeep\t6\nhurt\t6\nprove\t6\nmark\t6\njest\t6\nbeat\t6\nfarewell\t6\nage\t6\ncold\t6\ngirl\t6\nfeast\t6\nfollow\t6\nfoe\t6\ntorch\t6\nwild\t6\nthrough\t6\n1\t6\nturn\t6\nUpon\t6\ngives\t6\ntherefore\t6\nmaids\t6\nmatter\t6\nwish\t6\nSpeak\t6\nstrength\t6\ndies\t6\nspoke\t6\nFrom\t6\nread\t5\ncause\t5\nhadst\t5\nhalf\t5\nsimple\t5\nopen\t5\nstrange\t5\nslew\t5\n5\t5\ngrace\t5\nwise\t5\nasleep\t5\nreturn\t5\nwench\t5\njoyful\t5\nsad\t5\ncivil\t5\nquoth\t5\nDid\t5\nwritten\t5\nheads\t5\nfive\t5\nhonorable\t5\nfortune\t5\nlonger\t5\nBalthasar\t5\nTwo\t5\nsatisfied\t5\nvoice\t5\nrude\t5\nCapulets\t5\npoint\t5\nvial\t5\nuntimely\t5\nFaith\t5\nStand\t5\nMake\t5\ndare\t5\nexcuse\t5\nSaint\t5\nLike\t5\nyourself\t5\nwalk\t5\nthus\t5\nAlas\t5\ntear\t5\nslay\t5\nbright\t5\nSee\t5\npretty\t5\nCould\t5\nhare\t5\nOur\t5\nCupid\t5\nherself\t5\nwits\t5\nfellow\t5\n4\t5\nlamentable\t5\nACT\t5\npleasure\t5\ndreams\t5\nyonder\t5\nSuch\t5\nslaughtered\t5\nease\t5\nscorn\t5\ndew\t5\nHence\t5\nwast\t5\nnine\t5\nhonest\t5\nchide\t5\nhell\t5\nsighs\t5\nAnon\t5\nJOHN\t5\nThree\t5\nEre\t5\nAway\t5\nhold\t5\nform\t5\nAPOTHECARY\t5\nstate\t5\nfar\t5\nwedding\t5\nmoney\t5\nheir\t5\nwings\t5\ngold\t5\nhonor\t5\nliving\t5\nrough\t5\nshrift\t5\nlead\t5\nmusicians\t5\nfingers\t5\nthings\t5\nwake\t5\nquickly\t5\npower\t5\nbegin\t5\ntown\t5\ndance\t5\ndidst\t5\nalready\t5\nknowest\t5\nconsent\t5\nthank\t5\neither\t5\nGet\t5\nwithal\t5\nserve\t5\nshape\t5\nSweet\t5\ndraws\t5\nMontagues\t5\nletters\t5\ngiving\t5\ntruth\t5\nbreak\t5\nlaid\t5\nsecond\t5\nSignior\t4\nArt\t4\nFie\t4\nempty\t4\ngreen\t4\nstrew\t4\nknave\t4\nWere\t4\nquiet\t4\nPeace\t4\ndeny\t4\ncount\t4\nDost\t4\nCame\t4\nhair\t4\nwear\t4\nalong\t4\ndamned\t4\nHast\t4\nforsworn\t4\nalack\t4\nsadness\t4\nvow\t4\nUnless\t4\ntakes\t4\nfatal\t4\ndoubt\t4\nkeeps\t4\nworn\t4\nhard\t4\nwomb\t4\nPoor\t4\nfought\t4\nChurch\t4\nslow\t4\nveins\t4\nafter\t4\nwoo\t4\nbow\t4\nHeart\t4\nChorus\t4\nstreets\t4\nbrow\t4\nsecret\t4\nfriends\t4\nspite\t4\nguests\t4\nanger\t4\noft\t4\nmercy\t4\nSince\t4\nhoar\t4\nbold\t4\ncoz\t4\nbrief\t4\nsave\t4\nseek\t4\nTHIRD\t4\nfain\t4\nleft\t4\nth\t4\namong\t4\nTut\t4\nhearts\t4\ni\t4\nWelcome\t4\ngolden\t4\nsake\t4\nwithdraw\t4\nKnock\t4\nseeing\t4\nnames\t4\nlamb\t4\nwhom\t4\ngoes\t4\nbroad\t4\nprepare\t4\nMusicians\t4\nswords\t4\nPut\t4\ntrust\t4\nremove\t4\nfray\t4\nswift\t4\nstop\t4\nsomething\t4\nran\t4\nHelp\t4\ngave\t4\nminute\t4\nhope\t4\nmoon\t4\nnote\t4\nheavens\t4\nask\t4\ndry\t4\ncoming\t4\ndares\t4\nFortune\t4\ncourse\t4\nbirth\t4\ndrink\t4\nhers\t4\nmet\t4\nwelcome\t4\nconjure\t4\nmouse\t4\nneeds\t4\nEither\t4\nspirit\t4\ntree\t4\nThus\t4\nknown\t4\nladies\t4\nyond\t4\npiteous\t4\npay\t4\nburied\t4\nsought\t4\ngray\t4\nsell\t4\nbad\t4\nproud\t4\nsure\t4\niron\t4\nGentlemen\t4\nwisely\t4\nWithin\t4\ncity\t4\nintents\t4\nwaking\t4\nfour\t4\nfoul\t4\ngentlewoman\t4\nchange\t4\nweeps\t4\nrage\t4\nkinsmen\t4\njealous\t4\nwhile\t4\nYoung\t4\nanything\t4\nsaint\t4\nYea\t4\nfine\t4\nCommend\t4\nhouses\t4\nsteel\t4\nPAGE\t4\nseeming\t4\nwork\t4\nloss\t4\nBoth\t4\nblind\t4\nlearned\t4\nfalls\t4\nfault\t4\nready\t4\nunder\t4\ndaylight\t4\nloves\t4\nhateful\t4\nsour\t4\nthither\t4\ntorture\t4\nyear\t4\nGregory\t4\nwind\t4\nweak\t4\nmatch\t4\nJohn\t4\ncut\t4\nWhose\t4\npatience\t4\nrate\t4\nprecious\t4\nghostly\t4\nmoves\t4\nself\t3\nmortal\t3\nweary\t3\nseems\t3\nnaught\t3\ncharge\t3\nteach\t3\nwisdom\t3\nchoose\t3\ngaze\t3\nsoft\t3\ndeadly\t3\nblush\t3\npure\t3\nconduct\t3\nApothecary\t3\ndinner\t3\nAre\t3\nruled\t3\ndevise\t3\nvirtuous\t3\nwalls\t3\nforward\t3\nchance\t3\ntidings\t3\ncruel\t3\nbridal\t3\nsolemnity\t3\noccasion\t3\nplague\t3\nanon\t3\nabroad\t3\ndoor\t3\nsupper\t3\nHark\t3\nloathsome\t3\nwed\t3\nshroud\t3\nproof\t3\nclosed\t3\nchildren\t3\nUnto\t3\n"
+          },
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"result-alert alert-warning\" role\u003d\"alert\"\u003e\u003cbutton type\u003d\"button\" class\u003d\"close\" data-dismiss\u003d\"alert\" aria-label\u003d\"Close\"\u003e\u003cspan aria-hidden\u003d\"true\"\u003e\u0026times;\u003c/span\u003e\u003c/button\u003e\u003cstrong\u003eOutput is truncated\u003c/strong\u003e to 1000 rows. Learn more about \u003cstrong\u003ezeppelin.spark.maxResult\u003c/strong\u003e\u003c/div\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://zeppelin:4040/jobs/job?id\u003d53"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1613402315349_526070566",
+      "id": "paragraph_1613402315349_526070566",
+      "dateCreated": "2021-02-15 15:18:35.349",
+      "dateStarted": "2021-02-15 15:51:59.207",
+      "dateFinished": "2021-02-15 15:52:00.403",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\n\n\nfrom pyspark.sql.functions import input_file_name\nfrom pyspark.sql import functions as F\n\ndf_romeo \u003d spark.read.format(\"text\").load(\"/files/Assignment/Shakespeare/alls-well-that-ends-well_TXT_FolgerShakespeare.gz\") \\\n  .withColumn(\"source_file_name\", input_file_name())\n  \ndf_counts \u003d df_romeo.select(F.explode(F.split(F.regexp_replace(F.col(\"value\"), \"[^A-Za-z0-9\\s]+\", \" \"), \" \")).alias(\"word_clean\")).select(F.trim(F.col(\"word_clean\")).alias(\"word_clean\")).groupBy(F.col(\"word_clean\")).count().orderBy(F.col(\"count\").desc())\n\nz.show(df_counts)\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-02-15 22:18:02.318",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "word_clean": "string",
+                      "count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "tableHide": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "word_clean\tcount\n\t6768\nI\t736\nthe\t603\nand\t498\nto\t495\nof\t443\nyou\t426\na\t414\nmy\t325\nin\t283\nthat\t257\nis\t256\nit\t246\ns\t238\nnot\t236\nhis\t207\nyour\t203\nme\t201\nhave\t191\nbe\t182\nhim\t182\nhe\t181\nfor\t174\nher\t169\nwill\t146\nwith\t145\nPAROLLES\t143\nthis\t136\nAnd\t121\nso\t118\nas\t113\nHELEN\t110\nLORD\t106\nbut\t104\nBERTRAM\t103\nshall\t102\nLAFEW\t99\nHe\t96\nFIRST\t93\nThe\t93\nlord\t90\nThat\t88\nCOUNTESS\t88\nwas\t87\nsir\t87\nKING\t87\nour\t87\ndo\t86\nare\t86\nall\t85\nthou\t84\nno\t84\nBut\t84\nknow\t83\nshe\t81\nthee\t79\nwould\t78\nTo\t78\nthy\t76\nam\t75\nby\t74\ngood\t74\nwell\t70\nwhat\t68\nwe\t67\nYou\t67\nll\t67\nmore\t64\nWhat\t64\nfrom\t63\non\t63\nat\t62\nFOOL\t60\nt\t59\nwhich\t57\nsay\t56\nor\t56\nlove\t56\nA\t55\nMy\t54\nEnter\t54\nIf\t53\nif\t53\nwere\t51\nthey\t51\nthem\t50\nSECOND\t50\nan\t49\none\t49\nhad\t48\nKing\t46\nhath\t46\nDIANA\t45\nman\t44\nmake\t44\nthere\t44\nupon\t44\nParolles\t44\ngreat\t43\nBertram\t42\nth\t41\ncan\t41\nSOLDIER\t41\nmust\t41\ntoo\t41\nspeak\t41\nmine\t40\nIn\t40\naside\t40\n \t40\nring\t39\nmost\t39\nO\t39\nhonor\t39\nown\t38\nthan\t38\nhere\t38\nmay\t38\nus\t38\nmadam\t37\nnow\t37\nThis\t37\nthink\t37\nsee\t37\nlike\t36\nThey\t36\nvery\t36\nSo\t35\ngive\t35\nshould\t35\nout\t34\nyet\t34\nWhen\t33\nmother\t33\nIt\t33\ncome\t33\nson\t33\nst\t32\nWe\t32\nwife\t32\ntake\t31\nAs\t31\nHelen\t31\nsuch\t31\nOf\t31\nShe\t31\ndid\t30\nLet\t30\nWhich\t30\nnever\t29\nIs\t29\nCount\t29\ntis\t28\nwhen\t28\nexits\t28\ntime\t28\nexit\t28\nhas\t27\nmuch\t27\nthen\t27\nlife\t27\nagain\t27\nknave\t27\nWhy\t27\nleave\t26\ncannot\t26\ntheir\t26\nHis\t26\npoor\t26\nother\t25\nTis\t25\naway\t24\nGENTLEMAN\t24\ndoes\t24\nyoung\t24\nfather\t23\never\t23\npilgrim\t23\nnature\t23\nScene\t23\nhand\t23\nBy\t23\nsome\t23\nRossillion\t23\ntwo\t23\nThere\t22\nheaven\t22\nmaid\t22\nany\t22\nhear\t22\nWIDOW\t22\nFor\t22\ndone\t22\nAy\t22\nFrance\t21\nboth\t21\npray\t21\nnothing\t21\ner\t21\noff\t21\nDo\t21\nfind\t21\nmight\t20\nup\t20\nNo\t20\nfirst\t20\nWith\t20\nDuke\t20\ngo\t20\nserve\t20\nname\t20\nlive\t20\nbefore\t20\nlet\t20\nhope\t20\nGod\t20\nHow\t20\nthine\t20\ntell\t20\nwhere\t19\ncourt\t19\nanswer\t19\nLafew\t19\nLord\t19\nput\t19\nhow\t19\no\t19\nlady\t19\ninto\t19\ntruth\t19\ndaughter\t19\ndrum\t19\ndeath\t18\ncomes\t18\nthese\t18\ncould\t18\ngone\t18\nwhose\t18\nWhere\t18\nhimself\t17\nDiana\t17\nbeen\t17\npaper\t17\nmaster\t17\nmade\t17\nMajesty\t17\nWell\t17\nbusiness\t17\nindeed\t16\nThou\t16\ndown\t16\nworld\t16\nfair\t16\ni\t16\nnone\t16\nLordship\t16\nmany\t16\nNay\t16\nGood\t16\nold\t16\nnoble\t16\nNot\t16\nbring\t16\nHere\t16\nheart\t16\nNow\t16\nart\t16\nhome\t16\nFlorence\t16\ntrue\t15\nwhom\t15\nvirginity\t15\nYet\t15\nagainst\t15\nGo\t15\nAll\t15\nCome\t15\npower\t15\nYour\t15\nsweet\t14\nbetter\t14\nway\t14\nblood\t14\nmen\t14\nfool\t14\nunder\t14\nhelp\t14\nlose\t14\nWho\t13\nfriends\t13\nanother\t13\nwoman\t13\nShall\t13\nset\t13\nfurther\t13\nFrench\t13\nlost\t13\nafter\t13\nrather\t13\nhouse\t13\nservice\t13\nhusband\t13\nfound\t13\nOur\t13\nthings\t13\nBe\t13\nword\t13\nmyself\t12\ndear\t12\ndie\t12\ncaptain\t12\nitself\t12\ncount\t12\nthough\t12\nyours\t12\nbelieve\t12\nevery\t12\nplace\t12\nknows\t12\nday\t12\nHer\t12\nnor\t12\nmarry\t12\nhigh\t12\nletter\t11\nTherefore\t11\nlook\t11\nthose\t11\nourselves\t11\nFool\t11\nWill\t11\nlittle\t11\nforth\t11\npast\t11\ngave\t11\nere\t11\nLords\t11\nFarewell\t11\nFortune\t11\ngrace\t11\nsaid\t11\nwars\t10\ndare\t10\ndead\t10\nthoughts\t10\nbrother\t10\nthank\t10\nhonesty\t10\neyes\t10\nswear\t10\nhast\t10\nmistress\t10\nhonest\t10\nCountess\t10\nnight\t10\nloved\t10\nuse\t10\nsure\t10\nmatter\t10\nThough\t10\nbed\t10\nSir\t10\nplease\t10\nwar\t10\nyouth\t10\ntonight\t10\nMarry\t10\nvirtue\t10\nreturn\t10\nsend\t9\nlack\t9\npardon\t9\nLove\t9\nThen\t9\nThy\t9\nbeseech\t9\nwho\t9\nborn\t9\nfar\t9\nsense\t9\nknew\t9\nthought\t9\nCaptain\t9\nWidow\t9\ntill\t9\npleasure\t9\nsince\t9\nhour\t9\nseem\t9\neye\t9\nMay\t9\nWas\t9\ngreatest\t9\npart\t9\nworthy\t9\nstand\t9\nwithout\t9\nyourself\t9\nFlourish\t9\nfriend\t9\ncharge\t9\nstill\t9\nFrom\t9\nbest\t9\nletters\t9\nfellow\t9\nfear\t9\nask\t9\nbeing\t9\nthanks\t8\nwear\t8\nfaith\t8\nfortune\t8\ngot\t8\n2\t8\noaths\t8\ncommand\t8\nfire\t8\nreads\t8\nFaith\t8\nthousand\t8\nenough\t8\nfull\t8\nonly\t8\ngentlewoman\t8\nlong\t8\npity\t8\nfall\t8\nknown\t8\nhold\t8\ndemand\t8\nfine\t8\nWhose\t8\nneed\t8\nstay\t8\nTill\t8\nenemy\t8\nloves\t8\nholy\t8\ntongue\t8\nMars\t8\nspoke\t8\nunderstand\t8\nAttendants\t8\nMadam\t8\nprove\t8\nnote\t8\nSince\t8\noft\t8\nsword\t8\nsave\t8\nabout\t8\ndanger\t7\nMonsieur\t7\ncourtier\t7\neven\t7\nSTEWARD\t7\nne\t7\nYes\t7\nThan\t7\ndispleasure\t7\nsake\t7\nface\t7\nsoldier\t7\neat\t7\nsteal\t7\nfavor\t7\nboy\t7\nwithin\t7\nry\t7\ncall\t7\ncheek\t7\nOr\t7\nwish\t7\nheard\t7\nworth\t7\nvirtuous\t7\nrun\t7\nrest\t7\npoint\t7\nAn\t7\nwon\t7\nflesh\t7\ntimes\t7\nsaw\t7\nhorse\t7\nlords\t7\nshow\t7\nonce\t7\nUpon\t7\nmakes\t7\ncommon\t7\nOne\t7\nd\t7\nherself\t7\nbound\t7\npains\t7\nhaste\t7\nsays\t7\nneither\t7\nten\t7\ntold\t7\nDUKE\t7\nfarewell\t7\nfit\t7\nvirgin\t6\nliege\t6\nlast\t6\ncargo\t6\nelse\t6\noffice\t6\nroyal\t6\n3\t6\nlies\t6\nlooks\t6\nMust\t6\nMore\t6\nMARIANA\t6\nthyself\t6\ncredit\t6\nknowledge\t6\nmarriage\t6\nstrange\t6\nlight\t6\nbuy\t6\ntaken\t6\nhither\t6\nkept\t6\nhumble\t6\nthree\t6\nFirst\t6\npass\t6\nreputation\t6\nkeep\t6\nstrive\t6\nlaw\t6\ntender\t6\nliving\t6\ncalled\t6\nears\t6\nHath\t6\n1\t6\nquestion\t6\ncure\t6\nFlorentine\t6\nheavy\t6\nwords\t6\ndearest\t6\nwrit\t6\nprayers\t6\nAt\t6\nbegin\t6\nHighness\t6\nlend\t6\nwrite\t6\nSuch\t6\nSoldiers\t6\nchoice\t6\ncat\t6\npurpose\t6\nmind\t6\ncourse\t6\nhead\t6\nchild\t6\nhate\t6\ngeneral\t6\ngoes\t6\nwrong\t6\nlate\t6\nGreat\t6\nend\t6\nbetween\t6\ncreature\t6\nWould\t6\ntrust\t6\nfinger\t6\nduty\t6\nmaiden\t6\nbody\t6\nbid\t6\nremembrance\t6\ntook\t6\nchoose\t6\ndevil\t6\nmean\t6\ncare\t6\nre\t6\nstrong\t6\nTake\t6\nill\t6\nage\t6\nsent\t6\nbear\t6\ngentleman\t6\ncold\t6\nspeed\t6\ngiven\t5\nNothing\t5\nsimple\t5\nthemselves\t5\nHave\t5\nseen\t5\nmeaning\t5\nsame\t5\nn\t5\ntruly\t5\nhers\t5\nfollow\t5\narmy\t5\nNor\t5\nsix\t5\ndeed\t5\nlay\t5\nsworn\t5\nprince\t5\nem\t5\nrt\t5\nnext\t5\nmeans\t5\nParis\t5\nshalt\t5\ntitle\t5\nact\t5\nlawful\t5\ntherefore\t5\nOn\t5\nunto\t5\nspeech\t5\ntry\t5\ninterpreter\t5\ncanst\t5\nholds\t5\nmonsieur\t5\nGrace\t5\nways\t5\nanon\t5\ntalk\t5\nIndeed\t5\ndeceived\t5\nsovereign\t5\nvalor\t5\nwelcome\t5\nfancy\t5\nJaques\t5\nundertake\t5\nneeds\t5\nmeet\t5\nKnow\t5\nhonorable\t5\ndoth\t5\nreport\t5\nforever\t5\nboys\t5\nPray\t5\ncompanion\t5\nthus\t5\nmove\t5\nSaint\t5\nwilt\t5\nsorrow\t5\nrecovered\t5\nwhipped\t5\nsomething\t5\ncorrupt\t5\ncamp\t5\nsirrah\t5\nsuit\t5\nlead\t5\nfly\t5\nAre\t5\nwisdom\t5\nsuccess\t5\nDian\t5\ntogether\t5\nvow\t5\nlanguage\t5\nread\t5\ngrief\t5\naid\t5\nsing\t5\npresent\t5\ntears\t5\nACT\t5\nalready\t5\ngentle\t5\nAfter\t5\npraise\t5\ncase\t5\nsuffer\t5\nAway\t5\nstate\t5\nmarried\t5\nproud\t5\nparticular\t5\ngold\t5\nself\t5\nfour\t5\nweak\t5\nDid\t5\ngift\t5\nreceive\t5\ncountry\t5\nconfess\t5\nright\t5\nplay\t5\nbehalf\t4\nended\t4\ncoward\t4\ngrow\t4\nthrive\t4\nstocks\t4\ndeserved\t4\njustice\t4\nrate\t4\nLook\t4\nwork\t4\nPardon\t4\npatient\t4\nnay\t4\npay\t4\nscar\t4\nalmost\t4\nreading\t4\nfortunes\t4\nremedy\t4\ncontent\t4\nstands\t4\ntoken\t4\nspace\t4\ntwas\t4\nsingle\t4\nlie\t4\npretty\t4\nvaliant\t4\nfree\t4\nends\t4\ndeal\t4\nreasons\t4\nMake\t4\nOnly\t4\nmidnight\t4\nbuttock\t4\nGentlemen\t4\nget\t4\nentreat\t4\nworn\t4\nWhether\t4\ncap\t4\nnose\t4\nhearts\t4\nquestions\t4\npaid\t4\npromise\t4\nsound\t4\nGive\t4\ngoodly\t4\nprice\t4\nsharp\t4\ndisaster\t4\nEre\t4\nDrum\t4\nSay\t4\neach\t4\ndost\t4\nfoot\t4\nVirginity\t4\nintents\t4\ndearly\t4\ngracious\t4\nalone\t4\nnear\t4\nyounger\t4\nfaults\t4\nidle\t4\nskill\t4\nundone\t4\nFare\t4\nleisure\t4\nwishes\t4\ngoodness\t4\nrich\t4\nvows\t4\nshame\t4\ngives\t4\nlest\t4\nblack\t4\nbeg\t4\nwhence\t4\nthinks\t4\ncarry\t4\ngoing\t4\nseems\t4\nwonder\t4\nweigh\t4\nhundred\t4\nrespect\t4\nkind\t4\nmelancholy\t4\nSome\t4\nen\t4\nsin\t4\n4\t4\nhurt\t4\nvirtues\t4\nowes\t4\nbeat\t4\nmanners\t4\nstar\t4\nblame\t4\n5\t4\nmercy\t4\nanything\t4\nbold\t4\nfive\t4\ntwere\t4\nsings\t4\nbosom\t4\nBefore\t4\nHad\t4\npresently\t4\ncontempt\t4\ngentlemen\t4\nAgainst\t4\nsearch\t4\nfetch\t4\nkiss\t4\nspoken\t4\nDumaine\t4\nable\t4\nstood\t4\near\t4\ndeny\t4\ntaking\t4\nransom\t4\nservant\t4\nquickly\t4\njust\t4\nguard\t4\ncolor\t4\ncoming\t4\nhappy\t3\ninformed\t3\nbeard\t3\nthrough\t3\nsong\t3\nwind\t3\ne\t3\nbreaking\t3\nfifty\t3\nMight\t3\nforward\t3\ntroop\t3\nexperience\t3\nsurety\t3\nstratagem\t3\nobserve\t3\nInto\t3\nincrease\t3\nfinds\t3\nshake\t3\nfears\t3\nhours\t3\nThose\t3\nabsent\t3\nmain\t3\nclothes\t3\nseldom\t3\nbad\t3\nWithin\t3\ntouch\t3\nking\t3\nprofession\t3\nspirits\t3\nentertainment\t3\nmatch\t3\npox\t3\nPrithee\t3\nattempt\t3\npeace\t3\nlately\t3\nhealth\t3\nwhy\t3\nconstraint\t3\nbless\t3\nFrenchman\t3\nequal\t3\nbravely\t3\nlent\t3\nSoldier\t3\nweep\t3\nburied\t3\nKeep\t3\nhence\t3\nSteward\t3\nSpeak\t3\nwears\t3\nthankful\t3\nblushes\t3\nwed\t3\nyear\t3\nstars\t3\nowe\t3\nfain\t3\nshort\t3\nbidding\t3\nscarce\t3\nwhile\t3\nones\t3\ndraw\t3\nplague\t3\nstanding\t3\nstomach\t3\nTruly\t3\nbackward\t3\nwin\t3\nwhipping\t3\nGet\t3\nworse\t3\ntraitors\t3\nfond\t3\nbeauty\t3\nOft\t3\nde\t3\nunworthy\t3\nfox\t3\nturn\t3\nrogues\t3\nmetaphor\t3\nThese\t3\nmoney\t3\nproduce\t3\nTheir\t3\nthither\t3\npluck\t3\nMine\t3\ndesire\t3\nDemand\t3\nE\t3\nspare\t3\nsleep\t3\nabove\t3\npatience\t3\ngiving\t3\nwhole\t3\nnation\t3\nperceive\t3\noften\t3\nsecond\t3\nfile\t3\ncompany\t3\neverything\t3\nbrings\t3\ntricks\t3\nArt\t3\nwherein\t3\nsoldiers\t3\nwant\t3\ndidst\t3\ncomfort\t3\nassure\t3\ngallant\t3\ntwenty\t3\nexploit\t3\nliking\t3\nSave\t3\npromises\t3\nDear\t3\nalong\t3\noffense\t3\nacquainted\t3\nremember\t3\ndesperate\t3\nlearned\t3\nfreely\t3\nknowing\t3\nquick\t3\nsoon\t3\nreports\t3\ndark\t3\nwithered\t3\nreceived\t3\nblessed\t3\nshut\t3\nofficer\t3\ndouble\t3\nsick\t3\nbought\t3\nparts\t3\nsoldiership\t3\ngrave\t3\nwindow\t3\nTell\t3\nwhilst\t3\nvirgins\t3\nUnless\t3\nwarrant\t3\nvelvet\t3\nBless\t3\ncommendations\t3\nmotion\t3\n"
+          },
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"result-alert alert-warning\" role\u003d\"alert\"\u003e\u003cbutton type\u003d\"button\" class\u003d\"close\" data-dismiss\u003d\"alert\" aria-label\u003d\"Close\"\u003e\u003cspan aria-hidden\u003d\"true\"\u003e\u0026times;\u003c/span\u003e\u003c/button\u003e\u003cstrong\u003eOutput is truncated\u003c/strong\u003e to 1000 rows. Learn more about \u003cstrong\u003ezeppelin.spark.maxResult\u003c/strong\u003e\u003c/div\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://zeppelin:4040/jobs/job?id\u003d54"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1613417723493_1263711349",
+      "id": "paragraph_1613417723493_1263711349",
+      "dateCreated": "2021-02-15 19:35:23.496",
+      "dateStarted": "2021-02-15 19:37:40.474",
+      "dateFinished": "2021-02-15 19:37:42.486",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\n\n\nfrom pyspark.sql.functions import input_file_name\nfrom pyspark.sql import functions as F\nimport os\n\nroot \u003d \"/files/INFORMATION_SCHEMA/\"\ndirectory \u003d os.fsencode(root)\n    \nfor file in os.listdir(directory):\n     filename \u003d os.fsdecode(file)\n     if filename.endswith(\".json\"):\n         input_path \u003d root + filename\n         output_path \u003d root + os.path.splitext(os.path.basename(input_path))[0]\n        #  print(input_path)\n        #  print(output_path)\n         print(\"Processing {}\".format(filename))\n         df_raw \u003d spark.read \\\n            .option(\"multiLine\", True) \\\n            .format(\"json\") \\\n            .load(input_path)\n         if df_raw.count() \u003e 0:\n             print(\"Writing to {}\".format(output_path))\n             df_raw \\\n                .select([F.col(col).alias(col.replace(\u0027 \u0027, \u0027_\u0027)) for col in df_raw.columns]) \\\n                .write \\\n                .mode(\"overwrite\") \\\n                .parquet(output_path)\n         continue\n     else:\n         continue",
+      "user": "anonymous",
+      "dateUpdated": "2021-02-15 23:11:56.634",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "Address": "string",
+                      "source_file_name": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "AddressTypeID": "string",
+                      "ModifiedDate": "string",
+                      "Name": "string",
+                      "rowguid": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Processing TABLES.json\nWriting to /files/INFORMATION_SCHEMA/TABLES\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://zeppelin:4040/jobs/job?id\u003d1297"
+            },
+            {
+              "jobUrl": "http://zeppelin:4040/jobs/job?id\u003d1298"
+            },
+            {
+              "jobUrl": "http://zeppelin:4040/jobs/job?id\u003d1299"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1613417772012_1002282297",
+      "id": "paragraph_1613417772012_1002282297",
+      "dateCreated": "2021-02-15 19:36:12.012",
+      "dateStarted": "2021-02-15 23:11:56.673",
+      "dateFinished": "2021-02-15 23:11:57.694",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\n\ndf_raw \u003d spark.read \\\n    .option(\"multiLine\", True) \\\n    .format(\"json\") \\\n    .load(\"/files/Assignment/AdventureWorks/json/SalesTerritoryHistory.gz\")\n\nz.show(df_raw)",
+      "user": "anonymous",
+      "dateUpdated": "2021-02-15 22:07:05.937",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "BusinessEntityID": "string",
+                      "EndDate": "string",
+                      "ModifiedDate": "string",
+                      "StartDate": "string",
+                      "TerritoryID": "string",
+                      "rowguid": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "BusinessEntityID\tEndDate\tModifiedDate\tStartDate\tTerritoryID\trowguid\n275\t2012-11-29T07:00:00Z\t2012-11-22T07:00:00Z\t2011-05-31T06:00:00Z\t2\t8563CE6A-00FF-47D7-BA4D-3C3E1CDEF531\n275\tnull\t2012-11-23T07:00:00Z\t2012-11-30T07:00:00Z\t3\t2F44304C-EE87-4C72-813E-CA75C5F61F4C\n276\tnull\t2011-05-24T06:00:00Z\t2011-05-31T06:00:00Z\t4\t64BCB1B3-A793-40BA-9859-D90F78C3F167\n277\t2012-11-29T07:00:00Z\t2012-11-22T07:00:00Z\t2011-05-31T06:00:00Z\t3\t3E9F893D-5142-46C9-A76A-867D1E3D6F90\n277\tnull\t2012-11-23T07:00:00Z\t2012-11-30T07:00:00Z\t2\t132E4721-32DD-4A73-B556-1837F3A2B9AE\n278\tnull\t2011-05-24T06:00:00Z\t2011-05-31T06:00:00Z\t6\tB7C8F9F5-5FB8-47B3-BE73-1B9A14BDF8B9\n279\tnull\t2011-05-24T06:00:00Z\t2011-05-31T06:00:00Z\t5\t57D1CDCF-62CE-499F-8BE8-1BB71C4BB7EF\n280\t2012-09-29T06:00:00Z\t2012-09-22T06:00:00Z\t2011-05-31T06:00:00Z\t1\tFD3F5566-10E2-4960-BE12-0365E5665881\n281\tnull\t2011-05-24T06:00:00Z\t2011-05-31T06:00:00Z\t4\t9D8754B2-C320-40DB-A77F-FF5A1BC0F46B\n282\t2012-05-29T06:00:00Z\t2012-05-22T06:00:00Z\t2011-05-31T06:00:00Z\t6\t2C9F5240-D8BF-4F85-897D-6083146DBC4B\n282\tnull\t2012-05-23T06:00:00Z\t2012-05-30T06:00:00Z\t10\t92375465-38C6-4C86-ABA1-9838A2969475\n283\tnull\t2011-05-24T06:00:00Z\t2011-05-31T06:00:00Z\t1\t009F7660-44A6-4ADF-BD4B-A5D1B79993F5\n284\tnull\t2012-09-23T06:00:00Z\t2012-09-30T06:00:00Z\t1\tED12F921-8023-48EF-84BD-94D942F4C009\n286\tnull\t2013-05-23T06:00:00Z\t2013-05-30T06:00:00Z\t9\tD664D989-2BEB-4F2C-A4AA-691018965283\n288\tnull\t2013-05-23T06:00:00Z\t2013-05-30T06:00:00Z\t8\t3E1360CB-32E0-4286-8D98-8539F1AB2550\n289\tnull\t2012-05-23T06:00:00Z\t2012-05-30T06:00:00Z\t6\t987613ED-33D6-42A6-B992-0B33E9234934\n290\tnull\t2012-05-23T06:00:00Z\t2012-05-30T06:00:00Z\t7\t8895E74D-6D38-4140-BBEA-A8136A2F480E\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://zeppelin:4040/jobs/job?id\u003d1150"
+            },
+            {
+              "jobUrl": "http://zeppelin:4040/jobs/job?id\u003d1151"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1613417984758_1527836592",
+      "id": "paragraph_1613417984758_1527836592",
+      "dateCreated": "2021-02-15 19:39:44.758",
+      "dateStarted": "2021-02-15 22:07:02.630",
+      "dateFinished": "2021-02-15 22:07:03.052",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%python\n\nimport json\n\nreformat_json(\"/files/Assignment/AdventureWorks/Address.json\", \"/files/Assignment/AdventureWorks/Address.jsonl\")",
+      "user": "anonymous",
+      "dateUpdated": "2021-02-15 20:04:50.637",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1613419010247_819231865",
+      "id": "paragraph_1613419010247_819231865",
+      "dateCreated": "2021-02-15 19:56:50.247",
+      "dateStarted": "2021-02-15 20:04:50.670",
+      "dateFinished": "2021-02-15 20:04:50.879",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%python\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-02-15 19:57:23.326",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1613419043326_1537118789",
+      "id": "paragraph_1613419043326_1537118789",
+      "dateCreated": "2021-02-15 19:57:23.326",
+      "status": "READY"
+    }
+  ],
+  "name": "Data Sets",
+  "id": "2FYQ8JS4E",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0-preview2",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

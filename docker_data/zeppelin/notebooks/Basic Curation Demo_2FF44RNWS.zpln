@@ -3,7 +3,7 @@
     {
       "text": "%md\n# Project Details\nA simple project that demonstrates a simple data curation project. Using SQL, Apache Spark, PostgreSQL, Apache Zeppelin, Docker and Docker Compose. It uses employment projection data by occupation name and county in Utah.\n\n# Project Outline\n| Step | Technology | Description |\n|-----:|------------|-------------|\n|    1 | Spark      | Read data from csv files (15)\n|    2 | Spark      | Write data into a corresponding table (raw data)\n|    3 | SQL        | Verify each table (15) exists\n|    4 | SQL        | Show record count by table\n|    5 | SQL        | Investigate what data cleansing is required\n|    6 | SQL        | Clean up column names, combine raw tables (15) into a single process table\n|    7 | Spark      | Read data from processed table\n|    8 | Spark      | Filter data to the highest paid location for each occupation name\n\n# Environment\n1. Languages: Python, SQL\n1. Apache Spark 2.2.1\n1. PostgreSQL 10.6\n1. Apache Zeppelin 0.8.1 \n1. Docker 19.03.1, build 74b1e89\n1. Docker Compose 1.24.1, build 4667896b\n\n# Other Fun Things To Try\n1. Add geolocation information for each county\n1. Display salary ranges on map\n1. Output data into file(s)\n1. Write to Apache Cassandra\n1. Write to Elasticsearch\n1. Write to graph database (neo4j or anagoDB)\n1. Pull files directly from web source\n1. Make code less verbose (loops, functions, etc)\n1. Speed up the process\n1. Make the code re-runnable/self-healing\n1. Handle modified data\n1. Front end UI\n1. Convert to event sourced data\n1. Add additional (different/complimentary) data\n1. Implement Presto\n1. Create PowerBI report from data\n\n# Source Files\n1. Beaver_County_Employment_Projections_2012-2022.csv\n1. Box_Elder_County_Employment_Projections_2012-2022.csv\n1. Cache_County_Employment_Projections_2012-2022.csv\n1. Garfield_County_Employment_Projections_2012-2022.csv\n1. Iron_County_Employment_Projections_2012-2022.csv\n1. Millard_County_Employment_Projections_2012-2022.csv\n1. Piute_County_Employment_Projections_2012-2022.csv\n1. Rich_County_Employment_Projections_2012-2022.csv\n1. Salt_Lake_County_Employment_Projections_2012-2022.csv\n1. Sanpete_County_Employment_Projections_2012-2022.csv\n1. Sevier_County_Employment_Projections_2012-2022.csv\n1. Utah_County_Employment_Projections_2012-2022.csv\n1. Wasatch_Employment_Projections_2012-2022.csv\n1. Washington_County_Employment_Projections_2012-2022.csv\n1. Wayne_Employment_Projections_2012-2022.csv\n\nSource: https://opendata.utah.gov/\n",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:26.865",
+      "dateUpdated": "2021-02-05 03:40:28.178",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -15,7 +15,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -33,6 +33,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169143_2008686464",
       "id": "20190829-022330_767586551",
@@ -44,7 +45,7 @@
     {
       "text": "%md\n\n# Step 1",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:26.996",
+      "dateUpdated": "2021-02-05 03:40:28.204",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -56,7 +57,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -74,6 +75,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169145_1446465130",
       "id": "20190830-032751_1927835622",
@@ -85,7 +87,7 @@
     {
       "text": "%md\n\n# Spark\n## Read file for each county\n\n1. Header row for each file\n1. Infer the schema of each file\n1. Append column of source file\n1. Display 5 sample records",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:27.126",
+      "dateUpdated": "2021-02-05 03:40:28.229",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -97,7 +99,7 @@
         "colWidth": 3.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {
           "0": {
             "graph": {
@@ -123,6 +125,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169145_-167636964",
       "id": "20190829-133856_759055540",
@@ -134,7 +137,7 @@
     {
       "text": "%pyspark\n\nfrom pyspark.sql.functions import lit\n\ndf_beaver \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Beaver_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Beaver_County_Employment_Projections_2012-2022.csv\"))\ndf_boxelder \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Box_Elder_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Box_Elder_County_Employment_Projections_2012-2022.csv\"))\ndf_cache \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Cache_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Cache_County_Employment_Projections_2012-2022.csv\"))\ndf_garfield \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Garfield_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Garfield_County_Employment_Projections_2012-2022.csv\"))\ndf_iron \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Iron_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Iron_County_Employment_Projections_2012-2022.csv\"))\ndf_millard \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Millard_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Millard_County_Employment_Projections_2012-2022.csv\"))\ndf_piute \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Piute_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Piute_County_Employment_Projections_2012-2022.csv\"))\ndf_rich \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Rich_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Rich_County_Employment_Projections_2012-2022.csv\"))\ndf_saltlake \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Salt_Lake_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Salt_Lake_County_Employment_Projections_2012-2022.csv\"))\ndf_sanpete \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Sanpete_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Sanpete_County_Employment_Projections_2012-2022.csv\"))\ndf_sevier \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Sevier_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Sevier_County_Employment_Projections_2012-2022.csv\"))\ndf_utah \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Utah_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Utah_County_Employment_Projections_2012-2022.csv\"))\ndf_wasatch \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Wasatch_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Wasatch_Employment_Projections_2012-2022.csv\"))\ndf_washington \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Washington_County_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Washington_County_Employment_Projections_2012-2022.csv\"))\ndf_wayne \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/files/UtahDS/Wayne_Employment_Projections_2012-2022.csv\") \\\n  .withColumn(\"source_file_name\", lit(\"Wayne_Employment_Projections_2012-2022.csv\"))\n\nz.show(df_wasatch.limit(5))",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:27.256",
+      "dateUpdated": "2021-02-05 03:40:28.253",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -146,7 +149,7 @@
         "colWidth": 9.0,
         "editorMode": "ace/mode/python",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {
           "0": {
             "graph": {
@@ -235,6 +238,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169145_755085077",
       "id": "20190829-012730_906473588",
@@ -246,7 +250,7 @@
     {
       "text": "%md\n\n# Step 2",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:31.798",
+      "dateUpdated": "2021-02-05 03:40:28.278",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -258,7 +262,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -276,6 +280,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169146_-771926665",
       "id": "20190830-032654_123213654",
@@ -287,7 +292,7 @@
     {
       "text": "%md\n\n# Spark\n## Write each files data\n\n1. Insert into a corresponding \"public.raw_[county name]\" table\n1. Auto create table for each county (file)\n1. Overwrite table contents",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:31.928",
+      "dateUpdated": "2021-02-05 03:40:28.303",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -299,7 +304,7 @@
         "colWidth": 3.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -317,6 +322,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169146_-1004907223",
       "id": "20190829-134046_28846703",
@@ -328,7 +334,7 @@
     {
       "text": "%pyspark\n\nconnectionProperties \u003d {\n  \"user\": \"message_store\",\n  \"password\": \"\",\n  \"driver\": \"org.postgresql.Driver\"\n        }\n\ndf_beaver.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_beaver\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Beaver\")\ndf_boxelder.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_boxelder\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Box Elder\")\ndf_cache.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_cache\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Cache\")\ndf_garfield.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_garfield\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Garfield\")\ndf_iron.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_iron\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Iron\")\ndf_millard.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_millard\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Millard\")\ndf_piute.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_piute\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Piute\")\ndf_rich.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_rich\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Rich\")\ndf_saltlake.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_saltlake\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Salt Lake\")\ndf_sanpete.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_sanpete\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Sanpete\")\ndf_sevier.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_sevier\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Sevier\")\ndf_utah.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_utah\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Utah\")\ndf_wasatch.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_wasatch\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Wasatch\")\ndf_washington.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_washington\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Washington\")\ndf_wayne.write.jdbc(url\u003d\"jdbc:postgresql://message_store:5432/\", table\u003d\"public.raw_wayne\", mode\u003d\"overwrite\", properties\u003dconnectionProperties)\nprint(\"Completed: Wayne\")",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:32.056",
+      "dateUpdated": "2021-02-05 03:40:28.329",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -340,7 +346,7 @@
         "colWidth": 9.0,
         "editorMode": "ace/mode/python",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {
           "0": {
             "graph": {
@@ -400,6 +406,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169146_1777446303",
       "id": "20190829-024003_1202704084",
@@ -411,7 +418,7 @@
     {
       "text": "%md\n\n# Step 3",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:35.189",
+      "dateUpdated": "2021-02-05 03:40:28.355",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -423,7 +430,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -441,6 +448,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169146_-1814486921",
       "id": "20190830-032738_111341904",
@@ -452,7 +460,7 @@
     {
       "text": "%md\n\n# SQL\n## Verify tables exist\n\n1. Should be 15 records",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:35.322",
+      "dateUpdated": "2021-02-05 03:40:28.380",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -464,7 +472,7 @@
         "colWidth": 3.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -482,6 +490,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169147_176330692",
       "id": "20190829-135305_726851865",
@@ -493,7 +502,7 @@
     {
       "text": "%jdbc\n\nSELECT\n   table_name\nFROM information_schema.\"tables\"\nWHERE\n   table_name LIKE \u0027raw%\u0027\nORDER BY\n   table_name",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:35.451",
+      "dateUpdated": "2021-02-05 03:40:28.405",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -505,7 +514,7 @@
         "colWidth": 9.0,
         "editorMode": "ace/mode/sql",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {
           "0": {
             "graph": {
@@ -567,6 +576,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169147_1123219858",
       "id": "20190829-030246_97873831",
@@ -578,7 +588,7 @@
     {
       "text": "%md\n\n# Step 4",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:35.588",
+      "dateUpdated": "2021-02-05 03:40:28.431",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -590,7 +600,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -608,6 +618,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169147_-1374663579",
       "id": "20190830-032949_1545505914",
@@ -619,7 +630,7 @@
     {
       "text": "%md\n\n# SQL\n## Record count by raw_ table\n\n1. Should be 15 raw_ tables",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:35.718",
+      "dateUpdated": "2021-02-05 03:40:28.456",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -631,7 +642,7 @@
         "colWidth": 3.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -649,6 +660,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169147_967473895",
       "id": "20190829-140618_1631334414",
@@ -660,9 +672,9 @@
     {
       "text": "%jdbc\n\n--SELECT\n--   \u0027SELECT \u0027\u0027\u0027 || table_name || \u0027\u0027\u0027 AS source_table, COUNT(*) AS record_count FROM \u0027 || table_name || \u0027 UNION\u0027 \n--FROM information_schema.\"tables\"\n--WHERE\n--   table_name LIKE \u0027raw%\u0027\n--ORDER BY\n--   table_name\n\nSELECT \u0027raw_beaver\u0027     AS source_table, COUNT(*) AS record_count FROM raw_beaver     UNION\nSELECT \u0027raw_boxelder\u0027   AS source_table, COUNT(*) AS record_count FROM raw_boxelder   UNION\nSELECT \u0027raw_cache\u0027      AS source_table, COUNT(*) AS record_count FROM raw_cache      UNION\nSELECT \u0027raw_garfield\u0027   AS source_table, COUNT(*) AS record_count FROM raw_garfield   UNION\nSELECT \u0027raw_iron\u0027       AS source_table, COUNT(*) AS record_count FROM raw_iron       UNION\nSELECT \u0027raw_millard\u0027    AS source_table, COUNT(*) AS record_count FROM raw_millard    UNION\nSELECT \u0027raw_piute\u0027      AS source_table, COUNT(*) AS record_count FROM raw_piute      UNION\nSELECT \u0027raw_rich\u0027       AS source_table, COUNT(*) AS record_count FROM raw_rich       UNION\nSELECT \u0027raw_saltlake\u0027   AS source_table, COUNT(*) AS record_count FROM raw_saltlake   UNION\nSELECT \u0027raw_sanpete\u0027    AS source_table, COUNT(*) AS record_count FROM raw_sanpete    UNION\nSELECT \u0027raw_sevier\u0027     AS source_table, COUNT(*) AS record_count FROM raw_sevier     UNION\nSELECT \u0027raw_utah\u0027       AS source_table, COUNT(*) AS record_count FROM raw_utah       UNION\nSELECT \u0027raw_washington\u0027 AS source_table, COUNT(*) AS record_count FROM raw_washington UNION\nSELECT \u0027raw_wayne\u0027      AS source_table, COUNT(*) AS record_count FROM raw_wayne",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:35.847",
+      "dateUpdated": "2021-02-05 03:40:28.482",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "sql",
           "editOnDblClick": false,
@@ -672,7 +684,7 @@
         "colWidth": 9.0,
         "editorMode": "ace/mode/sql",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {
           "0": {
             "graph": {
@@ -795,6 +807,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169148_1967221031",
       "id": "20190829-031029_17424089",
@@ -806,9 +819,9 @@
     {
       "text": "%md\n\n# Step 5",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:35.979",
+      "dateUpdated": "2021-02-05 03:40:28.508",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
@@ -818,7 +831,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -836,6 +849,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169148_1038602546",
       "id": "20190830-032958_1819296509",
@@ -847,9 +861,9 @@
     {
       "text": "%md\n\n# Data Cleansing Investigation",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:36.106",
+      "dateUpdated": "2021-02-05 03:40:28.533",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
@@ -859,7 +873,7 @@
         "colWidth": 3.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -877,6 +891,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169148_838346062",
       "id": "20190829-140612_1910157418",
@@ -888,9 +903,9 @@
     {
       "text": "%jdbc\r\n\r\nSELECT\r\n   CASE\r\n     WHEN column_name \u003d \u0027Annual Openings Replacements\u0027 THEN \u0027annual_openings_replacements\u0027\r\n     WHEN column_name \u003d \u0027Annual Openings Total\u0027        THEN \u0027annual_openings_total\u0027\r\n     WHEN column_name \u003d \u0027Education\u0027                    THEN \u0027education\u0027\r\n     WHEN column_name \u003d \u0027Job Training\u0027                 THEN \u0027job_training\u0027\r\n     WHEN column_name \u003d \u0027Occupation Title\u0027             THEN \u0027occupation_title\u0027\r\n     WHEN column_name \u003d \u0027SOC Code\u0027                     THEN \u0027soc_code\u0027\r\n     WHEN column_name \u003d \u0027Work Experience\u0027              THEN \u0027work_experience\u0027\r\n     WHEN column_name \u003d \u0027Annual Openings Growth\u0027       THEN \u0027annual_openings_growth\u0027\r\n     WHEN column_name \u003d \u0027Hourly Wages Inexperienced\u0027   THEN \u0027hourly_wages_inexperience\u0027\r\n     WHEN column_name \u003d \u0027source_file_name\u0027             THEN \u0027source_file_name\u0027\r\n     WHEN column_name LIKE \u0027%2012%\u0027                    THEN \u0027estimates_2012\u0027\r\n     WHEN column_name LIKE \u0027%2022%\u0027                    THEN \u0027estimates_2022\u0027\r\n     WHEN LOWER(column_name) LIKE \u0027%star%\u0027             THEN \u0027star_rating\u0027\r\n     WHEN LOWER(column_name) LIKE \u0027%wages%\u0027            THEN \u0027hourly_wages_median\u0027\r\n     WHEN LOWER(column_name) LIKE \u0027%growth%\u0027           THEN \u0027annual_growth_rate\u0027\r\n     ELSE \u0027unknown\u0027\r\n   END AS column_name_common\r\n  ,data_type\r\n  ,MIN(column_name) AS sample_column_name_original_1\r\n  ,MAX(column_name) AS sample_column_name_original_2\r\n  ,COUNT(*)\r\n  ,COUNT(DISTINCT column_name) AS distinct_column_names\r\nFROM information_schema.\"columns\"\r\nWHERE\r\n   table_name LIKE \u0027raw%\u0027\r\nGROUP BY\r\n   CASE\r\n     WHEN column_name \u003d \u0027Annual Openings Replacements\u0027 THEN \u0027annual_openings_replacements\u0027\r\n     WHEN column_name \u003d \u0027Annual Openings Total\u0027        THEN \u0027annual_openings_total\u0027\r\n     WHEN column_name \u003d \u0027Education\u0027                    THEN \u0027education\u0027\r\n     WHEN column_name \u003d \u0027Job Training\u0027                 THEN \u0027job_training\u0027\r\n     WHEN column_name \u003d \u0027Occupation Title\u0027             THEN \u0027occupation_title\u0027\r\n     WHEN column_name \u003d \u0027SOC Code\u0027                     THEN \u0027soc_code\u0027\r\n     WHEN column_name \u003d \u0027Work Experience\u0027              THEN \u0027work_experience\u0027\r\n     WHEN column_name \u003d \u0027Annual Openings Growth\u0027       THEN \u0027annual_openings_growth\u0027\r\n     WHEN column_name \u003d \u0027Hourly Wages Inexperienced\u0027   THEN \u0027hourly_wages_inexperience\u0027\r\n     WHEN column_name \u003d \u0027source_file_name\u0027             THEN \u0027source_file_name\u0027\r\n     WHEN column_name LIKE \u0027%2012%\u0027                    THEN \u0027estimates_2012\u0027\r\n     WHEN column_name LIKE \u0027%2022%\u0027                    THEN \u0027estimates_2022\u0027\r\n     WHEN LOWER(column_name) LIKE \u0027%star%\u0027             THEN \u0027star_rating\u0027\r\n     WHEN LOWER(column_name) LIKE \u0027%wages%\u0027            THEN \u0027hourly_wages_median\u0027\r\n     WHEN LOWER(column_name) LIKE \u0027%growth%\u0027           THEN \u0027annual_growth_rate\u0027\r\n     ELSE \u0027unknown\u0027\r\n   END\r\n  ,data_type\r\nORDER BY\r\n   column_name_common",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:36.235",
+      "dateUpdated": "2021-02-05 03:40:28.557",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "sql",
           "editOnDblClick": false,
@@ -900,7 +915,7 @@
         "colWidth": 9.0,
         "editorMode": "ace/mode/sql",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {
           "0": {
             "graph": {
@@ -951,6 +966,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169148_-617149195",
       "id": "20190829-145918_1551440508",
@@ -962,9 +978,9 @@
     {
       "text": "%md\n\n# Step 6",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:36.365",
+      "dateUpdated": "2021-02-05 03:40:28.589",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
@@ -974,7 +990,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -992,6 +1008,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169149_-1018933959",
       "id": "20190830-033005_2094284759",
@@ -1003,9 +1020,9 @@
     {
       "text": "%md\n\n# SQL\n## Union all data together\n1. Drop table if exists\n1. Normalize column names\n1. Union raw_ tables\n1. Insert into processed table\n1. Query insert count (should be 4780)\n \n\n\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:36.497",
+      "dateUpdated": "2021-02-05 03:40:28.613",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
@@ -1015,7 +1032,7 @@
         "colWidth": 3.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -1033,6 +1050,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169149_760671145",
       "id": "20190829-200108_510567407",
@@ -1044,9 +1062,9 @@
     {
       "text": "%jdbc\n\nDROP TABLE IF EXISTS public.processed_jobs;\n",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:36.627",
+      "dateUpdated": "2021-02-05 03:40:28.638",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "sql",
           "editOnDblClick": false,
@@ -1056,7 +1074,7 @@
         "colWidth": 9.0,
         "editorMode": "ace/mode/sql",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {
           "0": {
             "graph": {
@@ -1116,6 +1134,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169149_2126391837",
       "id": "20190829-145933_1721691768",
@@ -1127,7 +1146,7 @@
     {
       "text": "%md\n\n### dont judge me. this is just a sample project ;P\nsql to generate sql below\n\n```\nSELECT\n  sort_order\n  ,table_name\n  ,column_name\n  ,column_name_normalized\n  ,CASE\n     WHEN sort_order \u003d 0 THEN \u0027SELECT\u0027\n     WHEN sort_order \u003d 99 THEN \u0027FROM public.\u0027 || table_name || \u0027 UNION\u0027\n     WHEN sort_order \u003d 1 THEN \u0027   \"\u0027 || RPAD(column_name || \u0027\"\u0027, 30, \u0027 \u0027) || \u0027 AS \u0027 || column_name_normalized\n     WHEN sort_order \u003e 1 THEN \u0027  ,\"\u0027 || RPAD(column_name || \u0027\"\u0027, 30, \u0027 \u0027) || \u0027 AS \u0027 || column_name_normalized\n     ELSE \u0027\u0027\n  END AS qry\nFROM (\nSELECT\n  0          AS sort_order\n  ,table_name AS table_name\n  ,\u0027\u0027         AS column_name\n  ,\u0027\u0027         AS column_name_normalized\nFROM information_schema.\"tables\"\nWHERE\n  table_name LIKE \u0027raw%\u0027\nUNION\nSELECT\n  ROW_NUMBER() OVER(\n     PARTITION BY table_name\n     ORDER BY     column_name_normalized) AS sort_order\n  ,table_name\n ,column_name\n ,column_name_normalized\nFROM (\nSELECT \n  table_name\n ,column_name\n ,CASE\n     WHEN column_name \u003d \u0027Annual Openings Replacements\u0027 THEN \u0027annual_openings_replacements\u0027\n     WHEN column_name \u003d \u0027Annual Openings Total\u0027        THEN \u0027annual_openings_total\u0027\n     WHEN column_name \u003d \u0027Education\u0027                    THEN \u0027education\u0027\n     WHEN column_name \u003d \u0027Job Training\u0027                 THEN \u0027job_training\u0027\n     WHEN column_name \u003d \u0027Occupation Title\u0027             THEN \u0027occupation_title\u0027\n     WHEN column_name \u003d \u0027SOC Code\u0027                     THEN \u0027soc_code\u0027\n     WHEN column_name \u003d \u0027Work Experience\u0027              THEN \u0027work_experience\u0027\n     WHEN column_name \u003d \u0027Annual Openings Growth\u0027       THEN \u0027annual_openings_growth\u0027\n     WHEN column_name \u003d \u0027Hourly Wages Inexperienced\u0027   THEN \u0027hourly_wages_inexperience\u0027\n     WHEN column_name \u003d \u0027source_file_name\u0027             THEN \u0027source_file_name\u0027\n     WHEN column_name LIKE \u0027%2012%\u0027                    THEN \u0027estimates_2012\u0027\n     WHEN column_name LIKE \u0027%2022%\u0027                    THEN \u0027estimates_2022\u0027\n     WHEN LOWER(column_name) LIKE \u0027%star%\u0027             THEN \u0027star_rating\u0027\n     WHEN LOWER(column_name) LIKE \u0027%wages%\u0027            THEN \u0027hourly_wages_median\u0027\n     WHEN LOWER(column_name) LIKE \u0027%growth%\u0027           THEN \u0027annual_growth_rate\u0027\n     ELSE \u0027unknown\u0027\n  END AS column_name_normalized\nFROM information_schema.\"columns\"\nWHERE\n  table_name LIKE \u0027raw%\u0027) AS base\nUNION\nSELECT\n  99         AS sort_order\n  ,table_name AS table_name\n  ,\u0027\u0027         AS column_name\n  ,\u0027\u0027         AS column_name_normalized\nFROM information_schema.\"tables\"\nWHERE\n  table_name LIKE \u0027raw%\u0027) AS combined\nORDER BY\n  table_name\n  ,sort_order\n  ,column_name\n```\n",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:36.756",
+      "dateUpdated": "2021-02-05 03:40:28.665",
       "config": {
         "tableHide": true,
         "editorSetting": {
@@ -1139,7 +1158,7 @@
         "colWidth": 9.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -1157,6 +1176,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169149_2005232250",
       "id": "20190830-040010_630067952",
@@ -1168,9 +1188,9 @@
     {
       "text": "%jdbc\n\nSELECT\n  *\nINTO public.processed_jobs\nFROM (\nSELECT\n   \"Annual Growth Rate\"            AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Employment Estimates 2012\"     AS estimates_2012\n  ,\"Employment Estimates 2022\"     AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Hourly Wages Median\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating\"                   AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_beaver UNION\nSELECT\n   \"Percent Growth\"                AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Estimates 2012\"                AS estimates_2012\n  ,\"Estimates 2022\"                AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Median Hourly Wages\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating*\"                  AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_boxelder UNION\nSELECT\n   \"Percent Growth\"                AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Estimates 2012\"                AS estimates_2012\n  ,\"Estimates 2022\"                AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Median Hourly Wages\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating*\"                  AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_cache UNION\nSELECT\n   \"Annual Growth Rate\"            AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Employment Estimates 2012\"     AS estimates_2012\n  ,\"Employment Estimates 2022\"     AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Hourly Wages Median\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating\"                   AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_garfield UNION\nSELECT\n   \"Annual Growth Rate\"            AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Employment Estimates 2012\"     AS estimates_2012\n  ,\"Employment Estimates 2022\"     AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Hourly Wages Median\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating\"                   AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_iron UNION\nSELECT\n   \"Annual Growth Rate\"            AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Employment Estimates 2012\"     AS estimates_2012\n  ,\"Employment Estimates 2022\"     AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Hourly Wages Median\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating\"                   AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_millard UNION\nSELECT\n   \"Annual Growth Rate\"            AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Employment Estimates 2012\"     AS estimates_2012\n  ,\"Employment Estimates 2022\"     AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Hourly Wages Median\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating\"                   AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_piute UNION\nSELECT\n   \"Percent Growth\"                AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Estimates 2012\"                AS estimates_2012\n  ,\"Estimates 2022\"                AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Median Hourly Wages\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating*\"                  AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_rich UNION\nSELECT\n   \"Annual Growth Rate\"            AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Employment Estimates 2012\"     AS estimates_2012\n  ,\"Employment Estimates 2022\"     AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Hourly Wages Median\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating\"                   AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_saltlake UNION\nSELECT\n   \"Annual Growth Rate\"            AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Employment Estimates 2012\"     AS estimates_2012\n  ,\"Employment Estimates 2022\"     AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Hourly Wages Median\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating\"                   AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_sanpete UNION\nSELECT\n   \"Annual Growth Rate\"            AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Employment Estimates 2012\"     AS estimates_2012\n  ,\"Employment Estimates 2022\"     AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Hourly Wages Median\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating\"                   AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_sevier UNION\nSELECT\n   \"Annual Growth Rate\"            AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Employment Estimates 2012\"     AS estimates_2012\n  ,\"Employment Estimates 2022\"     AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Hourly Wages Median\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating\"                   AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_utah UNION\nSELECT\n   \"Annual Growth Rate\"            AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Employment Estimates 2012\"     AS estimates_2012\n  ,\"Employment Estimates 2022\"     AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Hourly Wages Median\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating\"                   AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_wasatch UNION\nSELECT\n   \"Annual Growth Rate\"            AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Employment Estimates 2012\"     AS estimates_2012\n  ,\"Employment Estimates 2022\"     AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Hourly Wages Median\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating\"                   AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_washington UNION\nSELECT\n   \"Annual Growth Rate\"            AS annual_growth_rate\n  ,\"Annual Openings Growth\"        AS annual_openings_growth\n  ,\"Annual Openings Replacements\"  AS annual_openings_replacements\n  ,\"Annual Openings Total\"         AS annual_openings_total\n  ,\"Education\"                     AS education\n  ,\"Employment Estimates 2012\"     AS estimates_2012\n  ,\"Employment Estimates 2022\"     AS estimates_2022\n  ,\"Hourly Wages Inexperienced\"    AS hourly_wages_inexperience\n  ,\"Hourly Wages Median\"           AS hourly_wages_median\n  ,\"Job Training\"                  AS job_training\n  ,\"Occupation Title\"              AS occupation_title\n  ,\"SOC Code\"                      AS soc_code\n  ,\"source_file_name\"              AS source_file_name\n  ,\"Star Rating\"                   AS star_rating\n  ,\"Work Experience\"               AS work_experience\nFROM public.raw_wayne) AS base;",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:36.885",
+      "dateUpdated": "2021-02-05 03:40:28.692",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "sql",
           "editOnDblClick": false,
@@ -1180,7 +1200,7 @@
         "colWidth": 9.0,
         "editorMode": "ace/mode/sql",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -1198,6 +1218,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169150_-644710468",
       "id": "20190829-155716_1657224798",
@@ -1209,9 +1230,9 @@
     {
       "text": "%jdbc\n\nSELECT\n   \u0027processed_jobs\u0027 AS source_table\n  ,COUNT(*) AS record_count\nFROM public.processed_jobs",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:37.015",
+      "dateUpdated": "2021-02-05 03:40:28.718",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "sql",
           "editOnDblClick": false,
@@ -1221,7 +1242,7 @@
         "colWidth": 9.0,
         "editorMode": "ace/mode/sql",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {
           "0": {
             "graph": {
@@ -1296,6 +1317,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169151_-747983399",
       "id": "20190829-201150_1559115067",
@@ -1307,9 +1329,9 @@
     {
       "text": "%md\n\n# Step 7",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:37.144",
+      "dateUpdated": "2021-02-05 03:40:28.744",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
@@ -1319,7 +1341,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -1337,6 +1359,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169151_340696714",
       "id": "20190830-033013_204684837",
@@ -1348,9 +1371,9 @@
     {
       "text": "%md\n\n# Spark\n## Read the combined dataset\n",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:37.297",
+      "dateUpdated": "2021-02-05 03:40:28.778",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
@@ -1360,7 +1383,7 @@
         "colWidth": 3.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -1378,6 +1401,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169151_1402048298",
       "id": "20190829-222550_1322102679",
@@ -1389,9 +1413,9 @@
     {
       "text": "%pyspark\n\ndf_combined_1 \u003d spark.read.format(\"jdbc\") \\\n  .option(\"url\", \"jdbc:postgresql://message_store:5432/\") \\\n  .option(\"driver\", \"org.postgresql.Driver\") \\\n  .option(\"dbtable\", \"public.processed_jobs\") \\\n  .option(\"user\", \"message_store\") \\\n  .option(\"password\", \"\") \\\n  .load()\n\nz.show(df_combined_1)",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:37.426",
+      "dateUpdated": "2021-02-05 03:40:28.804",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "python",
           "editOnDblClick": false,
@@ -1401,7 +1425,7 @@
         "colWidth": 9.0,
         "editorMode": "ace/mode/python",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {
           "0": {
             "graph": {
@@ -1465,6 +1489,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169151_-1082120502",
       "id": "20190829-201221_604270122",
@@ -1476,9 +1501,9 @@
     {
       "text": "%md\n\n# Step 8",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:37.966",
+      "dateUpdated": "2021-02-05 03:40:28.834",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
@@ -1488,7 +1513,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -1506,6 +1531,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169154_-1550883349",
       "id": "20190830-033021_965492532",
@@ -1517,9 +1543,9 @@
     {
       "text": "%md\n\n# Spark\n## Filter data for report\n\n1. The job that has the highest hourly median wage",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:38.094",
+      "dateUpdated": "2021-02-05 03:40:28.861",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
@@ -1547,6 +1573,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169154_-1619954429",
       "id": "20190829-222827_1921372444",
@@ -1558,9 +1585,9 @@
     {
       "text": "%pyspark\n\nfrom pyspark.sql.functions import row_number, col\nfrom pyspark.sql.window import Window\n\ndf_combined_2 \u003d df_combined_1 \\\n  .withColumn(\"priority\", row_number()\n    .over(Window.partitionBy(col(\"occupation_title\"))\n    .orderBy(col(\"hourly_wages_median\")))) \\\n  .where(col(\"priority\") \u003d\u003d 1)\n\n\nz.show(df_combined_2)",
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:38.223",
+      "dateUpdated": "2021-02-05 03:40:28.886",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "python",
           "editOnDblClick": false,
@@ -1570,7 +1597,7 @@
         "colWidth": 9.0,
         "editorMode": "ace/mode/python",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {
           "0": {
             "graph": {
@@ -1657,6 +1684,7 @@
         ]
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169155_-526045593",
       "id": "20190829-221933_108988996",
@@ -1667,9 +1695,9 @@
     },
     {
       "user": "anonymous",
-      "dateUpdated": "2020-07-27 19:50:41.572",
+      "dateUpdated": "2021-02-05 03:40:28.917",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
@@ -1679,7 +1707,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/scala",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -1688,6 +1716,7 @@
         "forms": {}
       },
       "apps": [],
+      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1595631169158_-538191072",
       "id": "20190829-223056_1210647338",
@@ -1705,7 +1734,5 @@
   "config": {
     "isZeppelinNotebookCronEnable": false
   },
-  "info": {
-    "isRunning": true
-  }
+  "info": {}
 }

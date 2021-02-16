@@ -1,0 +1,74 @@
+[
+	{
+		"tid" : 101,
+		"tname" : "Adelaide"
+	},
+	{
+		"tid" : 102,
+		"tname" : "Brisbane Lions"
+	},
+	{
+		"tid" : 103,
+		"tname" : "Carlton"
+	},
+	{
+		"tid" : 104,
+		"tname" : "Collingwood"
+	},
+	{
+		"tid" : 105,
+		"tname" : "Essendon"
+	},
+	{
+		"tid" : 106,
+		"tname" : "Fremantle"
+	},
+	{
+		"tid" : 107,
+		"tname" : "Geelong"
+	},
+	{
+		"tid" : 108,
+		"tname" : "Gold Coast"
+	},
+	{
+		"tid" : 109,
+		"tname" : "Greater Western Sydney"
+	},
+	{
+		"tid" : 110,
+		"tname" : "Hawthorn"
+	},
+	{
+		"tid" : 111,
+		"tname" : "Melbourne"
+	},
+	{
+		"tid" : 112,
+		"tname" : "North Melbourne"
+	},
+	{
+		"tid" : 113,
+		"tname" : "Port Adelaide"
+	},
+	{
+		"tid" : 114,
+		"tname" : "Richmond"
+	},
+	{
+		"tid" : 115,
+		"tname" : "St Kilda"
+	},
+	{
+		"tid" : 116,
+		"tname" : "Sydney"
+	},
+	{
+		"tid" : 117,
+		"tname" : "West Coast"
+	},
+	{
+		"tid" : 118,
+		"tname" : "Western Bulldogs"
+	}
+]
