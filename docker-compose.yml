@@ -19,6 +19,8 @@ services:
         --packages org.postgresql:postgresql:42.2.5
     links:
       - message_store
+    expose:
+      - 9001
     ports:
       - 9001:8080
     volumes:
