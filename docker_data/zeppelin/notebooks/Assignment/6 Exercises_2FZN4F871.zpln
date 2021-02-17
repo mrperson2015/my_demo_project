@@ -3,7 +3,7 @@
     {
       "text": "%md\n\n# To be proficient in Spark, one must have three fundamental skills:\n\n  1. The ability to **manipulate and understand the data**\n  1. The knowledge on **how to bend the tool to the programmer’s needs**\n  1. The art of finding a **balance among the factors that affect Spark jobs executions**\n\nThe following exercises will help to assess the skills above.",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T20:54:44+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -35,19 +35,17 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830215_1549286126",
+      "jobName": "paragraph_1613582177491_1873185242",
       "id": "paragraph_1613433524014_788808294",
-      "dateCreated": "2021-02-17T19:57:10+0000",
-      "status": "FINISHED",
+      "dateCreated": "2021-02-17T17:16:17+0000",
+      "status": "READY",
       "focus": true,
-      "$$hashKey": "object:181",
-      "dateFinished": "2021-02-17T20:54:46+0000",
-      "dateStarted": "2021-02-17T20:54:44+0000"
+      "$$hashKey": "object:7969"
     },
     {
       "text": "%md\n\n# The Dataset\nLet’s describe briefly the dataset that we are going to use. The data consists of extract files from the Microsoft Adventure Works OLTP database. Below you will find a paragraph querying the INFORMATION_SCHEMA data that gives a list of tables and descriptions. Data is available in this docker container at \"/files/AdventureWorks/\" in parquet format. You can also find a database diagram below or at https://i.stack.imgur.com/LMu4W.gif",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T19:57:10+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -79,16 +77,16 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830215_589987041",
+      "jobName": "paragraph_1613582177492_448881618",
       "id": "paragraph_1613430068146_405639893",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:182"
+      "$$hashKey": "object:7970"
     },
     {
       "text": "%md\n\n![alt Adventure Works Database Diagram](https://i.stack.imgur.com/LMu4W.gif)",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T19:57:10+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -120,17 +118,17 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830215_1155904311",
+      "jobName": "paragraph_1613582177492_1699760003",
       "id": "paragraph_1613433839221_619450427",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:183"
+      "$$hashKey": "object:7971"
     },
     {
       "title": "Information Schema",
       "text": "%pyspark\n\nfrom pyspark.sql.functions import input_file_name\nfrom pyspark.sql import functions as F\n\nz.show(spark.read.parquet(\"/files/INFORMATION_SCHEMA/TABLES\").select(F.col(\"TABLE_NAME\"), F.col(\"TABLE_COMMENT\")).where(\"TABLE_SCHEMA = 'AdventureWorks2014'\").orderBy(F.col(\"TABLE_NAME\")))",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T19:57:10+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "editorSetting": {
           "language": "python",
@@ -217,17 +215,17 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830215_270932838",
+      "jobName": "paragraph_1613582177493_1161363339",
       "id": "paragraph_1613427629760_1539992709",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:184"
+      "$$hashKey": "object:7972"
     },
     {
       "title": "Exercise 1",
       "text": "%md\n\nFind out how many of the below are found in the data:\n\n  1. Sales\n  1. Products\n  1. Sellers\n  1. How many products have been sold at least once?\n  1. Which product is found in the most sales?",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T20:54:18+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -251,27 +249,27 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830215_1835551284",
+      "jobName": "paragraph_1613582177493_1455276335",
       "id": "paragraph_1613429275983_1191839057",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:185"
+      "$$hashKey": "object:7973"
     },
     {
       "title": "Exercise 1 - Code",
       "text": "%pyspark\n\ndf_sales_header       = spark.read.parquet(\"/files/AdventureWorks/SalesOrderHeader\")\ndf_sales_detail       = spark.read.parquet(\"/files/AdventureWorks/SalesOrderDetail\")\ndf_sales_person       = spark.read.parquet(\"/files/AdventureWorks/SalesPerson\")\ndf_production_product = spark.read.parquet(\"/files/AdventureWorks/Product\")",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T20:54:31+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "tableHide": false,
         "editorSetting": {
-          "language": "python",
+          "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
         "colWidth": 12,
-        "editorMode": "ace/mode/python",
+        "editorMode": "ace/mode/scala",
         "fontSize": 9,
         "editorHide": false,
         "title": true,
@@ -285,17 +283,17 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830215_2099629669",
+      "jobName": "paragraph_1613582177493_672645514",
       "id": "paragraph_1613434022202_865669202",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:186"
+      "$$hashKey": "object:7974"
     },
     {
       "title": "Exercise 2",
       "text": "%md\n\nHow many distinct products have been sold each day?",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T19:57:10+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -319,26 +317,26 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830215_1036466853",
+      "jobName": "paragraph_1613582177493_1994102492",
       "id": "paragraph_1613431431388_350325179",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:187"
+      "$$hashKey": "object:7975"
     },
     {
       "title": "Exercise 2 - Code",
       "text": "%pyspark\n\ndf_sales_header       = spark.read.parquet(\"/files/AdventureWorks/SalesOrderHeader\")\ndf_sales_detail       = spark.read.parquet(\"/files/AdventureWorks/SalesOrderDetail\")\ndf_sales_person       = spark.read.parquet(\"/files/AdventureWorks/SalesPerson\")\ndf_production_product = spark.read.parquet(\"/files/AdventureWorks/Product\")",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T20:54:33+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "editorSetting": {
-          "language": "python",
+          "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
         "colWidth": 12,
-        "editorMode": "ace/mode/python",
+        "editorMode": "ace/mode/scala",
         "fontSize": 9,
         "editorHide": false,
         "title": true,
@@ -352,17 +350,17 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830215_109685631",
+      "jobName": "paragraph_1613582177493_1217289560",
       "id": "paragraph_1613497230389_1564930877",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:188"
+      "$$hashKey": "object:7976"
     },
     {
       "title": "Exercise 3",
       "text": "%md\n\nWhat is the average sub total for every order?",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T19:57:10+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -386,26 +384,26 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830215_1575065408",
+      "jobName": "paragraph_1613582177493_869334979",
       "id": "paragraph_1613431484029_1752708006",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:189"
+      "$$hashKey": "object:7977"
     },
     {
       "title": "Exercise 3 - Code",
       "text": "%pyspark\n\ndf_sales_header       = spark.read.parquet(\"/files/AdventureWorks/SalesOrderHeader\")\ndf_sales_detail       = spark.read.parquet(\"/files/AdventureWorks/SalesOrderDetail\")\ndf_sales_person       = spark.read.parquet(\"/files/AdventureWorks/SalesPerson\")\ndf_production_product = spark.read.parquet(\"/files/AdventureWorks/Product\")",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T20:54:35+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "editorSetting": {
-          "language": "python",
+          "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
         "colWidth": 12,
-        "editorMode": "ace/mode/python",
+        "editorMode": "ace/mode/scala",
         "fontSize": 9,
         "editorHide": false,
         "title": true,
@@ -419,17 +417,17 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830215_1166420259",
+      "jobName": "paragraph_1613582177493_1687734567",
       "id": "paragraph_1613497467801_349706646",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:190"
+      "$$hashKey": "object:7978"
     },
     {
       "title": "Exercise 4",
       "text": "%md\n\nFor each seller, what is the average % contribution of an order to the seller's daily quota?\n\n## Example\nIf Seller 1 with `SalesQuota=300000.0` has 3 orders:\n\nOrder 1: Sub Total 20,565\nOrder 2: Sub Total  1,294\nOrder 3: Sub Total 32,726\n\nThe average % contribution of orders to the seller's quota would be:\n\nOrder 1: 20565/300000.0 = 0.068\nOrder 2: 1294 /300000.0 = 0.004\nOrder 3: 32726/300000.0 = 0.109\n\nAverage % Contribution = (0.068 + 0.004 + 0.109)/3 = 0.06033333",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T19:57:10+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -453,26 +451,26 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830216_22538723",
+      "jobName": "paragraph_1613582177493_529890147",
       "id": "paragraph_1613496219308_1871567905",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:191"
+      "$$hashKey": "object:7979"
     },
     {
       "title": "Exercise 4 - Code",
       "text": "%pyspark\n\ndf_sales_header       = spark.read.parquet(\"/files/AdventureWorks/SalesOrderHeader\")\ndf_sales_detail       = spark.read.parquet(\"/files/AdventureWorks/SalesOrderDetail\")\ndf_sales_person       = spark.read.parquet(\"/files/AdventureWorks/SalesPerson\")\ndf_production_product = spark.read.parquet(\"/files/AdventureWorks/Product\")",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T20:54:37+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "editorSetting": {
-          "language": "python",
+          "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
         "colWidth": 12,
-        "editorMode": "ace/mode/python",
+        "editorMode": "ace/mode/scala",
         "fontSize": 9,
         "editorHide": false,
         "title": true,
@@ -486,17 +484,17 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830216_1306762228",
+      "jobName": "paragraph_1613582177494_1724107",
       "id": "paragraph_1613497500068_1434021862",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:192"
+      "$$hashKey": "object:7980"
     },
     {
       "title": "Exercise 5",
       "text": "%md\n\nWho are the sellers that sell the second most and least number of each product? Who are those for the product with `ProductId = 1`?",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T19:57:10+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -520,26 +518,26 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830216_175539303",
+      "jobName": "paragraph_1613582177494_560475809",
       "id": "paragraph_1613432734840_1488041363",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:193"
+      "$$hashKey": "object:7981"
     },
     {
       "title": "Exercise 5 - Code",
       "text": "%pyspark\n\ndf_sales_header       = spark.read.parquet(\"/files/AdventureWorks/SalesOrderHeader\")\ndf_sales_detail       = spark.read.parquet(\"/files/AdventureWorks/SalesOrderDetail\")\ndf_sales_person       = spark.read.parquet(\"/files/AdventureWorks/SalesPerson\")\ndf_production_product = spark.read.parquet(\"/files/AdventureWorks/Product\")",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T20:54:39+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "editorSetting": {
-          "language": "python",
+          "language": "scala",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
         "colWidth": 12,
-        "editorMode": "ace/mode/python",
+        "editorMode": "ace/mode/scala",
         "fontSize": 9,
         "editorHide": false,
         "title": true,
@@ -553,17 +551,17 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830216_997821032",
+      "jobName": "paragraph_1613582177494_1388130257",
       "id": "paragraph_1613497523027_1467440356",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:194"
+      "$$hashKey": "object:7982"
     },
     {
       "title": "Exercise 6",
       "text": "%md\n\nCreate a new column called \"hashed_approval\" defined as follows:\n\n  1. if the order_id is even: apply MD5 hashing iteratively to the CreditCardApprovalCode field, once for each '8' present in the text. E.g. if the Credit Card Approval Code is '105041Vi84182', you would apply hashing two times iteratively (only if the order number is even)\n\n  1. if the order_id is odd: apply SHA256 hashing to the CreditCardApprovalCode text\n\nFinally, check if there are any duplicate on the new column",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T19:57:10+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -587,17 +585,17 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830216_2143945838",
+      "jobName": "paragraph_1613582177494_1657450444",
       "id": "paragraph_1613433134423_69012190",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:195"
+      "$$hashKey": "object:7983"
     },
     {
       "title": "Exercise 6 - Code",
       "text": "%pyspark\n\ndf_sales_header       = spark.read.parquet(\"/files/AdventureWorks/SalesOrderHeader\")\ndf_sales_detail       = spark.read.parquet(\"/files/AdventureWorks/SalesOrderDetail\")\ndf_sales_person       = spark.read.parquet(\"/files/AdventureWorks/SalesPerson\")\ndf_production_product = spark.read.parquet(\"/files/AdventureWorks/Product\")",
       "user": "anonymous",
-      "dateUpdated": "2021-02-17T20:17:17+0000",
+      "dateUpdated": "2021-02-17T17:16:17+0000",
       "config": {
         "editorSetting": {
           "language": "python",
@@ -608,7 +606,7 @@
         "colWidth": 12,
         "editorMode": "ace/mode/python",
         "fontSize": 9,
-        "editorHide": false,
+        "editorHide": true,
         "title": true,
         "results": {
           "0": {
@@ -710,15 +708,15 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1613591830216_501482106",
+      "jobName": "paragraph_1613582177494_1997789498",
       "id": "paragraph_1613427588010_1388908013",
-      "dateCreated": "2021-02-17T19:57:10+0000",
+      "dateCreated": "2021-02-17T17:16:17+0000",
       "status": "READY",
-      "$$hashKey": "object:196"
+      "$$hashKey": "object:7984"
     }
   ],
   "name": "6 Exercises",
-  "id": "2FZSW83H6",
+  "id": "2FZN4F871",
   "defaultInterpreterGroup": "spark",
   "version": "0.9.0-preview2",
   "noteParams": {},
