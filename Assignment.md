@@ -34,3 +34,16 @@ https://www.portainer.io/
 * ```Address```:  localhost:9000
 * ```Username```: admin
 * ```Password```: password1
+
+
+# Using databricks:
+1. Signup for community account at databricks.com
+    1. Choose a cloud provider: "Get started with Community Edition"
+    </br>![image](https://user-images.githubusercontent.com/13457838/182223227-774ba96b-34cc-464c-8777-588346143542.png)
+    3. Validate email addres
+1. Create cluster
+    1. Databricks runtime version: Runtime: 10.4 LTS (Scala 2.12, Spark 3.2.1)
+1. Create notebook
+    1. Default Language: Python
+    2. Cluster: 6-questions
+![image](https://user-images.githubusercontent.com/13457838/182253070-8a813721-bc95-42a3-9785-4f033f190c07.png)
