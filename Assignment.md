@@ -4,22 +4,24 @@ This project contains sample data and an Apache Zeppelin note in a self containe
 # To Run
 1. Clone (this) repo ```git clone https://github.com/mrperson2015/my_demo_project.git```
 1. Change directory to cloned repo ```cd my_demo_project/```
+
+## To Run Using Docker Compose
 1. Run docker images ```docker-compose up```
 1. Browse to Apache Zeppelin at ```localhost:9001```
 1. Open note ```Assignment/6 Exercises```
 1. Enjoy ;)
 
-# Validated On Systems
+### Validated On Systems
 * Windows 10
 * Ubuntu 19.04
 * macOS Majave 10.14.2
 
-# Apache Zeppelin
+### Apache Zeppelin
 Web-based notebook that enables data-driven,  interactive data analytics
 https://zeppelin.apache.org/
 * ```Address```:  localhost:9001
 
-# PostgreSQL
+### PostgreSQL
 * ```Address```:  localhost:5432
 * ```Database```: message_store
 * ```Username```: message_store
@@ -27,7 +29,7 @@ https://zeppelin.apache.org/
 * ```Username```: postgres
 * ```Password```: 
 
-# Portainer
+### Portainer
   (Not part of docker-compose)\
   Build and manage your Docker environments
 https://www.portainer.io/
@@ -36,7 +38,7 @@ https://www.portainer.io/
 * ```Password```: password1
 
 
-# Using databricks:
+## To Run Using databricks:
 1. Signup for community account at databricks.com
     1. Choose a cloud provider: "Get started with Community Edition"
     </br>![image](https://user-images.githubusercontent.com/13457838/182223227-774ba96b-34cc-464c-8777-588346143542.png)
@@ -47,3 +49,4 @@ https://www.portainer.io/
     1. Default Language: Python
     2. Cluster: 6-questions
 ![image](https://user-images.githubusercontent.com/13457838/182253070-8a813721-bc95-42a3-9785-4f033f190c07.png)
+1. In the notebook `databricks_6-questions.ipynb` you will find instructions to upload the data required for this notebook
