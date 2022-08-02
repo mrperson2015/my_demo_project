@@ -1,5 +1,5 @@
 # Assignment
-This project contains sample data and an Apache Zeppelin note in a self contained docker container. The note has 6 exercises to test your PySpark abilities. With the note open, you can download the note as a .zpln file. This allows you to share your code for others to import and run in the same environment.
+This project contains sample data and an Apache Zeppelin note in a self contained docker container and instructions to use a community edition databricks cluster. The note has 6 exercises to test your PySpark abilities. With the note open, you can download the note as a .zpln file (docker) or export as ipynb (databricks). This allows you to share your code for others to import and run in the same environment.
 
 # To Run
 1. Clone (this) repo ```git clone https://github.com/mrperson2015/my_demo_project.git```
